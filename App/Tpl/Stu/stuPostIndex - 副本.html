@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>首页</title>
+<link href="__PUBLIC__/css/index_index.css" rel="stylesheet" type="text/css" />
+<script src="__PUBLIC__/js/index_index.js"></script>
+<script src="__PUBLIC__/js/jquery.js"></script>
+
+</head>
+<body>
+<include file="Header:index" /> 
+<div id="bigmain">
+<div id="main"><volist name="list" id="vo">
+<div class="box600a205">
+<div class="box600a50">
+<div class="box450a50 title"><a href="{:U('__APP__/Post/stuPostDetail',array('cid'=>$vo['id']))}"><font style="font-size:16px;margin-left:25px;">{$vo.title}</font></a></div>
+<div class="box150a50 date">{$vo.time|substr=0,16}</div>
+</div>
+
+<div class="box600a135">
+<div class="box600a110">
+<div class="detail">{$vo.detail}</div>
+</div>
+<div class="box600a25">
+<span style="width:160px;float:left;margin-left:40px;display:block;overflow:hidden;white-space: nowrap;text-align:left;color:blue;">
+<span style="float:left;width:50px;text-align:right;">电话：</span>
+{$vo.phone}</span>
+<span style="width:160px;float:left;margin-left:40px;display:block;overflow:hidden;white-space: nowrap;text-align:left;color:blue;">
+<span style="float:left;width:50px;text-align:right;">微信：</span>
+{$vo.weixin}</span>
+<span style="width:170px;float:left;margin-left:30px;display:block;overflow:hidden;white-space: nowrap;text-align:left;color:blue;">
+<span style="float:left;width:50px;text-align:right;"><span style="width:28px;float:left;margin-left:8px;text-align:center;">q q</span>：</span>
+{$vo.qq}
+<span name="detailId"style="display:none;">{$vo.id}</span>
+</div>
+</div>
+</div>
+</volist>
+<div class="resultpage">{$page}</div>
+</div>
+</div>
+<include file="PUblic:footer" /> 
+</body>
+</html>

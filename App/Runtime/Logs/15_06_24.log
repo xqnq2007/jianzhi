@@ -1,0 +1,1192 @@
+[ 2015-06-24T08:01:12+08:00 ] 127.0.0.1 /chrome/profile_avatars/avatar_generic.png
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.064989s ]
+INFO: [ route_check ] --END-- [ RunTime:0.065304s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.063570s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.063746s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+ERR: 无法加载模块:chrome
+
+[ 2015-06-24T08:01:20+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001482s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Use of undefined constant boss_username - assumed 'boss_username' C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Undefined index:  boss_username C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant stu_username - assumed 'stu_username' C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 20 行.
+NOTIC: [8] Undefined index:  stu_username C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `jz_post` [ RunTime:0.082977s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 11 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `jz_post` LIMIT 1   [ RunTime:0.012306s ]
+NOTIC: [8] Use of undefined constant header - assumed 'header' C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant theme - assumed 'theme' C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 14 行.
+NOTIC: [8] Undefined variable: map C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 17 行.
+SQL: SELECT * FROM `jz_post` ORDER BY time desc LIMIT 0,10   [ RunTime:0.001268s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.020345s ]
+INFO: [ view_template ] --END-- [ RunTime:0.020505s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: php100 C:\wamp\www\jianzhishidai\App\Runtime\Cache\f331a3f0d874c4248458495ef2c2c2d1.php 第 119 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.167112s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.167254s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.021690s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.011709s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.007612s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.018169s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.059510s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 88 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 89 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 90 行.
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.017187s ]
+INFO: [ view_end ] --END-- [ RunTime:0.017299s ]
+
+[ 2015-06-24T08:01:21+08:00 ] 127.0.0.1 /__PUBLIC__/js/jquery.js
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001699s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001850s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000670s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000775s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Undefined variable: group C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:__PUBLIC__
+
+[ 2015-06-24T08:01:21+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000929s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001044s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000620s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000702s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Undefined variable: group C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:favicon.ico
+
+[ 2015-06-24T08:30:21+08:00 ] 127.0.0.1 /index.php/
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001550s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001670s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001416s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Use of undefined constant boss_username - assumed 'boss_username' C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Undefined index:  boss_username C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant stu_username - assumed 'stu_username' C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 20 行.
+NOTIC: [8] Undefined index:  stu_username C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `jz_post` [ RunTime:0.003691s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 11 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `jz_post` LIMIT 1   [ RunTime:0.000273s ]
+NOTIC: [8] Use of undefined constant header - assumed 'header' C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant theme - assumed 'theme' C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 14 行.
+NOTIC: [8] Undefined variable: map C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 17 行.
+SQL: SELECT * FROM `jz_post` ORDER BY time desc LIMIT 0,10   [ RunTime:0.000323s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002084s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002194s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: php100 C:\wamp\www\jianzhishidai\App\Runtime\Cache\f331a3f0d874c4248458495ef2c2c2d1.php 第 119 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.026590s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026684s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001273s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001269s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001007s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001249s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005068s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 88 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 89 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 90 行.
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.002633s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002782s ]
+
+[ 2015-06-24T08:30:21+08:00 ] 127.0.0.1 /index.php/__PUBLIC__/js/jquery.js
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000941s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001073s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000663s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000761s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Undefined variable: group C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:__PUBLIC__
+
+[ 2015-06-24T08:30:21+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000950s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001076s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000620s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000701s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Undefined variable: group C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:favicon.ico
+
+[ 2015-06-24T12:13:46+08:00 ] 127.0.0.1 /chrome/profile_avatars/avatar_generic.png
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.026554s ]
+INFO: [ route_check ] --END-- [ RunTime:0.026754s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.025655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.025813s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+ERR: 无法加载模块:chrome
+
+[ 2015-06-24T12:13:54+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001245s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001349s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Use of undefined constant boss_username - assumed 'boss_username' C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Undefined index:  boss_username C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant stu_username - assumed 'stu_username' C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 20 行.
+NOTIC: [8] Undefined index:  stu_username C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `jz_post` [ RunTime:0.120453s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 11 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `jz_post` LIMIT 1   [ RunTime:0.108733s ]
+NOTIC: [8] Use of undefined constant header - assumed 'header' C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant theme - assumed 'theme' C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 14 行.
+NOTIC: [8] Undefined variable: map C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 17 行.
+SQL: SELECT * FROM `jz_post` ORDER BY time desc LIMIT 0,10   [ RunTime:0.018606s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.015967s ]
+INFO: [ view_template ] --END-- [ RunTime:0.016122s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: php100 C:\wamp\www\jianzhishidai\App\Runtime\Cache\f331a3f0d874c4248458495ef2c2c2d1.php 第 119 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.171895s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.172007s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.008679s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.011755s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.011559s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.022576s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.054876s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 88 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 89 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 90 行.
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.031675s ]
+INFO: [ view_end ] --END-- [ RunTime:0.031814s ]
+
+[ 2015-06-24T12:13:54+08:00 ] 127.0.0.1 /__PUBLIC__/js/jquery.js
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001743s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001883s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000713s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000811s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Undefined variable: group C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:__PUBLIC__
+
+[ 2015-06-24T12:13:55+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001045s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001151s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000674s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Undefined variable: group C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:favicon.ico
+
+[ 2015-06-24T12:31:43+08:00 ] 127.0.0.1 /pagead/js/adsbygoogle.js
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.002075s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002227s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001687s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001804s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+ERR: 无法加载模块:pagead
+
+[ 2015-06-24T12:39:12+08:00 ] 127.0.0.1 /index.php/Index/postinfo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001605s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001728s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001206s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001285s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Use of undefined constant boss_username - assumed 'boss_username' C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Undefined index:  boss_username C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant stu_username - assumed 'stu_username' C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 20 行.
+NOTIC: [8] Undefined index:  stu_username C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 20 行.
+NOTIC: [8] Use of undefined constant boss_username - assumed 'boss_username' C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 105 行.
+NOTIC: [8] Undefined index:  boss_username C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 105 行.
+NOTIC: [8] Use of undefined constant stu_username - assumed 'stu_username' C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 124 行.
+NOTIC: [8] Undefined index:  stu_username C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 124 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.029972s ]
+INFO: [ view_template ] --END-- [ RunTime:0.030081s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: php100 C:\wamp\www\jianzhishidai\App\Runtime\Cache\02264d34ca84e3934afb8aeeac99fbdb.php 第 116 行.
+NOTIC: [8] Undefined variable: phone C:\wamp\www\jianzhishidai\App\Runtime\Cache\02264d34ca84e3934afb8aeeac99fbdb.php 第 186 行.
+NOTIC: [8] Undefined variable: weixin C:\wamp\www\jianzhishidai\App\Runtime\Cache\02264d34ca84e3934afb8aeeac99fbdb.php 第 187 行.
+NOTIC: [8] Undefined variable: qq C:\wamp\www\jianzhishidai\App\Runtime\Cache\02264d34ca84e3934afb8aeeac99fbdb.php 第 188 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.048703s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048796s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001190s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001110s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000923s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001118s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004568s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 88 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 89 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 90 行.
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001948s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002054s ]
+
+[ 2015-06-24T12:39:12+08:00 ] 127.0.0.1 /index.php/Index/__PUBLIC__/js/jquery.js
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000981s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001104s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000680s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+ERR: 非法操作:__PUBLIC__
+
+[ 2015-06-24T12:39:12+08:00 ] 127.0.0.1 /index.php/Post/yanzhengma
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001620s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001743s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001214s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001292s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] ob_end_clean() [<a href='ref.outcontrol'>ref.outcontrol</a>]: failed to delete buffer. No buffer to delete. C:\wamp\www\jianzhishidai\App\Lib\Action\PostAction.class.php 第 98 行.
+
+[ 2015-06-24T12:39:12+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000988s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001130s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000829s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000937s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Undefined variable: group C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:favicon.ico
+
+[ 2015-06-24T18:04:48+08:00 ] 127.0.0.1 /chrome/profile_avatars/avatar_generic.png
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.022846s ]
+INFO: [ route_check ] --END-- [ RunTime:0.022993s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.012592s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012805s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+ERR: 无法加载模块:chrome
+
+[ 2015-06-24T18:21:06+08:00 ] 127.0.0.1 /index.php/
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001568s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001680s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001388s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Use of undefined constant boss_username - assumed 'boss_username' C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Undefined index:  boss_username C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant stu_username - assumed 'stu_username' C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 20 行.
+NOTIC: [8] Undefined index:  stu_username C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `jz_post` [ RunTime:0.078105s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 11 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `jz_post` LIMIT 1   [ RunTime:0.004643s ]
+NOTIC: [8] Use of undefined constant header - assumed 'header' C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant theme - assumed 'theme' C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 14 行.
+NOTIC: [8] Undefined variable: map C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 17 行.
+SQL: SELECT * FROM `jz_post` ORDER BY time desc LIMIT 0,10   [ RunTime:0.001672s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.031009s ]
+INFO: [ view_template ] --END-- [ RunTime:0.031172s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: php100 C:\wamp\www\jianzhishidai\App\Runtime\Cache\f331a3f0d874c4248458495ef2c2c2d1.php 第 119 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.177475s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.177598s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.008646s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.003464s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.002012s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.015437s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.029875s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 88 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 89 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 90 行.
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.009252s ]
+INFO: [ view_end ] --END-- [ RunTime:0.009370s ]
+
+[ 2015-06-24T18:21:06+08:00 ] 127.0.0.1 /index.php/__PUBLIC__/js/jquery.js
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000956s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001085s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000837s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000936s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Undefined variable: group C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:__PUBLIC__
+
+[ 2015-06-24T18:21:06+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001569s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001681s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001226s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001303s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Undefined variable: group C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:favicon.ico
+
+[ 2015-06-24T18:21:10+08:00 ] 127.0.0.1 /index.php/Index/perCenter
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000893s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000996s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000681s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000759s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Use of undefined constant boss_username - assumed 'boss_username' C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 30 行.
+NOTIC: [8] Undefined index:  boss_username C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 30 行.
+NOTIC: [8] Use of undefined constant stu_username - assumed 'stu_username' C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 32 行.
+NOTIC: [8] Undefined index:  stu_username C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 32 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001793s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001871s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.031685s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031792s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001157s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001042s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000917s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001189s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004513s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 88 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 89 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 90 行.
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001553s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001639s ]
+
+[ 2015-06-24T18:21:10+08:00 ] 127.0.0.1 /index.php/Index/__PUBLIC__/js/jquery.js
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001158s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001335s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000679s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+ERR: 非法操作:__PUBLIC__
+
+[ 2015-06-24T18:21:10+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001063s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001199s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000719s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000806s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Undefined variable: group C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:favicon.ico
+
+[ 2015-06-24T18:21:11+08:00 ] 127.0.0.1 /index.php/
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000903s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001015s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000670s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Use of undefined constant boss_username - assumed 'boss_username' C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Undefined index:  boss_username C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant stu_username - assumed 'stu_username' C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 20 行.
+NOTIC: [8] Undefined index:  stu_username C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `jz_post` [ RunTime:0.003898s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 11 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `jz_post` LIMIT 1   [ RunTime:0.000233s ]
+NOTIC: [8] Use of undefined constant header - assumed 'header' C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant theme - assumed 'theme' C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 14 行.
+NOTIC: [8] Undefined variable: map C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 17 行.
+SQL: SELECT * FROM `jz_post` ORDER BY time desc LIMIT 0,10   [ RunTime:0.000195s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001259s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001347s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: php100 C:\wamp\www\jianzhishidai\App\Runtime\Cache\f331a3f0d874c4248458495ef2c2c2d1.php 第 119 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.017483s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017578s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000556s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000430s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000303s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000543s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002066s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 88 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 89 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 90 行.
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001867s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002033s ]
+
+[ 2015-06-24T18:21:11+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000972s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001101s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000605s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000683s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Undefined variable: group C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:favicon.ico
+
+[ 2015-06-24T18:21:15+08:00 ] 127.0.0.1 /index.php/Public/contactUs
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001048s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001174s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000633s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000710s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000494s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000589s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: php100 C:\wamp\www\jianzhishidai\App\Runtime\Cache\b96d16c64357caa41fa7fcff6c5dd220.php 第 115 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.031835s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031929s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000457s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000639s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000322s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000552s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002184s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000670s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000740s ]
+
+[ 2015-06-24T18:21:16+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000909s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001023s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000679s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000755s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Undefined variable: group C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:favicon.ico
+
+[ 2015-06-24T18:21:18+08:00 ] 127.0.0.1 /index.php/Index/
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000918s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001034s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000670s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Use of undefined constant boss_username - assumed 'boss_username' C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Undefined index:  boss_username C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant stu_username - assumed 'stu_username' C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 20 行.
+NOTIC: [8] Undefined index:  stu_username C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `jz_post` [ RunTime:0.003387s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 11 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `jz_post` LIMIT 1   [ RunTime:0.000330s ]
+NOTIC: [8] Use of undefined constant header - assumed 'header' C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant theme - assumed 'theme' C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 14 行.
+NOTIC: [8] Undefined variable: map C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 17 行.
+SQL: SELECT * FROM `jz_post` ORDER BY time desc LIMIT 0,10   [ RunTime:0.000201s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000537s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000616s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: php100 C:\wamp\www\jianzhishidai\App\Runtime\Cache\f331a3f0d874c4248458495ef2c2c2d1.php 第 119 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.016020s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016110s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000521s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000427s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000303s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000508s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001957s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 88 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 89 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 90 行.
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000808s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000925s ]
+
+[ 2015-06-24T18:21:18+08:00 ] 127.0.0.1 /index.php/Index/__PUBLIC__/js/jquery.js
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000918s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001048s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000685s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000768s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+ERR: 非法操作:__PUBLIC__
+
+[ 2015-06-24T18:21:18+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000955s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001080s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000606s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000683s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Undefined variable: group C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:favicon.ico
+
+[ 2015-06-24T18:21:21+08:00 ] 127.0.0.1 /index.php/Public/replymsg
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000899s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001005s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000744s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000856s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000735s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000980s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: php100 C:\wamp\www\jianzhishidai\App\Runtime\Cache\e5a4b3328fbe8e8ca7e6e6ec380fc913.php 第 116 行.
+NOTIC: [8] Use of undefined constant phone - assumed 'phone' C:\wamp\www\jianzhishidai\App\Runtime\Cache\e5a4b3328fbe8e8ca7e6e6ec380fc913.php 第 139 行.
+NOTIC: [8] Undefined variable: theinfo C:\wamp\www\jianzhishidai\App\Runtime\Cache\e5a4b3328fbe8e8ca7e6e6ec380fc913.php 第 139 行.
+NOTIC: [8] Use of undefined constant qq - assumed 'qq' C:\wamp\www\jianzhishidai\App\Runtime\Cache\e5a4b3328fbe8e8ca7e6e6ec380fc913.php 第 140 行.
+NOTIC: [8] Undefined variable: theinfo C:\wamp\www\jianzhishidai\App\Runtime\Cache\e5a4b3328fbe8e8ca7e6e6ec380fc913.php 第 140 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.025352s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025440s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000446s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000434s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000304s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000574s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001957s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000775s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000855s ]
+
+[ 2015-06-24T18:21:21+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000894s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000667s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Undefined variable: group C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:favicon.ico
+
+[ 2015-06-24T18:23:10+08:00 ] 127.0.0.1 /index.php/Public/contactUs
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001700s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001823s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001206s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001283s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000515s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000601s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: php100 C:\wamp\www\jianzhishidai\App\Runtime\Cache\b96d16c64357caa41fa7fcff6c5dd220.php 第 115 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.011820s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011910s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000451s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000429s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000301s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000501s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001874s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000648s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000719s ]
+
+[ 2015-06-24T18:23:10+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000910s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001020s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000666s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Undefined variable: group C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:favicon.ico
+
+[ 2015-06-24T18:23:13+08:00 ] 127.0.0.1 /index.php/Public/replymsg
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000955s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001093s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000640s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000723s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001205s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001289s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: php100 C:\wamp\www\jianzhishidai\App\Runtime\Cache\e5a4b3328fbe8e8ca7e6e6ec380fc913.php 第 116 行.
+NOTIC: [8] Use of undefined constant phone - assumed 'phone' C:\wamp\www\jianzhishidai\App\Runtime\Cache\e5a4b3328fbe8e8ca7e6e6ec380fc913.php 第 139 行.
+NOTIC: [8] Undefined variable: theinfo C:\wamp\www\jianzhishidai\App\Runtime\Cache\e5a4b3328fbe8e8ca7e6e6ec380fc913.php 第 139 行.
+NOTIC: [8] Use of undefined constant qq - assumed 'qq' C:\wamp\www\jianzhishidai\App\Runtime\Cache\e5a4b3328fbe8e8ca7e6e6ec380fc913.php 第 140 行.
+NOTIC: [8] Undefined variable: theinfo C:\wamp\www\jianzhishidai\App\Runtime\Cache\e5a4b3328fbe8e8ca7e6e6ec380fc913.php 第 140 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.015245s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015334s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001066s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001117s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000923s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004422s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001255s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001328s ]
+
+[ 2015-06-24T18:23:13+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001023s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001147s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000660s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000740s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Undefined variable: group C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:favicon.ico
+
+[ 2015-06-24T21:43:46+08:00 ] 127.0.0.1 /chrome/profile_avatars/avatar_generic.png
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.023512s ]
+INFO: [ route_check ] --END-- [ RunTime:0.023652s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.011971s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012132s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+ERR: 无法加载模块:chrome
+
+[ 2015-06-24T21:43:54+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001543s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001675s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Use of undefined constant boss_username - assumed 'boss_username' C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Undefined index:  boss_username C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant stu_username - assumed 'stu_username' C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 20 行.
+NOTIC: [8] Undefined index:  stu_username C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `jz_post` [ RunTime:0.155442s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 11 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `jz_post` LIMIT 1   [ RunTime:0.190737s ]
+NOTIC: [8] Use of undefined constant header - assumed 'header' C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant theme - assumed 'theme' C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 14 行.
+NOTIC: [8] Undefined variable: map C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 17 行.
+SQL: SELECT * FROM `jz_post` ORDER BY time desc LIMIT 0,10   [ RunTime:0.024185s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.028037s ]
+INFO: [ view_template ] --END-- [ RunTime:0.028158s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: php100 C:\wamp\www\jianzhishidai\App\Runtime\Cache\f331a3f0d874c4248458495ef2c2c2d1.php 第 119 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.243959s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.244059s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.012114s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.011608s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001732s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.015789s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.041560s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 88 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 89 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 90 行.
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.015374s ]
+INFO: [ view_end ] --END-- [ RunTime:0.015490s ]
+
+[ 2015-06-24T21:43:54+08:00 ] 127.0.0.1 /__PUBLIC__/js/jquery.js
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001655s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001775s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001411s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Undefined variable: group C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:__PUBLIC__
+
+[ 2015-06-24T21:43:55+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001204s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001332s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000664s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000747s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Undefined variable: group C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:favicon.ico
+
+[ 2015-06-24T22:25:44+08:00 ] 127.0.0.1 /chrome/profile_avatars/avatar_generic.png
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.069256s ]
+INFO: [ route_check ] --END-- [ RunTime:0.069400s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.039817s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.039954s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+ERR: 无法加载模块:chrome
+
+[ 2015-06-24T22:25:58+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001684s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Use of undefined constant boss_username - assumed 'boss_username' C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Undefined index:  boss_username C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant stu_username - assumed 'stu_username' C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 20 行.
+NOTIC: [8] Undefined index:  stu_username C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `jz_post` [ RunTime:0.966333s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 11 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `jz_post` LIMIT 1   [ RunTime:0.525905s ]
+NOTIC: [8] Use of undefined constant header - assumed 'header' C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant theme - assumed 'theme' C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 14 行.
+NOTIC: [8] Undefined variable: map C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 17 行.
+SQL: SELECT * FROM `jz_post` ORDER BY time desc LIMIT 0,10   [ RunTime:0.094336s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.206068s ]
+INFO: [ view_template ] --END-- [ RunTime:0.206212s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: php100 C:\wamp\www\jianzhishidai\App\Runtime\Cache\f331a3f0d874c4248458495ef2c2c2d1.php 第 119 行.
+INFO: Run ParseTemplate Behavior [ RunTime:1.268085s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.268196s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.019248s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.045335s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.014614s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.027429s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.106959s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 88 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 89 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 90 行.
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.025370s ]
+INFO: [ view_end ] --END-- [ RunTime:0.025490s ]
+
+[ 2015-06-24T22:25:59+08:00 ] 127.0.0.1 /__PUBLIC__/js/jquery.js
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001574s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001692s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000624s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000705s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Undefined variable: group C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:__PUBLIC__
+
+[ 2015-06-24T22:26:02+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000947s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001069s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000626s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000705s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Undefined variable: group C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:favicon.ico
+
+[ 2015-06-24T22:43:35+08:00 ] 127.0.0.1 /index.php/Public/replymsg
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001637s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001765s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001506s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001188s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001294s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: php100 C:\wamp\www\jianzhishidai\App\Runtime\Cache\e5a4b3328fbe8e8ca7e6e6ec380fc913.php 第 116 行.
+NOTIC: [8] Use of undefined constant phone - assumed 'phone' C:\wamp\www\jianzhishidai\App\Runtime\Cache\e5a4b3328fbe8e8ca7e6e6ec380fc913.php 第 139 行.
+NOTIC: [8] Undefined variable: theinfo C:\wamp\www\jianzhishidai\App\Runtime\Cache\e5a4b3328fbe8e8ca7e6e6ec380fc913.php 第 139 行.
+NOTIC: [8] Use of undefined constant qq - assumed 'qq' C:\wamp\www\jianzhishidai\App\Runtime\Cache\e5a4b3328fbe8e8ca7e6e6ec380fc913.php 第 140 行.
+NOTIC: [8] Undefined variable: theinfo C:\wamp\www\jianzhishidai\App\Runtime\Cache\e5a4b3328fbe8e8ca7e6e6ec380fc913.php 第 140 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.041701s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041792s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001201s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001193s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001053s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001546s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005319s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.002172s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002314s ]
+
+[ 2015-06-24T22:43:35+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000916s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001036s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000785s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000886s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Undefined variable: group C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:favicon.ico
+
+[ 2015-06-24T22:46:39+08:00 ] 127.0.0.1 /index.php/Public/replymsg
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001591s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001711s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001231s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001314s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001118s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001208s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: php100 C:\wamp\www\jianzhishidai\App\Runtime\Cache\e5a4b3328fbe8e8ca7e6e6ec380fc913.php 第 116 行.
+NOTIC: [8] Use of undefined constant phone - assumed 'phone' C:\wamp\www\jianzhishidai\App\Runtime\Cache\e5a4b3328fbe8e8ca7e6e6ec380fc913.php 第 139 行.
+NOTIC: [8] Undefined variable: theinfo C:\wamp\www\jianzhishidai\App\Runtime\Cache\e5a4b3328fbe8e8ca7e6e6ec380fc913.php 第 139 行.
+NOTIC: [8] Use of undefined constant qq - assumed 'qq' C:\wamp\www\jianzhishidai\App\Runtime\Cache\e5a4b3328fbe8e8ca7e6e6ec380fc913.php 第 140 行.
+NOTIC: [8] Undefined variable: theinfo C:\wamp\www\jianzhishidai\App\Runtime\Cache\e5a4b3328fbe8e8ca7e6e6ec380fc913.php 第 140 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.016647s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016735s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001112s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001065s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000955s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001161s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004519s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001389s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001473s ]
+
+[ 2015-06-24T22:46:39+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001595s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001718s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001503s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Undefined variable: group C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:favicon.ico
+
+[ 2015-06-24T22:46:41+08:00 ] 127.0.0.1 /index.php/Index/
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001479s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001657s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000826s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000927s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Use of undefined constant boss_username - assumed 'boss_username' C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Undefined index:  boss_username C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant stu_username - assumed 'stu_username' C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 20 行.
+NOTIC: [8] Undefined index:  stu_username C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `jz_post` [ RunTime:0.003372s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 11 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `jz_post` LIMIT 1   [ RunTime:0.000187s ]
+NOTIC: [8] Use of undefined constant header - assumed 'header' C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant theme - assumed 'theme' C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 14 行.
+NOTIC: [8] Undefined variable: map C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 17 行.
+SQL: SELECT * FROM `jz_post` ORDER BY time desc LIMIT 0,10   [ RunTime:0.000166s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001891s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001998s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: php100 C:\wamp\www\jianzhishidai\App\Runtime\Cache\f331a3f0d874c4248458495ef2c2c2d1.php 第 119 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.026074s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026170s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001302s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001133s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001085s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001190s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004980s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 88 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 89 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 90 行.
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.002914s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003049s ]
+
+[ 2015-06-24T22:46:41+08:00 ] 127.0.0.1 /index.php/Index/__PUBLIC__/js/jquery.js
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000936s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001071s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000694s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+ERR: 非法操作:__PUBLIC__
+
+[ 2015-06-24T22:46:41+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000938s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001066s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000634s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000723s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Undefined variable: group C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:favicon.ico
+
+[ 2015-06-24T22:46:43+08:00 ] 127.0.0.1 /index.php/Boss/replymsg
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001048s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001185s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000787s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Use of undefined constant boss_shell - assumed 'boss_shell' C:\wamp\www\jianzhishidai\App\Lib\Action\BossAction.class.php 第 334 行.
+NOTIC: [8] Undefined index:  boss_shell C:\wamp\www\jianzhishidai\App\Lib\Action\BossAction.class.php 第 334 行.
+
+[ 2015-06-24T22:46:43+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000921s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001038s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000693s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Undefined variable: group C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:favicon.ico
+
+[ 2015-06-24T22:47:55+08:00 ] 127.0.0.1 /index.php/Boss/replymsg
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000991s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001114s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000720s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `jz_boss` [ RunTime:0.038405s ]
+NOTIC: [8] Use of undefined constant boss_username - assumed 'boss_username' C:\wamp\www\jianzhishidai\App\Lib\Action\BossAction.class.php 第 335 行.
+NOTIC: [8] Undefined index:  boss_username C:\wamp\www\jianzhishidai\App\Lib\Action\BossAction.class.php 第 335 行.
+SQL: SELECT * FROM `jz_boss` WHERE ( `username` = null )  [ RunTime:0.001492s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001774s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001882s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 15 行.
+NOTIC: [8] Undefined variable: thepost C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 15 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 18 行.
+NOTIC: [8] Undefined variable: thepost C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 18 行.
+NOTIC: [8] Undefined variable: thearea C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 20 行.
+NOTIC: [8] Undefined variable: theareaid C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 20 行.
+NOTIC: [8] Use of undefined constant numwant - assumed 'numwant' C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 41 行.
+NOTIC: [8] Undefined variable: thepost C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 41 行.
+NOTIC: [8] Undefined variable: payType C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 43 行.
+NOTIC: [8] Undefined variable: payTypeId C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 43 行.
+NOTIC: [8] Use of undefined constant salary - assumed 'salary' C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 52 行.
+NOTIC: [8] Undefined variable: thepost C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 52 行.
+NOTIC: [8] Undefined variable: salaryType C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 53 行.
+NOTIC: [8] Undefined variable: salaryTypeId C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 53 行.
+NOTIC: [8] Use of undefined constant detail - assumed 'detail' C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 62 行.
+NOTIC: [8] Undefined variable: thepost C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 62 行.
+NOTIC: [8] Use of undefined constant phone - assumed 'phone' C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 63 行.
+NOTIC: [8] Undefined variable: thepost C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 63 行.
+NOTIC: [8] Use of undefined constant weixin - assumed 'weixin' C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 64 行.
+NOTIC: [8] Undefined variable: thepost C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 64 行.
+NOTIC: [8] Use of undefined constant qq - assumed 'qq' C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 65 行.
+NOTIC: [8] Undefined variable: thepost C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 65 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.037925s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038016s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000475s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000437s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000327s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000547s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002002s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000765s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000848s ]
+
+[ 2015-06-24T22:47:55+08:00 ] 127.0.0.1 /index.php/Boss/__PUBLIC__/js/jquery.js
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001589s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001846s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001269s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001357s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+ERR: 非法操作:__PUBLIC__
+
+[ 2015-06-24T22:47:55+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000946s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001071s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000618s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000698s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Undefined variable: group C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:favicon.ico
+
+[ 2015-06-24T22:51:09+08:00 ] 127.0.0.1 /index.php/Boss/replymsg
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.002945s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003092s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001246s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001334s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `jz_boss` [ RunTime:0.003577s ]
+NOTIC: [8] Use of undefined constant boss_username - assumed 'boss_username' C:\wamp\www\jianzhishidai\App\Lib\Action\BossAction.class.php 第 335 行.
+NOTIC: [8] Undefined index:  boss_username C:\wamp\www\jianzhishidai\App\Lib\Action\BossAction.class.php 第 335 行.
+SQL: SELECT * FROM `jz_boss` WHERE ( `username` = null )  [ RunTime:0.001363s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002068s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002168s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 15 行.
+NOTIC: [8] Undefined variable: thepost C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 15 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 18 行.
+NOTIC: [8] Undefined variable: thepost C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 18 行.
+NOTIC: [8] Undefined variable: thearea C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 20 行.
+NOTIC: [8] Undefined variable: theareaid C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 20 行.
+NOTIC: [8] Use of undefined constant numwant - assumed 'numwant' C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 41 行.
+NOTIC: [8] Undefined variable: thepost C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 41 行.
+NOTIC: [8] Undefined variable: payType C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 43 行.
+NOTIC: [8] Undefined variable: payTypeId C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 43 行.
+NOTIC: [8] Use of undefined constant salary - assumed 'salary' C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 52 行.
+NOTIC: [8] Undefined variable: thepost C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 52 行.
+NOTIC: [8] Undefined variable: salaryType C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 53 行.
+NOTIC: [8] Undefined variable: salaryTypeId C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 53 行.
+NOTIC: [8] Use of undefined constant detail - assumed 'detail' C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 62 行.
+NOTIC: [8] Undefined variable: thepost C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 62 行.
+NOTIC: [8] Use of undefined constant phone - assumed 'phone' C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 63 行.
+NOTIC: [8] Undefined variable: thepost C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 63 行.
+NOTIC: [8] Use of undefined constant weixin - assumed 'weixin' C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 64 行.
+NOTIC: [8] Undefined variable: thepost C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 64 行.
+NOTIC: [8] Use of undefined constant qq - assumed 'qq' C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 65 行.
+NOTIC: [8] Undefined variable: thepost C:\wamp\www\jianzhishidai\App\Runtime\Cache\b6ca228bbc5319665b7e4234b91e1e42.php 第 65 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.017104s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017196s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001145s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001057s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001061s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001157s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004639s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001318s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001392s ]
+
+[ 2015-06-24T22:51:09+08:00 ] 127.0.0.1 /index.php/Boss/__PUBLIC__/js/jquery.js
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.016270s ]
+INFO: [ route_check ] --END-- [ RunTime:0.016408s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001241s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001331s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+ERR: 非法操作:__PUBLIC__
+
+[ 2015-06-24T22:51:09+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000910s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001029s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000686s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Undefined variable: group C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:favicon.ico
+
+[ 2015-06-24T22:51:11+08:00 ] 127.0.0.1 /index.php/Index/
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001435s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001561s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000702s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000797s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Use of undefined constant boss_username - assumed 'boss_username' C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Undefined index:  boss_username C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant stu_username - assumed 'stu_username' C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 20 行.
+NOTIC: [8] Undefined index:  stu_username C:\wamp\www\jianzhishidai\App\Lib\Action\HeaderAction.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `jz_post` [ RunTime:0.003304s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 11 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `jz_post` LIMIT 1   [ RunTime:0.000247s ]
+NOTIC: [8] Use of undefined constant header - assumed 'header' C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant theme - assumed 'theme' C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 14 行.
+NOTIC: [8] Undefined variable: map C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php 第 17 行.
+SQL: SELECT * FROM `jz_post` ORDER BY time desc LIMIT 0,10   [ RunTime:0.000322s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001853s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001938s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: php100 C:\wamp\www\jianzhishidai\App\Runtime\Cache\f331a3f0d874c4248458495ef2c2c2d1.php 第 119 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.026164s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026259s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001164s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001045s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000959s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001707s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005125s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 88 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 89 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\jianzhishidai\App\Lib\Action\IndexAction.class.php:5) C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\View.class.php 第 90 行.
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001839s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002205s ]
+
+[ 2015-06-24T22:51:11+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000956s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001091s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000738s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Undefined variable: group C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:favicon.ico
+
+[ 2015-06-24T22:51:12+08:00 ] 127.0.0.1 /index.php/Public/replymsg
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000920s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001041s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000693s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000778s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000556s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000673s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: php100 C:\wamp\www\jianzhishidai\App\Runtime\Cache\e5a4b3328fbe8e8ca7e6e6ec380fc913.php 第 116 行.
+NOTIC: [8] Use of undefined constant phone - assumed 'phone' C:\wamp\www\jianzhishidai\App\Runtime\Cache\e5a4b3328fbe8e8ca7e6e6ec380fc913.php 第 139 行.
+NOTIC: [8] Undefined variable: theinfo C:\wamp\www\jianzhishidai\App\Runtime\Cache\e5a4b3328fbe8e8ca7e6e6ec380fc913.php 第 139 行.
+NOTIC: [8] Use of undefined constant qq - assumed 'qq' C:\wamp\www\jianzhishidai\App\Runtime\Cache\e5a4b3328fbe8e8ca7e6e6ec380fc913.php 第 140 行.
+NOTIC: [8] Undefined variable: theinfo C:\wamp\www\jianzhishidai\App\Runtime\Cache\e5a4b3328fbe8e8ca7e6e6ec380fc913.php 第 140 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.012941s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013039s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000548s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000467s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000319s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000513s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002218s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000662s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000738s ]
+
+[ 2015-06-24T22:51:12+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000921s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001041s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000687s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\jianzhishidai\ThinkPHP\Common\functions.php 第 566 行.
+NOTIC: [8] Undefined variable: group C:\wamp\www\jianzhishidai\ThinkPHP\Lib\Core\App.class.php 第 120 行.
+ERR: 无法加载模块:favicon.ico
+

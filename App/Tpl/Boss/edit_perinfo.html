@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+  
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<link href="__PUBLIC__/css/post.css" rel="stylesheet"	type="text/css" />
+<link href="__PUBLIC__/css/boss_editperinfo.css" rel="stylesheet"	type="text/css" />
+<script src="__PUBLIC__/js/jquery.js"></script>
+<script src="__PUBLIC__/js/post.js"></script>
+</head>
+<body>
+<div id="body1">
+<div id="main">
+<form action={:U('__APP__/Boss/update_perinfo',array('cusername'=>$theinfo[0][username]))} method="post" name="perInfoForm">
+<div class="center1">
+<ul class="formul mlf60">
+	<li class="formli"><span class="test">姓名</span><span class="mar_rig10">:</span><input id="name" name="name" type="text" class="h15 in1 w300 border"value='{$theinfo[0][name]}' maxlength='20' />&nbsp;<span></span></li>	
+	<li class="formli"><span class="test"><font color="#FF0000"style="margin-right:5px;">*</font>电话</span><span class="mar_rig10">:</span><input id="phone" name="phone" type="text" value="{$theinfo[0][phone]}"class="h15 w300 in4 border" maxlength='20' />&nbsp;<span></span></li>
+	<li class="formli"><span class="test">微信</span><span class="mar_rig10">:</span><input id="user_weixin" name="user_weixin" type="text" class="h15 w300 in4 border" value="{$theinfo[0][weixin]}" maxlength='20' />&nbsp;<span></span></li>	
+	<li class="formli"><span class="test"><font class="mar_rig3">Q Q</font></span><span class="mar_rig10">:</span><input class="h15 w300 in4 border"name="qq" id="qq" type="text" value="{$theinfo[0][qq]}" maxlength='20' />&nbsp;<span></span></li>
+	<li class="formli"><span class="test">Email</span><span class="mar_rig10">:</span><input class="h15 w300 in4 border" name="email" id="email" type="text" value="{$theinfo[0][email]}" maxlength='30' />&nbsp;<span></span></li>
+	<li class="formli mar_top15"><input name="" id="perInfoSubBut" type="button" class="sub perInfoSubBut" value="提交"/></li>
+</ul>
+</div>
+</form>
+</div>
+</div>
+</body>
+</html>

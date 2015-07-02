@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="__PUBLIC__/js/jquery.js"></script>
+<script type="text/javascript">
+	function per_center(){ 		
+		window.location.href="__APP__/Index/perCenter"; 
+		}
+</script>
+<style type="text/css">
+<!--
+body {
+	margin: 0px;
+	text-align: center;
+}
+#top{
+    width:960px;
+    height:100px;   
+    margin:0px auto;
+}
+#menu{
+    
+    height:50px;
+    background:#5da7e0;
+    margin:0px auto;
+    }
+#logo {
+	
+	height: 100px;
+	width: 250px;
+	float:left;
+}
+#toprig {
+	
+	height: 100px;	
+	width: 400px;
+	float:right;
+	font-size: 14px;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	color: #FF0000;
+	cursor: hand;
+}
+*{
+  padding:0px;
+  margin:0px;
+ }
+.ul_header {
+	text-decoration: none;
+	height: 50px;
+	width: 960px;
+	list-style: none;
+	margin:auto;
+}
+.li_header{
+	float: left;
+	width: 80px;
+	line-height: 50px;
+}
+#header_logintip{
+    width:200px;
+    height:20px;
+	margin-right:20px;
+}
+#shouyeshoucang{
+	width:380px;
+	height:50px;
+	margin-top:50px;
+	
+	line-height:50px;
+	
+	float:right;
+	text-align:right;
+}
+-->
+</style>
+</head>
+<body>
+
+
+  <div id="top">
+    <div id="logo"><img src="/xuedao/Common/Image/logo1.jpg" width="250" height="100"></div>
+	<div id="toprig">
+	
+	
+	<div id="shouyeshoucang">
+	{$php100}{$php200}
+	<a href="javascript:void(0)" onclick="SetHome(this,window.location)">设为首页</a>&nbsp;|&nbsp;
+	<a href="javascript:void(0)" onclick="shoucang(document.title,window.location)" class="mar_rig20">加入收藏</a>
+	
+	</div>
+	</div>
+  </div>
+  <div id="menu">
+      <ul class="ul_header">
+	    <li class="li_header"><a href="__APP__/Index/"><font color="#FFFFFF">首页</font></a></li>
+		 <li class="li_header"><a href="javascript:void(0);" onclick="per_center()"><font color="#FFFFFF">个人中心</font></a></li>		
+	  </ul>
+  </div>
+
+</body>
+</html>

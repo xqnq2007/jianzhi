@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<include file="Header:adminHeader" />
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<link href="/Public/css/boss_index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="main">
+  <div id="left">
+    <ul  style="margin-top:40px;">
+	    <li class="li1">管理信息</li>
+		<li><a href="__APP__/Admin/bossPost" target="content">招聘信息</a></li>
+		<li><a href="__APP__/Admin/stuPost"target="content">求职信息</a></li>
+	</ul>
+	<ul >
+	    <li class="li1">管理用户</li>
+		<li><a href="__APP__/Admin/bossList"target="content">招聘用户</a></li>
+		<li><a href="__APP__/Admin/stuList" target="content">求职用户</a></li>
+	</ul>
+	<ul >
+	    <li class="li1">客户服务</li>
+		<li><a href="__APP__/Boss/replymsg" target="content">留言反馈</a></li>
+		<li><a href="__APP__/Boss/contactUs" target="content">联系我们</a></li>
+	</ul>
+  </div>
+  <div id="center"><iframe src="__APP__/Admin/bossPost" name="content" width="600" height="600" align="middle" scrolling="no" frameborder="0"></iframe></div>
+</div>
+</body>
+</html>
+<include file="PUblic:footer" />

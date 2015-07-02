@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>首页</title>
+<link href="__PUBLIC__/css/index_index.css" rel="stylesheet" type="text/css" />
+<script src="__PUBLIC__/js/jquery.js"></script>
+<script src="__PUBLIC__/js/index_index.js"></script>
+</head>
+<body>
+
+<include file="Header:index" /> 
+<div id="bigmain">
+<div id="rig">
+<div class="rig1" onclick="postinfo()">
+<ul >
+	<li><a href="/index.php/Index/postinfo" class="postA" ><font class="color_black" >发布兼职信息</font></a></li>
+</ul>
+</div>
+<div class="riggap"></div>
+<div class="rig2">
+<div class="mar_bot20">
+<ul>
+	<li id="boss" class="guzhudenglu"onMouseOver="bosshov();" >
+	<h3 id="bosstab">雇主登录</h3>
+	</li>
+	<li id="stu" class="xueshengdenglu"	onmouseover="stuhov();">
+	<h3  id="stutab">学生登录</h3>
+	</li>
+</ul>
+</div>
+<form action="__URL__/boss_login" method=post id="bossform"
+	class="formboss">
+<ul class="bossul">
+	<li>用户名：<input type="text" name="bossUsername" id="bossUsername"class="fotext" maxlength='20'  /></li>
+	<li>密　码：<input type="password" name="bossPass" id="bossPass" class="fotext" maxlength='20' /></li>
+	<li><input type="button" value="登录" class="subtext" name="stuform" id="bossSubBut" /></li>
+	<li><a href="__APP__/Boss/register"><font class="color333 mf30">还没有帐号？立即注册一个</font></a></li>
+</ul>
+</form>
+<form action="__URL__/stu_login" method=post id="stuform"
+	style="display:none;">
+<ul class="bossul">
+	<li>用户名：<input class="fotext" type="text" name="stuUsername" id="stuUsername" maxlength='20'/></li>
+	<li>密　码：<input class="fotext" type="password" name="stuPass" id="stuPass" maxlength='20'/></li>
+	<li><input type="button" value="登录" class="subtext" name="stuform" id="stuSubBut" /></li>
+	<li><a href="__APP__/Stu/register"><font class="color333 mf30">还没有帐号？立即注册一个</font></a></li>	
+</ul>
+</form>
+</div>
+</div>
+<div id="main"><div class="divvolist"><volist name="list" id="vo">
+<div class="box600a205">
+<div class="box600a50">
+<div class="box450a50"><a href="{:U('__APP__/Post/postDetail',array('cid'=>$vo['id']))}"><font class="title">{$vo.title}</font></a></div>
+<div class="box150a50 date">{$vo.time|substr=0,16}</div>
+</div>
+<div class="box600a135">
+	<div class="box600a110">
+		<div class="detail">{$vo.detail}</div>
+	</div>
+	<div class="box600a25">
+		<span class="phoneOutSpan">
+			<span class="phoneText">电话：</span><span class="phoneNum">{$vo.phone}</span>
+		</span>
+		<span class="phoneOutSpan">
+			<span class="phoneText">微信：</span><span class="phoneNum">{$vo.weixin}</span>
+		</span>
+		<span class="qqOutSpan">
+			<span class="qqText">q q：</span><span class="qqNum">{$vo.qq}</span>
+		</span>
+	<span name="detailId" class="disnone">{$vo.id}</span>
+	</div>
+</div>
+</div>
+</volist>
+</div>
+<div class="resultpage">{$page}</div>
+</div>
+</div>
+<include file="PUblic:footer" /> 
+</body>
+</html>

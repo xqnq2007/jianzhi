@@ -1,0 +1,155 @@
+//   表单验证函数
+$(function(){	 
+    var ok1=false;
+    var ok2=false;
+    var ok3=false;    
+    $("#user_username").focus(function(){
+    	$(this).next().text('用户名由3-20位字母，数字，下划线组成').removeClass().addClass('state2');
+    }).blur(function(){
+        var username=$.trim($(this).val());
+        if(username==''){$(this).next().text('用户名不能为空').removeClass().addClass('state3');}        
+        else if(!(/[a-zA-Z0-9]{3,20}/).test(username)){
+            $(this).next().text('用户名格式不正确').removeClass().addClass('state3');           
+        }else{
+            var tmp;
+            $.ajaxSetup({ 
+                async : false 
+            });
+            $.post("/index.php/Stu/usernameTest",{name:username},function(data){
+           	 if(data=='0'){            		 
+            		 tmp='1';
+                	 }
+            	 else{
+            		alert('这个用户名已经被注册过了');
+            	 }
+   			});
+   			if(tmp=='1'){$(this).next().text('可以注册').removeClass().addClass('state4');}    	
+        }         
+    });   
+    function usernameTest(){
+    	var username=$.trim($("#user_username").val());
+        if(username==''){$("#user_username").next().text('用户名不能为空').removeClass().addClass('state3');}        
+        else if(!(/[a-zA-Z0-9]{3,20}/).test(username)){
+            $("#user_username").next().text('用户名格式不正确').removeClass().addClass('state3');            
+        }else{
+            var tmp;
+            $.ajaxSetup({ 
+                async : false 
+            });
+            $.post("/index.php/Stu/usernameTest",{name:username},function(data){            	 
+            	
+           	 if(data=='0'){  		 
+            		 ok1=true;
+            		 tmp='1';
+                	 }
+            	 else{
+            		alert('这个用户名已经被注册过了');
+            	 }
+   			});
+   			if(tmp=='1'){$("#user_username").next().text('可以注册').removeClass().addClass('state4');}
+        }      
+    }
+    //验证密码
+    $("#user_password").focus(function(){
+        $(this).next().text('密码由6-20位字母，数字，下划线组成').removeClass().addClass('state2');
+    }).blur(function(){
+    	var password=$.trim($(this).val());
+    	if(password==''){$(this).next().text('密码不能为空').removeClass().addClass('state3');}
+    	else if(!(/[a-zA-Z0-9]{6,20}/).test(password)){
+        	$(this).next().text('密码格式不对').removeClass().addClass('state3');            
+        }else{
+        	$(this).next().text('');           
+        }         
+    });
+    function passwordTest(){
+    	var password=$.trim($("#user_password").val());
+    	if(password==''){$("#user_password").next().text('密码不能为空').removeClass().addClass('state3');}
+    	else if(!(/[a-zA-Z0-9]{6,20}/).test(password)){
+        	$("#user_password").next().text('密码格式不对').removeClass().addClass('state3');            
+        }else{
+        	$("#user_password").next().text('');
+            ok2=true;
+        }
+    }
+ // 验证电话号码
+    $("#user_phone").blur(function(){
+    	var phone=$.trim($(this).val());
+		var patrn = /^((\+?86)|(\(\+86\)))?\d{3,4}-\d{7,8}(-\d{3,4})?$/;
+		var validateReg = /^((\+?86)|(\(\+86\)))?1\d{10}$/;
+    	if(phone==''){$(this).next().text('电话不能为空').removeClass().addClass('state3');}
+    	else if(!(patrn.test(phone)||validateReg.test(phone))){
+        	 $(this).next().text('电话号码格式不正确').removeClass().addClass('state3');            
+        }else{
+        	$(this).next().text('').removeClass().addClass('state4');          
+        }         
+    });
+    function phoneTest(){
+    	var phone=$.trim($("#user_phone").val());
+		var patrn = /^((\+?86)|(\(\+86\)))?\d{3,4}-\d{7,8}(-\d{3,4})?$/;
+		var validateReg = /^((\+?86)|(\(\+86\)))?1\d{10}$/;
+    	if(phone==''){$("#user_phone").next().text('电话不能为空').removeClass().addClass('state3');}
+    	else if(!(patrn.test(phone)||validateReg.test(phone))){
+        	 $("#user_phone").next().text('电话号码格式不正确').removeClass().addClass('state3');            
+        }else{
+        	$("#user_phone").next().text('').removeClass().addClass('state4');
+            ok3=true;
+        }   
+    }
+	// 验证微信号
+	$("#user_weixin").blur(function(){		
+    	var weixin=$.trim($(this).val());
+		if(weixin==''){$(this).next().text('');}
+    	else if(!(/^[a-zA-Z\d_]{5,20}$/).test(weixin)){
+        	 $(this).next().text('微信格式不正确').removeClass().addClass('state2');            
+        }else{        	
+        	$(this).next().text('');            
+        }         
+    });  
+ // 验证QQ号码
+    $("#user_qq").blur(function(){
+    	var qq=$.trim($(this).val());
+    	if(qq==''){$(this).next().text('');}
+    	else if(!(/^[1-9][0-9]{4,9}$/).test(qq)){
+        	 $(this).next().text('QQ号码格式不正确').removeClass().addClass('state2');            
+        }else{        	
+        	$(this).next().text('');            
+        }
+         
+    });    
+    //验证邮箱
+    $("#user_email").blur(function(){
+    	var email=$.trim($(this).val());
+		if(email==''){$(this).next().text('');}
+    	else if(!(/^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/).test(email)){
+            $(this).next().text('Email格式不对').removeClass().addClass('state2');
+        }else{
+        	$(this).next().text('');
+        }         
+    });
+    //提交按钮,所有验证通过方可提交
+    $("#submitBut").click(function(){
+    	var username=$.trim($("#user_username").val());
+    	var password=$.trim($("#user_password").val());
+    	var phone=$.trim($("#user_phone").val());
+    	if((username=='')||(password=='')||(phone=='')){
+    		alert('标星号内容不能为空');        		
+    	}else{
+    		phoneTest();
+    		usernameTest();
+    		passwordTest();
+    		if(ok1 && ok2&ok3 ){
+            	$('form').submit();        	
+            }
+    	}
+    });
+	//验证码图片点击刷新
+	$("#yzcode").click(function(){
+		var time = new Date().getTime(); 
+		document.getElementById('yzcode').src= '/index.php/Post/yanzhengma/'+time;
+    });
+});
+//刷新验证码
+function fleshVerify(){
+   var time = new Date().getTime(); 
+   document.getElementById('yzcode').src= '/index.php/Post/yanzhengma/'+time;     
+ }

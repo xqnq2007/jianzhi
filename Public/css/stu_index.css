@@ -1,0 +1,46 @@
+
+#main {
+	
+	height: 680px;
+	width: 900px;
+	margin:0px auto;
+}
+
+body {
+text-align: center;
+}
+#left {	
+	height: 550px;
+	width: 200px;
+	float:left;
+}
+#center {	
+	height: 550px;
+	width: 600px;
+	float:right;
+	margin-top:40px;
+}
+#main ul{
+	clear: both;
+	height: 150px;
+	width: 160px;
+	border:1px solid #a9a9a9;
+	margin:20px 20px;
+	list-style:none;
+	padding:0px;
+}
+
+#main li{
+	height: 50px;
+	width: 160px;
+	line-height:50px
+	
+}
+
+.li1 {	
+	width: 120px;
+	margin-left:-20px;
+}
+a {
+	text-decoration: none;
+}
