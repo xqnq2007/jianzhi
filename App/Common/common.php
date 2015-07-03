@@ -13,7 +13,7 @@ function show_db_errorxx(){
    
     } 
 	function phoneSub($str){
-		$patrn = "/^((\+?86)|(\(\+86\)))?\d{3,4}-\d{7,8}(-\d{3,4})?$/";
+		$patrn = "/^(((\+?86)|(\(\+86\)))?\d{3,4}-)?\d{7,8}(-\d{3,4})?$/";
 		$validateReg = "/^((\+?86)|(\(\+86\)))?1\d{10}$/";		
 		if(preg_match($patrn,trim($str))||preg_match($validateReg,trim($str))){ 
 			$phone=trim($str); 

@@ -135,6 +135,9 @@ height:50px;
 margin-top:20px;
 marign-bottom:20px;
 }
+.copyright a:hover{
+	color:red;
+}
 .copyright li {
 display: list-item;
 /*text-align: -webkit-match-parent;*/
@@ -150,7 +153,8 @@ line-height:20px;
 <div class="copyright">
 	<ul style="">
 		<li style=""><a href="__APP____PUBLIC__/contactUs"  rel="nofollow">联系我们</a> | <a href="__APP__/Public/replymsg"  rel="nofollow">意见反馈</a> 
-		</li>
+		</li>		
+		<li><a href="http://www.miibeian.gov.cn/">京ICP备15033321号</a></li>
 	</ul>
 </div>
 </body>

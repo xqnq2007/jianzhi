@@ -43,9 +43,7 @@
 </body>
 </html> 
 <div id="main">
-<ul class="formul">
-	<!--  <li class="formli" style="margin-bottom:2px;"><span class="test" ><span style="margin-left:-11px;"><font color="#FF0000"style="margin-right:5px;">*</font>地址</span></span><span style="margin-right:10px;">:</span>天津市西青区天津工业大学&nbsp;<span ></span></li>-->
-	<!--  <li class="formli"><span class="test"><span style="margin-left:-11px;"><font color="#FF0000"style="margin-right:5px;">*</font>电话</span></span><span style="margin-right:10px;">:</span>18810711394&nbsp;<span  ></span></li>-->
+<ul class="formul">	
 	<li class="formli"><span  class="test" style="text-align:center;" ><span style="margin-left:8px;">Q Q</span></span><span style="margin-right:10px;">:</span>491325225&nbsp;<span></span></li>
 	<li class="formli"><span  class="test" style="text-align:center;" ><span style="">Email</span></span><span style="margin-right:10px;">:</span>xqnq2007@163.com&nbsp;<span></span></li>	
 </ul>

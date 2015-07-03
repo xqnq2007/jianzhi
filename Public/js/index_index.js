@@ -1,5 +1,4 @@
-function stuhov(){
-	
+function stuhov(){	
 	  var fostu=document.getElementById("stuform");
 	  fostu.style.display="";
 	  $("#stuform").css("display","block");
@@ -12,11 +11,9 @@ function stuhov(){
 	  var stubot=document.getElementById("stu");
 	  stubot.style.borderBottom="0px";
 	  var tabboss=document.getElementById("bosstab");	  
-	  tabboss.style.fontWeight="normal";	
-	 
+	  tabboss.style.fontWeight="normal";
   }
   function bosshov(){
-	 
 	  $("#stuform").css("display","none");
 	  var bossfrom=document.getElementById("bossform");
 	  bossform.style.display="block";
@@ -75,9 +72,7 @@ function stuhov(){
 	    // 验证用户名/Tpl/PUblic/register_do.php	    
 	    function usernameTest(){
 	    	var username=$.trim($("#bossUsername").val());
-	        if(!(/[a-zA-Z0-9]{3,20}/).test(username)){
-	           // $("#user_username").next().text('用户名格式不正确').removeClass().addClass('state3');
-	            //$(this).focus();
+	        if(!(/[a-zA-Z0-9]{3,20}/).test(username)){	          
 	        }else{
 	   			ok1=true;
 	        }      
@@ -122,9 +117,7 @@ function stuhov(){
 	    // 验证用户名/Tpl/PUblic/register_do.php	    
 	    function usernameTest(){
 	    	var username=$.trim($("#stuUsername").val());
-	        if(!(/[a-zA-Z0-9]{3,20}/).test(username)){
-	           // $("#user_username").next().text('用户名格式不正确').removeClass().addClass('state3');
-	            //$(this).focus();
+	        if(!(/[a-zA-Z0-9]{3,20}/).test(username)){	           
 	        }else{
 	   			ok3=true;
 	        }      
@@ -138,8 +131,7 @@ function stuhov(){
 	        }
 	    }
 	    //提交按钮,所有验证通过方可提交
-	    $("#stuSubBut").click(function(){
-	    	
+	    $("#stuSubBut").click(function(){	    	
 	    	var username=$.trim($("#stuUsername").val());
 	    	var password=$.trim($("#stuPass").val());
 	    	if((username=='')||(password=='')){
@@ -147,19 +139,22 @@ function stuhov(){
 	    	}else{	    		
 	    		usernameTest();
 	    		passwordTest();
-	    		if(ok3 && ok4){	    			
-	            	$("#stuform").submit();        	
+	    		if(ok3 && ok4){
+					var tmp;
+					$.ajaxSetup({ 
+						async : false 
+					});
+					$.post("/index.php/Index/stuLoginTest",{name:username,pass:password},function(data){
+						if(data=='1'){            		
+							 $("#stuform").submit();
+						}
+						else{
+							alert('用户名或密码错误');
+						}
+					});	
 	            }
-	    	}
-	       
-	       // alert('fdfdas');
-	    });
-	    /*$('.divvolist').click(function () {
-
-			var a=$(".detailId").innerText;
-	    	alert(a);
-			});	*/
-	     
+	    	} 
+	    });	    
 	});	
 	
 	

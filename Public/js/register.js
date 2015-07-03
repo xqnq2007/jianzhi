@@ -16,14 +16,21 @@ $(function(){
             $.ajaxSetup({ 
                 async : false 
             });
-            $.post("/index.php/Boss/usernameTest",{name:username},function(data){
-           	 if(data=='0'){            		
-            		 tmp='1';
-                	 }
-            	 else{
-            		alert('该用户名已被注册');
-            	 }
-   			});
+			var formname=$('form[name=\"regForm\"]').attr('action');
+			var posturl="";
+			if(formname.indexOf("Boss")>0){
+				posturl="/index.php/Boss/usernameTest";
+			}else{
+				posturl="/index.php/Stu/usernameTest";
+			}
+			$.post(posturl,{name:username},function(data){			
+			 if(data=='0'){			 
+					 tmp='1';
+					 }
+				 else{
+					alert('该用户名已被注册');
+				 }
+			});			
    			if(tmp=='1'){$(this).next().text('可以注册').removeClass().addClass('state4');}    	
         }         
     });   
@@ -74,7 +81,7 @@ $(function(){
  // 验证电话号码
     $("#user_phone").blur(function(){
     	var phone=$.trim($(this).val());
-		var patrn = /^((\+?86)|(\(\+86\)))?\d{3,4}-\d{7,8}(-\d{3,4})?$/;
+		var patrn = /^(((\+?86)|(\(\+86\)))?\d{3,4}-)?\d{7,8}(-\d{3,4})?$/;
 		var validateReg = /^((\+?86)|(\(\+86\)))?1\d{10}$/;
     	if(phone==''){$(this).next().text('不能为空').removeClass().addClass('state3');}
     	else if(!(patrn.test(phone)||validateReg.test(phone))){
@@ -85,7 +92,7 @@ $(function(){
     });
     function phoneTest(){
     	var phone=$.trim($("#user_phone").val());
-		var patrn = /^((\+?86)|(\(\+86\)))?\d{3,4}-\d{7,8}(-\d{3,4})?$/;
+		var patrn = /^(((\+?86)|(\(\+86\)))?(\d{3,4})?-)?\d{7,8}(-\d{3,4})?$/;
 		var validateReg = /^((\+?86)|(\(\+86\)))?1\d{10}$/;
     	if(phone==''){$("#user_phone").next().text('不能为空').removeClass().addClass('state3');}
     	else if(!(patrn.test(phone)||validateReg.test(phone))){

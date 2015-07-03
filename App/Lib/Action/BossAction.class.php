@@ -3,10 +3,7 @@
 /*if(!defined($_SESSION[boss_shell])){
     exit('Access Denied');
  }*/
-class BossAction extends Action {
-	public function _initialize() {
-		echo "<script src='__PUBLIC__/js/jquery.js'></script>";
-	}
+class BossAction extends Action {	
     public function index()
     { 	
 		if(!$_SESSION[boss_shell]){
@@ -25,7 +22,8 @@ class BossAction extends Action {
 			$condition['username']=$_SESSION[boss_username];
 			$res=$boss->where($condition)->select();
 			$this->assign('thepost',$res);			      
-			$this->display('Boss:editpost');			
+			$this->display('Boss:editpost');	
+			echo "<script src='__PUBLIC__/js/jquery.js'></script>";
 			echo "<script>
 			var subcss={	
 				margin:'0 0 0 225px'				
@@ -113,8 +111,8 @@ class BossAction extends Action {
 			$pass=trim($_POST['user_password']);
 			$phone=trim($_POST['user_phone']);
 			$weixin=weixinTest($_POST['user_weixin']);
-			$qq=$this->qqSub($_POST['user_qq']);
-			$email=$this->emailTest($_POST['user_email']);          
+			$qq=qqSub($_POST['user_qq']);
+			$email=emailTest($_POST['user_email']);          
 			$data=array( 	           
 				'id'=>(string)(10000+$boss_num),	      
 				'username'=>$username,
@@ -146,8 +144,7 @@ class BossAction extends Action {
 		 }		
     	$Data = M('Post'); // 实例化Data数据对象
 	    import('ORG.Util.myPage');// 导入分页类
-	    $map['username']=$_SESSION[boss_username];
-		echo $_SESSION[boss_username];
+	    $map['username']=$_SESSION[boss_username];		
 	    $count= $Data->where($map)->count();// 查询满足要求的总记录数 $map表示查询条件
 	    if($count==0){echo "您没有发布任何信息";}
 	    else{

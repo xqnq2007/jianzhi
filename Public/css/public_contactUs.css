@@ -1,6 +1,6 @@
-ul{	
+#main ul{	
 	margin:40px auto;	
-	height: 547px;
+	height: 400px;
 	width: 200px;
 	list-style:none;
 }

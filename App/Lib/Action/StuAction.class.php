@@ -1,9 +1,6 @@
 <?php
 // 本类由系统自动生成，仅供测试用途
-class StuAction extends Action {
-	public function _initialize() {
-		echo "<script src='__PUBLIC__/js/jquery.js'></script>";
-	}
+class StuAction extends Action {	
     public function index()
     { 	
 		if(!$_SESSION[stu_shell]){
@@ -93,7 +90,8 @@ class StuAction extends Action {
 		$this->assign('thepost',$tmp);
 		$this->assign('thearea',$tmparea);
 		$this->assign('theareaid',$tmpid);         
-		$this->display('Boss:editpost');		
+		$this->display('Boss:editpost');
+		echo "<script src='__PUBLIC__/js/jquery.js'></script>";
 		echo "<script>
 		$('span[name=\"hireNumSpan\"]').hide();
 		$('li[name=\"salaryLi\"]').hide();
@@ -164,6 +162,7 @@ class StuAction extends Action {
 		$tmp=$stu->where($condition)->select();      
 		$this->assign('theinfo',$tmp);            
 		$this->display('Boss:edit_perinfo');
+		echo "<script src='__PUBLIC__/js/jquery.js'></script>";
 		echo "<script>
 		var tmp=$('form[name=\"perInfoForm\"]').attr('action');
 		var tmpurl=tmp.replace(/Boss/,'Stu');
@@ -206,6 +205,7 @@ class StuAction extends Action {
 			exit('Access Denied');
 		}   	
 		$this->display('Boss:edit_pass');
+		echo "<script src='__PUBLIC__/js/jquery.js'></script>";
 		echo "<script>
 		var tmp=$('form[name=\"bossEditPassForm\"]').attr('action');
 		var tmpurl=tmp.replace(/Boss/,'Stu');
@@ -252,6 +252,7 @@ class StuAction extends Action {
     { 	      
     	$tmp=new HeaderAction();	
     	$this->display('Boss:register');
+		echo "<script src='__PUBLIC__/js/jquery.js'></script>";
 		echo "<script>			
 			$('form[name=\"regForm\"]').attr('action', '/index.php/Stu/reg');
 			</script>";	
@@ -264,44 +265,44 @@ class StuAction extends Action {
     }
     public function reg()
 	{    
-		if (md5(trim($_POST['yzcode']))!= $_SESSION['verify'])
+		if (md5(trim($_POST['yzmInput']))!= $_SESSION['verify'])
 		{  
 			echo "<script>fleshVerify();</script>"; 
 			$this->error('验证码错误');  //如果验证码不对就退出程序         
 		}
         else{
-       			load("@.ComFunc");
-			    $stu=M('Stu');
-       		    $stu_num=$stu->where('')->count();       		   
-		        $username=trim($_POST['user_username']); 
-				$name=nameSub($_POST['user_name']); 
-				$pass=trim($_POST['user_password']);
-				$phone=trim($_POST['user_phone']);
-				$weixin=weixinTest($_POST['user_weixin']);
-				$qq=qqSub($_POST['user_qq']);
-				$email=emailTest($_POST['user_email']);          
-		        $data=array( 	           
-					'id'=>(string)(10000+$stu_num),					  
-					'username'=>$username,
-					'pass'=>$pass,
-					'name'=>$name,
-					'phone'=>$phone,
-					'weixin'=>$weixin,
-					'qq'=>$qq,
-					'email'=>$email,        
-					'regtime'=> date('Y-m-d H:i:s',time()),	                 
-      			);
-		        if($stu->add($data)){
-					$_SESSION[stu_name]=$name;
-					$_SESSION[stu_username]=$username;
-					$_SESSION[stu_shell]=md5($username.$pass);
-					$this->clearBossSession();				
-					$this->success('注册成功');
-					$this->redirect('/Stu/index');
-		        }
-				else{		      	
-					$this->error('注册失败');
-				}
+			load("@.ComFunc");
+			$stu=M('Stu');
+			$stu_num=$stu->where('')->count();       		   
+			$username=trim($_POST['user_username']); 
+			$name=nameSub($_POST['user_name']); 
+			$pass=trim($_POST['user_password']);
+			$phone=trim($_POST['user_phone']);
+			$weixin=weixinTest($_POST['user_weixin']);
+			$qq=qqSub($_POST['user_qq']);
+			$email=emailTest($_POST['user_email']);          
+			$data=array( 	           
+				'id'=>(string)(10000+$stu_num),					  
+				'username'=>$username,
+				'pass'=>$pass,
+				'name'=>$name,
+				'phone'=>$phone,
+				'weixin'=>$weixin,
+				'qq'=>$qq,
+				'email'=>$email,        
+				'regtime'=> date('Y-m-d H:i:s',time()),	                 
+			);
+			if($stu->add($data)){
+				$_SESSION[stu_name]=$name;
+				$_SESSION[stu_username]=$username;
+				$_SESSION[stu_shell]=md5($username.$pass);
+				$this->clearBossSession();				
+				$this->success('注册成功');
+				$this->redirect('/Stu/index');
+			}
+			else{		      	
+				$this->error('注册失败');
+			}
         } 
     }
     public function usernameTest(){

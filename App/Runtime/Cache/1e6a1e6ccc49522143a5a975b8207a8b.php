@@ -5,95 +5,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <script src="__PUBLIC__/js/jquery.js"></script>
-<script>
-
-function per_center(){ 		
-	window.location.href="__APP__/Index/perCenter"; 
-	}
-function hrefIndex(){ 		
-	window.location.href="__APP__/Index/index"; 
-	}
-function hrefStuPostIndex(){ 		
-	window.location.href="__APP__/Stu/stuPostIndex"; 
-	}
-</script>
-
-<style type="text/css">
-<!--
-body {
-	margin: 0px;
-	width:100%;
-	text-align: center;	
-}
-#top{
-    width:960px;
-    height:100px;   
-    margin:0px auto;
-}
-#menu{
-    width:100%;
-    height:50px;
-    background:#5da7e0;
-    margin:0px auto;
-    }
-#logo {
-	
-	height: 100px;
-	width: 250px;
-	float:left;
-}
-#toprig {
-	
-	height: 100px;	
-	width: 400px;
-	float:right;
-	font-size: 14px;
-}
-a {
-	text-decoration: none;
-}
-a:hover {
-	color: #FF0000;
-	cursor: hand;
-}
-*{
-  padding:0px;
-  margin:0px;
- }
-.ul_header {
-	text-decoration: none;
-	height: 50px;
-	width: 960px;
-	list-style: none;
-	margin:auto;
-}
-.li_header{
-	float: left;
-	width: 80px;
-	line-height: 50px;
-	text-align:center;
-}
-#header_logintip{
-    width:200px;
-    height:20px;
-	margin-right:20px;
-}
-#shouyeshoucang{
-	width:380px;
-	height:50px;
-	margin-top:50px;
-	
-	line-height:50px;
-	
-	float:right;
-	text-align:right;
-}
-.hovColor:hover{
-	cursor:pointer;
-	background:#5282e0;
-}
--->
-</style>
+<script src="__PUBLIC__/js/header.js"></script>
+<link href="__PUBLIC__/css/header.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
   <div id="top">
@@ -111,9 +24,9 @@ a:hover {
   </div>
   <div id="menu">
       <ul class="ul_header">
-	    <li class="li_header hovColor" style="width:55px;" onclick="hrefIndex()"><a href="__APP__/Index/"><font color="#FFFFFF">首页</font></a></li>
-	    <li class="li_header hovColor" onclick="hrefStuPostIndex()"><a href="__APP__/Stu/stuPostIndex" ><font color="#FFFFFF">求职信息</font></a></li>	
-		 <li class="li_header hovColor" onclick="per_center()"><a href="javascript:void(0);" onclick="per_center()"><font color="#FFFFFF">个人中心</font></a></li>		
+	    <li class="li_header hovColor" style="width:55px;" onclick="hrefIndex()"><a href="__APP__/Index/"><font class="white">首页</font></a></li>
+	    <li class="li_header hovColor" onclick="hrefStuPostIndex()"><a href="__APP__/Stu/stuPostIndex" ><font class="white">求职信息</font></a></li>	
+		 <li class="li_header hovColor" onclick="per_center()"><a href="javascript:void(0);" onclick="per_center()"><font class="white">个人中心</font></a></li>		
 	  </ul>
   </div>
 
@@ -167,6 +80,9 @@ height:50px;
 margin-top:20px;
 marign-bottom:20px;
 }
+.copyright a:hover{
+	color:red;
+}
 .copyright li {
 display: list-item;
 /*text-align: -webkit-match-parent;*/
@@ -181,7 +97,7 @@ line-height:20px;
 <body>
 <div class="copyright">
 	<ul style="">
-		<li style=""><a href="__APP____PUBLIC__/contactUs"  rel="nofollow">联系我们</a> | <a href="__APP____PUBLIC__/replymsg"  rel="nofollow">意见反馈</a> 
+		<li style=""><a href="__APP____PUBLIC__/contactUs"  rel="nofollow">联系我们</a> | <a href="__APP__/Public/replymsg"  rel="nofollow">意见反馈</a> 
 		</li>
 	</ul>
 </div>

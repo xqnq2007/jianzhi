@@ -64,32 +64,35 @@ class IndexAction extends Action {
 			echo "0";
 		}  
     }
+	public function stuLoginTest(){ 	
+		$stu_id=trim($_POST['name']);
+		$stu_password=trim($_POST['pass']);
+		$stu=M('Stu');
+		$condition['username']=$stu_id;
+		$tmp=$stu->where($condition)->select();		
+		$b=is_array($tmp);
+		$ps=$b ? $stu_password==$tmp[0]["pass"]:FALSE;
+		if($ps){
+			$this->clearStuSession();
+			$this->clearBossSession();			
+			$_SESSION[stu_name]=$tmp[0]["name"];
+			$_SESSION[stu_username]=$tmp[0]["username"];
+			$_SESSION[stu_shell]=md5($tmp[0]["username"].$tmp[0]["pass"]);
+			echo "1";
+		}
+		else{
+			echo "0";
+		}  
+    }
 	public function boss_login(){		
         echo "<script language='javascript' type='text/javascript'>";
         echo "window.location.href='/index.php/Boss/index'";
         echo "</script>";
     }
-	public function stu_login(){ 
-    $stu_id=trim($_POST['stuUsername']);
-    $stu_password=trim($_POST['stuPass']);
-    $Model=M();
-    $a=$Model->query("SELECT * FROM jz_stu WHERE username='$stu_id'");
-    $b=is_array($a);
-    $ps=$b ? $stu_password==$a[0]["pass"]:FALSE;
-	if($ps){
-		$this->clearBossSession();
-		$this->clearStuSession();
-		$_SESSION[stu_name]=$a[0]["name"];
-		$_SESSION[stu_username]=$a[0]["username"];
-		$_SESSION[stu_shell]=md5($a[0]["username"].$a[0]["pass"]);		
+	public function stu_login(){
         echo "<script language='javascript' type='text/javascript'>";
         echo "window.location.href='/index.php/Stu/index'";
         echo "</script>";
-	}
-	else{
-		echo "<meta http-equiv='Content-Type'' content='text/html; charset=utf-8'>";
-		echo "<script> alert('密码或者用户名错误');window.location.href='/index.php'</script>";
-	}  
     }
     public function logout(){
     	$_SESSION[boss_name]=null;$_SESSION[stu_name]=null;

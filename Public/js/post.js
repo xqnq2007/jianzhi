@@ -44,7 +44,7 @@ $(function(){
  // 验证电话号码
     $("#phone").blur(function(){
     	var phone=$.trim($(this).val());
-		var patrn = /^((\+?86)|(\(\+86\)))?\d{3,4}-\d{7,8}(-\d{3,4})?$/;
+		var patrn = /^(((\+?86)|(\(\+86\)))?\d{3,4}-)?\d{7,8}(-\d{3,4})?$/;
 		var validateReg = /^((\+?86)|(\(\+86\)))?1\d{10}$/;
     	if(phone==''){$(this).next().text('不能为空').removeClass().addClass('state3');}
     	else if(!(patrn.test(phone)||validateReg.test(phone))){
@@ -56,7 +56,7 @@ $(function(){
     }); 
     function phoneTest(){
     	var phone=$.trim($("#phone").val());
-		var patrn = /^((\+?86)|(\(\+86\)))?\d{3,4}-\d{7,8}(-\d{3,4})?$/;
+		var patrn = /^(((\+?86)|(\(\+86\)))?\d{3,4}-)?\d{7,8}(-\d{3,4})?$/;
 		var validateReg = /^((\+?86)|(\(\+86\)))?1\d{10}$/;
     	if(phone==''){$("#phone").next().text('不能为空').removeClass().addClass('state3');}
     	else if(!(patrn.test(phone)||validateReg.test(phone))){
