@@ -1,0 +1,82 @@
+.mr120{
+	margin-right:120px;
+}
+.h45{
+	height:45px;
+}
+.h10{
+	height:10px;
+}
+.well{
+	padding:0px;
+	border:0px;
+}
+.title{
+	font-size:18px;	
+	line-height:1.54;	
+	white-space: nowrap;
+	text-overflow:ellipsis;
+	overflow:hidden;
+}
+.title a{
+	color:blue;
+	font-weight:normal
+}
+.title a:hover{
+	cusor:hand;
+}
+.f13{
+	font-size:13px;	
+}
+.c-container{
+	width: 538px; 
+	font-size: 13px;
+	line-height: 1.54;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+.detail{
+	height:40px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.noborder{
+	border:none;
+}
+.titlepadding{
+	padding:0;
+}
+.pagination>li>a, .pagination>li>span{
+	margin-right:10px;
+	padding: 7px 13.5px;
+}
+.current{
+	border:none;
+	font-weight:600;
+}
+.detailpadding{
+	padding:0;
+}
+.nums{
+	width: 538px; 
+	height: 42px;
+	line-height: 42px;
+	font-size: 12px;
+	color: #999;
+	padding-left:2px;
+}
+.resultpage{
+	width:630px;
+}
+.mb20{
+	margin-bottom:20px;
+}
+.pl110{
+	padding-left:110px;
+}
+ .leftBlock {
+	width:538px;
+	margin-bottom: 14px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #f3f3f3;
+}

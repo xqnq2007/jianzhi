@@ -4,6 +4,7 @@
 	<title>兼职信息</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maxinum-scale=1.0,user-scalable=no">
+	<link href="__PUBLIC__/css/Wei/weicss.css" rel="stylesheet"	type="text/css" />
 	<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
@@ -20,12 +21,15 @@
 	.list-group{border: 0px;border-radius:0px;overflow:hidden}
 	.list-group-item{color: #292929;font-size: 14px;font-weight: 500;border: 1px solid #eaeaea;border-radius:0px !important;}
 	.posttitle{height:50px;}
+	.fabu{
+		color: #3BA3FF;
+	}
 	</style>
 </head>
 <body>
 <!-- header begin -->
 <nav class="navbar navbar-fixed-top text-center">
-<a class="" href="__ROOT__/index.php/Wei/post"><span class="glyphicon glyphicon-pencil"></span>&nbsp;发布兼职</a>
+<a class="fabu" href="__ROOT__/index.php/Wei/post"><span class="glyphicon glyphicon-pencil"></span>&nbsp;发布兼职</a>
 </nav>
 <div class="well">
 </div>
@@ -35,12 +39,12 @@
 <li class="list-group-item">
 	<!--<img src="http://www.iconpng.com/png/long_shadow_icons/user.png">-->
 <div style="height:50px;">
-	<h5>{$vo.title}</h5>
+	<h5><font class="title">{$vo.title}</font></h5>
   <h6>{$vo.time}</h6></div>
 </li>
 <li class="list-group-item">{$vo.detail}</li>
-<li class="list-group-item"><span style="color:red"></span>{$vo.phone}</li>
-<li class="list-group-item"><span style="color:red"></span>{$vo.qq}</li>
+<li class="list-group-item"><span style="color:red"></span>电话：{$vo.phone}&nbsp;&nbsp;&nbsp;&nbsp;微信：{$vo.weixin}</li>
+<li class="list-group-item" ><span style="color:red"></span>QQ：{$vo.qq}</li>
 </ul>
 </div>
 </volist>

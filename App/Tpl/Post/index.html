@@ -4,9 +4,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title> 
-<link href="__PUBLIC__/css/public_post.css" rel="stylesheet"	type="text/css" />
-<link href="__PUBLIC__/css/post.css" rel="stylesheet"	type="text/css" />
-<script src="__PUBLIC__/js/jquery.js"></script>
+<link href="__PUBLIC__/css/public_post.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/css/post.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/css/comcss.css" rel="stylesheet" type="text/css" />
+<script src="__PUBLIC__/js/jquery.min.js"></script>
 <script src="__PUBLIC__/js/post.js"></script>
 </head>
 <body>
@@ -18,7 +19,7 @@
 <ul class="formul">
 	<li class="formli" name="postTypeLi">
 	<span class="test" ><font  class="mar_rig5 red">*</font>类型</span><span class="mar_rig10">:</span>
-	<input type="checkbox" id="zhaopin"name="tongyi" value="0" checked=true />&nbsp;招聘消息&nbsp;&nbsp;<input type="checkbox" id="qiuzhi" name="tongyi" value="1"/>&nbsp;求职消息</li>
+	<input type="checkbox" class="vam" id="zhaopin"name="tongyi" value="0" checked=true />&nbsp;招聘消息&nbsp;&nbsp;<input type="checkbox" class="vam" id="qiuzhi" name="tongyi" value="1"/>&nbsp;求职消息</li>
 	<li class="formli"><span class="test" ><font  class="mar_rig5 red">*</font>标题</span><span class="mar_rig10">:</span><input id="title" name="title" type="text" class="h15 in1 border" maxlength="25" />&nbsp;<span ></span></li>
 	<li class="formli"><span class="test" >地区</span><span class="mar_rig10 fl">:</span>
 	<div class="input_select_menu" id="select_prov_id"><span class="select_item"><font class="select_area mar_lef12">选择地区</font><input name="area_id" class="input disnone" value="0" /></span>
@@ -67,9 +68,9 @@
 	<li class="formli"><span class="test"><font  class="mar_rig5 red">*</font>电话</span><span class="mar_rig10">:</span><input id="phone" name="phone" type="text" class="h15 w380 in4 border" value="{$phone}" maxlength='20' />&nbsp;<span></span></li>
 	 <li class="formli"><span class="test">微信</span><span class="mar_rig10">:</span><input id="user_weixin" name="user_weixin" type="text" class="h15 w380 in4 border" value="{$weixin}" maxlength='20' />&nbsp;<span></span></li>	
 	<li class="formli"><span class="test"><font class="mar_rig3">Q Q</font></span><span class="mar_rig10">:</span><input class="h15 w380 in4 border"name="qq" id="qq" type="text" value="{$qq}" maxlength='20' />&nbsp;<span></span></li>
-	<li class="formli" name="yzcodeLi"><span class="test" ><font  class="mar_rig5 red">*</font>验证码</span><span class="mar_rig10">:</span> <img class="yzimg" id="yzcodeImg" name="Image1" title="验证码" src='__APP__/Post/yanzhengma'><a href="javascript:fleshVerify();">换一个</a></li>
+	<li class="formli" name="yzcodeLi"><span class="test" ><font  class="mar_rig5 red">*</font>验证码</span><span class="mar_rig10 mr17">:</span> <img class="yzimg" id="yzcodeImg" name="Image1" title="验证码" src='__APP__/Post/yanzhengma'><a href="javascript:fleshVerify();">换一个</a></li>
 	<li class="formli" name="yzcodeInputLi"><span class="fl alignBot"><input type="text" id="yzcodeInput" name="yzcodeInput" value="请输入验证码"class="h15 w97 border yzcodeInput" maxlength='10'/>&nbsp;<font id="yzcodeAlertFont" ></font></span></li>
-	<li class="formli" name="agreementLi"id="agreementLi"><input type="checkbox" name="tongyi" value="1" checked="checked" />我同意兼职网服务条款《<a href="__APP__/Public/agreement">使用协议</a>》 </li>
+	<li class="formli" name="agreementLi"id="agreementLi"><input type="checkbox" name="tongyi"  class="vam" value="1" checked="checked" />我同意兼职网服务条款《<a href="__APP__/Public/agreement">使用协议</a>》 </li>
 	<li class="formli mar_top15"><input name="pubSubBut" id="subBut" type="button" class="sub" value="提交"/></li>
 </ul>
 </div>

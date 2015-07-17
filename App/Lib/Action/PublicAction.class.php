@@ -9,9 +9,17 @@ class PublicAction extends Action {
     { 
     	$this->display(''); // 输出模板 
     }
+	public function contactUs()
+    { 
+    	$this->display(''); // 输出模板 
+    }
+	public function replymsg()
+    { 
+    	$this->display(''); // 输出模板 
+    }
 	public function testyzcode()
     { 
-    	if(md5(trim($_POST['yzcodenum']))!= $_SESSION['verify'])
+    	if(md5(strtolower(trim($_POST['yzcodenum'])))!= $_SESSION['verify'])
 		{  
 			 echo "0";	      
 		}

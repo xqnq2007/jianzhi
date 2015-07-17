@@ -156,6 +156,9 @@ function stuhov(){
 	    	} 
 	    });	    
 	});	
-	
-	
-	
+	$(function(){
+		$(".current").css('border','none');
+		$(".current").hover(function(){
+			$(this).css('background','none');
+		});
+	});		

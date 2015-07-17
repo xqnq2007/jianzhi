@@ -104,7 +104,7 @@ $(function(){
 	}).blur(function(){		
         var yzcode=$.trim($(this).val());
         if(yzcode==''){$(this).next().text('不能为空').removeClass().addClass('state3');}        
-        else if(!(/\d{4}/).test(yzcode)){
+        else if(!(/[0-9a-zA-Z]{4}/).test(yzcode)){
             $(this).next().text('格式不对').removeClass().addClass('state3');           
         }else{ 
 			var tmp=0;
@@ -116,19 +116,19 @@ $(function(){
 				tmp=1;
             }
             else{					
-				alert('验证码错误');
-				fleshVerify();
+				//alert('验证码错误');
+				//fleshVerify();
             }
    			});
 			if(tmp=='1'){
 				$(this).next().text('');
 			}
         }        
-    });   
+    }); 
     function yzcodeTest(){
     	var yzcode=$.trim($("#yzcodeInput").val());
         if(yzcode==''){$("#yzcodeInput").next().text('不能为空').removeClass().addClass('state3');}        
-        else if(!(/\d{4}/).test(yzcode)){
+        else if(!(/[0-9a-zA-Z]{4}/).test(yzcode)){
             $("#yzcodeInput").next().text('格式不对').removeClass().addClass('state3');           
         }else{
 			var tmp=0;
@@ -308,9 +308,40 @@ function fleshVerify(){
 			$(this).parent().parent().find("font.select_area").html($(this).find("span").html());
 			$(this).parent().parent().find("input").val($(this).find("span").attr("dc"));           
 			$(this).parent().css("display","none");
+			if(className="select_payType_id"){
+				var payType=$(this).find("span").html();
+				switch(payType){
+					case "日结":						
+						$("#select_salaryType_id").find("font.select_area").html("元/时");
+						$("#select_salaryType_id").find("input").val(1);
+						break;
+					case "周结":						
+						$("#select_salaryType_id").find("font.select_area").html("元/日");
+						$("#select_salaryType_id").find("input").val(2);
+						break;
+					case "月结":						
+						$("#select_salaryType_id").find("font.select_area").html("元/月");
+						$("#select_salaryType_id").find("input").val(3);
+						break;
+					case "其它":						
+						break;
+				}
+			}
+		});
+	}
+	function payTypeSelect(){
+		var se=$("#select_payType_id");
+		var seli=se.find("ul.item_list li");			
+		seli.click(function(){
+			var payType=$(this).find("span").html();
+			alert(payType);
+			//$(this).parent().parent().find("font.select_area").html($(this).find("span").html());
+			//$(this).parent().parent().find("input").val($(this).find("span").attr("dc"));           
+			//$(this).parent().css("display","none");
 		});
 	}
 	repselect("select_prov_id");
 	repselect("select_payType_id");
 	repselect("select_salaryType_id");
+	//payTypeSelect();
 });

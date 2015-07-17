@@ -1,19 +1,81 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
+<!--<!DOCTYPE html>-->
 <html>
-
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-<title>首页</title>
-<link href="__PUBLIC__/css/index_index.css" rel="stylesheet" type="text/css" />
-<script src="__PUBLIC__/js/jquery.js"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<title>兼职时代</title>
+<link href="__PUBLIC__/boot/css/bootstrap.min.css" rel="stylesheet">
+<link href="__PUBLIC__/css/index.css" rel="stylesheet" type="text/css" />
+<script src="__PUBLIC__/js/jquery.min.js"></script>
+<script src="__PUBLIC__/boot/js/bootstrap.min.js"></script>
 <script src="__PUBLIC__/js/index_index.js"></script>
 </head>
 <body>
+<include file="Header:index" />
+<div class="container-fluid mb20">
+	<div class="row-fluid">
+		<div class="col-md-6 pl110">
+			<div class="nums">
+				共有1000条信息
+			</div>
+			<div class="leftBlock"></div>
+			<volist name="list" id="vo">
+				<div class="well c-container">				
+				<ul class="list-group f13">
+				<li class="list-group-item noborder titlepadding">
+					<div class="title" data-toggle="modal" data-target="#myModal">
+					<a>		{$vo.title}
+					</a>
+					</div>
+					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					   <div class="modal-dialog">
+						  <div class="modal-content">
+							 <div class="modal-header">
+								<button type="button" class="close" 
+								   data-dismiss="modal" aria-hidden="true">
+									  &times;
+								</button>
+								<h4 class="modal-title" id="myModalLabel">
+								   模态框（Modal）标题
+								</h4>
+							 </div>
+							 <div class="modal-body">
+								在这里添加一些文本
+							 </div>
+							 <div class="modal-footer">
+								<button type="button" class="btn btn-default" 
+								   data-dismiss="modal">关闭
+								</button>
+								<button type="button" class="btn btn-primary">
+								   提交更改
+								</button>
+							 </div>
+						  </div><!-- /.modal-content -->
+					</div><!-- /.modal -->
+					</div>
+				</li>
+				<li class="list-group-item noborder titlepadding">{$vo.time}</li>
+				<li class="list-group-item detail noborder detailpadding">
+				{$vo.detail}
+				</li>
+				<li class="list-group-item noborder detailpadding h10"><span style="color:red"></span>电话：{$vo.phone}&nbsp;&nbsp;&nbsp;&nbsp;微信：{$vo.weixin}&nbsp;&nbsp;&nbsp;&nbsp;QQ：{$vo.qq}
+				</li>				
+				</ul>
+				</div>
 
-<include file="Header:index" /> 
-<div id="bigmain">
+			</volist>
+			<div class="leftBlock"></div>
+			<div class="resultpage">{$page}</div>			
+		</div>
+		<div class="col-md-6 pl110">
+			102fdsafds
+		</div> 
+	</div>
+</div>
+
+	<include file="Public:footer" />
+<!--<div id="bigmain">
 <div id="rig">
 <div class="rig1" onclick="postinfo()">
 <ul >
@@ -80,7 +142,7 @@
 </div>
 <div class="resultpage">{$page}</div>
 </div>
-</div>
-<include file="PUblic:footer" /> 
+</div>-->
+
 </body>
 </html>

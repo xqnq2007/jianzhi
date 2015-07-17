@@ -3,6 +3,12 @@ ul{
 	list-style:none;
 	width: 600px;
 }
+a:hover{
+	color:red;
+}
+input{
+	height:30px;
+}
 .mt40{
 	margin-top:40px;
 	margin-bottom:40px;
@@ -62,8 +68,8 @@ li{
 	font-size:14px;	
 }
 .h15{
-	height:25px;
-	line-height:25px;
+	height:30px;
+	line-height:30px;
 	vertical-align:middle;	
 }
 input{
@@ -87,11 +93,14 @@ input{
 	font-weight:bold;
 	width:80px;
 	margin-left:220px;	
-	background: #0a72ae;
+	background: #3BA3FF;
 	color:white;
 	cursor:pointer;
 	border:0px;
 	text-indent: 0px;
+}
+.sub:hover{
+	background: #2B75AE;
 }
 .editPassSub{
 	margin-left:190px;	
@@ -135,6 +144,10 @@ input{
 }
 .mar_lef12{
 	margin-left:12px;
+}
+.mr17{
+	margin-right:17px;
+	margin-right:13px\9;
 }
 #agreementLi{
 	margin-left:160px;
@@ -209,13 +222,13 @@ input{
 	display:inline;
 	float:left;
 	position: relative;
-	height: 25px;
+	height: 30px;
 	vertical-align: middle;
 	border: 1px solid #A9A9A9;
 	width:120px;
 	margin-top:11px;
 	margin-right:20px;
-	background:#FFF url(../images/triangle.png) no-repeat 86px -6px;
+	background:#FFF url(../images/triangle.png) no-repeat 86px -3px;
 }
 .width85{
 	width:85px;
@@ -224,16 +237,16 @@ input{
 	width:92px;
 }
 .backgrdleft52{
-	background:#FFF url(../images/triangle.png) no-repeat 52px -6px;
+	background:#FFF url(../images/triangle.png) no-repeat 52px -3px;
 }
 .backgrdleft60{
-	background:#FFF url(../images/triangle.png) no-repeat 60px -6px;
+	background:#FFF url(../images/triangle.png) no-repeat 60px -3px;
 }
 .select_item {
 	display: inline;
 	float:left;
-	height: 25px;
-	line-height: 25px;
+	height: 30px;
+	line-height: 30px;
 	overflow: hidden;
 	padding: 0 0 0 0px;
 	white-space: nowrap;
@@ -248,7 +261,7 @@ input{
 .item_list {
 	display: none;
 	position: absolute;
-	top: 25px;
+	top: 30px;
 	left: -1px;
 	overflow: hidden;
 	background: #fff;
@@ -274,8 +287,8 @@ input{
 }
 .item_list li {
 	margin: 0;
-	height: 32px;
-	line-height: 32px;
+	height: 30px;
+	line-height: 30px;
 	text-align: left;
 	float:left;
 }

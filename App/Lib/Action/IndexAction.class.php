@@ -3,12 +3,14 @@
 class IndexAction extends Action {	
     public function index()
     {
-	    $Data = M('Post'); // 实例化Data数据对象
+	     $Data = M('Post'); // 实例化Data数据对象
 	    import('ORG.Util.Page');// 导入分页类
 	    $count= $Data->where($map)->count();// 查询满足要求的总记录数 $map表示查询条件
 	    $Page= new Page($count,10);// 实例化分页类 传入总记录数
 		$Page->setConfig(header,'个发布');
-	    $Page->setConfig(theme,"%upPage% %first% %prePage% %linkPage% %downPage% %nowPage%/%totalPage% 页 %totalRow% %header%");
+		$Page->rollPage=10;
+	    //$Page->setConfig(theme,"%upPage% %first% %prePage% %linkPage% %downPage% %nowPage%/%totalPage% 页 %totalRow% %header%");
+		$Page->setConfig('theme',"<ul class='pagination'><li>%upPage%</li><li>%linkPage%</li><li>%downPage%</li></ul>");
 	    $show= $Page->show();// 分页显示输出
 	    // 进行分页数据查询
 	    $list = $Data->where($map)->order('time desc')->limit($Page->firstRow.','.$Page->listRows)->select();
@@ -103,8 +105,7 @@ class IndexAction extends Action {
         echo "</script>";
     }
 	public function postinfo(){    	
-		$tmp=new HeaderAction();
-		echo "<script src='__PUBLIC__/js/jquery.js'></script>";
+		$tmp=new HeaderAction();		
 		if($_SESSION[boss_username]){					
 			$tmp=new HeaderAction();
 			$boss=M("Boss");		    
@@ -113,7 +114,8 @@ class IndexAction extends Action {
 		    $this->assign('qq',$res[0][qq]);
 		    $this->assign('phone',$res[0][phone]);
 			$this->assign('weixin',$res[0][weixin]);
-		    $this->display('Post:index');			
+		    $this->display('Post:index');
+			echo "<script src='__PUBLIC__/js/jquery.js'></script>";
 			echo "<script> 
 				$('li[name=\"postTypeLi\"]').hide();
 				$('li[name=\"yzcodeLi\"]').hide();
@@ -132,7 +134,8 @@ class IndexAction extends Action {
 		    $this->assign('qq',$res[0][qq]);
 		    $this->assign('phone',$res[0][phone]);
 			$this->assign('weixin',$res[0][weixin]);
-		    $this->display('Post:index');			
+		    $this->display('Post:index');
+			echo "<script src='__PUBLIC__/js/jquery.js'></script>";
 			echo "<script> 
 				$('li[name=\"postTypeLi\"]').hide();
 				$('li[name=\"yzcodeLi\"]').hide();
@@ -146,14 +149,15 @@ class IndexAction extends Action {
 				$('input[id=\"subBut\"]').attr('name', 'stuSubBut');
 			</script>";	
 		}else
-		{
-			$this->display('Post:index');
+		{			
+			$this->display('Post:index');			
 		}
     }
  	public function pubStuPost()//已注册用户发布信息
     { 	       
     	$post=M('Stupost');      
 		$post_num=$post->where('')->count();
+		load("@.comfunc");
         $detail=detailSub($_POST['detail']);
         $qq=qqSub($_POST['qq']);
 		$title=trim($_POST['title']);
@@ -180,18 +184,19 @@ class IndexAction extends Action {
         	$this->error('发布失败');
         }   	
         
-    }
+    }	
 	public function pubBossPost()//未注册用户发布招聘信息
     { 			    
 		$post=M('Post');      
-		$post_num=$post->where('')->count();      
+		$post_num=$post->where('')->count();
+		load("@.comfunc");		
 		$detail=detailSub($_POST['detail']);
 		$salary=salarySub($_POST['salary']);
 		$num=numSub($_POST['num']);
 		$qq=qqSub($_POST['qq']);
 		$title=trim($_POST['title']);
 		$phone=phoneSub($_POST['phone']);
-		$weixin=weixinTest($_POST['user_weixin']);
+		$weixin=weixinTest($_POST['user_weixin']);		
 		$data=array(      
 			'id'=>(string)(10000+$post_num),
 			'username'=>'',
@@ -209,52 +214,13 @@ class IndexAction extends Action {
 			'qq'=>$qq,      
 		);
 		if($post->add($data)){
-			echo "<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>";
-			echo "<script type='text/javascript'>window.parent.location.href='/index.php';</script>";
+			$this->success("发布成功");
+			$this->redirect("Index/index");			
 						
-		}else{
-			echo "<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>";        	
-			$this->error('发布失败');
+		}else{			
+			$this->error("发布失败");
+			$this->redirect("Index/postinfo");		
 		}
     }
-    public function register(){
-    	$this->display('PUblic:register');
-    }
-    public function justpost(){
-    	$this->display('PUblic:post');
-    }
-    public function insert(){
-    	if (md5($_POST['yzcode'])!= $_SESSION['verify'])
-       {  
-         die('验证码错误');  //如果验证码不对就退出程序
-        }
-        else{
-        	if($_POST['user_kind']==0){
-        		echo "求职用户";
-        	}else{
-        		 echo "<script type='text/javascript'>alert('发布成功');window.location.href='/index.php/Boss/register?';</script>";
-        	}
-        } 
-    }
-     public function replymsg(){
-    	$this->display('');
-    }
-    public function insertmsg(){
-    	$replymsg=D('Replymsg');
-      $data=array(      
-      'title'=>$_POST['title'],      
-      'detail'=>$_POST['detail'], 
-      );
-      if($replymsg->create()){
-      	if($replymsg->add($data)){
-      	$this->success("留言成功");}
-      }else{
-      	$this->error("标题不能为空");
-      }
-    }
-    public function contactus(){
-    	$this->display('');      
-    }               
-    
 }
 ?>

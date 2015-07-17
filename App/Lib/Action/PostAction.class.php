@@ -1,38 +1,10 @@
 <?php
 // 本类由系统自动生成，仅供测试用途
-class PostAction extends Action {
-	public function _initialize() {
-		echo "<script src='__PUBLIC__/js/jquery.js'></script>";
-	}
+class PostAction extends Action {	
     public function index()
     { 	
        $this->display('Post:index'); // 输出模板    	
-    }
-    public function add()//未注册用户发布信息
-    { 	
-      $post=M('Post');
-      $data=array(      
-      'id'=>'',
-      'username'=>'xxx',
-      'title'=>$_POST['title'],
-      'area'=>$_POST['area_id'],
-      'salary'=>$_POST['salary'],
-      'numwant'=>$_POST['num'],
-      'detail'=>$_POST['detail'],      
-      'time'=> date('Y-m-d H:i:s',time()),      
-      'phone'=>$_POST['phone'],
-      'qq'=>$_POST['qq'],      
-      );
-      if($post->add($data)){
-      	echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
-      	echo "<script type='text/javascript'>alert('发布成功');window.location.href='';</script>";
-      }
-      else{
-      	echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
-      	echo "<script type='text/javascript'>alert('发布失败');window.location.href='/index.php/post';</script>";
-      }
-    
-    }
+    }    
 	public function postDetail(){    	  
 		$post=M('Post');
 		$boss=M('Boss');
@@ -62,7 +34,8 @@ class PostAction extends Action {
 		$tmparea=$tmpareas[0][area];
 		$this->assign('thearea',$tmparea);           
 		$this->assign('thepost',$tmp);      
-		$this->display('Post:postDetail');		
+		$this->display('Post:postDetail');
+		echo "<script src='__PUBLIC__/js/jquery.js'></script>";
 		echo "<script>		
 			$('span[name=\"salarySpan\"]').hide();
 			$('span[name=\"numSpan\"]').hide();
@@ -72,36 +45,10 @@ class PostAction extends Action {
 			};
 			$('span[name=\"areaSpan\"]').css(numcss);
 		</script>";
-    }
-	public function test(){
-		$post=M('Post');
-		$data=array(      
-		'id'=>'',
-		'username'=>'xx',
-		'title'=>$_POST['title'],
-		'area'=>$_POST['area_id'],
-		'salary'=>$_POST['salary'],
-		'numwant'=>$_POST['num'],
-		'detail'=>$_POST['detail'],      
-		'time'=> date('Y-m-d H:i:s',time()),      
-		'phone'=>$_POST['phone'],
-		'qq'=>$_POST['qq'],      
-        );
-		dump($data);
-		if($post->add($data)){      	
-			echo "<script type='text/javascript'>";
-			echo "alert('发布成功');window.location.href='__APP__';";
-			echo "</script>";
-		}
-		else{
-			echo "发布失败";
-		}
-		$this->display('Post:index');
-   }
-Public function yanzhengma(){
-    import('ORG.Util.Image');
-    ob_end_clean();
-    Image::buildImageVerify();
- }
+    }	
+	Public function yanzhengma(){
+		import('ORG.Util.Image');		
+        Image::buildImageVerify();			
+	}
 }
 ?>

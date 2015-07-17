@@ -29,6 +29,7 @@ $(function(){
 					 }
 				 else{
 					alert('该用户名已被注册');
+					$(this).next().text('');
 				 }
 			});			
    			if(tmp=='1'){$(this).next().text('可以注册').removeClass().addClass('state4');}    	
@@ -52,6 +53,7 @@ $(function(){
                 	 }
             	 else{
             		alert('该用户名已被注册');
+					$("#user_username").next().text('');
             	 }
    			});
    			if(tmp=='1'){$("#user_username").next().text('可以注册').removeClass().addClass('state4');}

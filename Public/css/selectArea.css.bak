@@ -3,39 +3,28 @@
 display:inline;
 float:left;
 position: relative;
-height: 25px;
+height: 28px;
 vertical-align: middle;
 
 border: 1px solid #A9A9A9;
 width:120px;
 margin-top:11px;
-margin-right:20px;
-background:#FFF url(../images/triangle.png) no-repeat 86px -6px;
+margin-right:10px;
+background:#FFF url(../images/triangle.png) no-repeat 86px -2px;
 
 }
-.width85{
-	width:85px;
-}
-.width92{
-	width:92px;
-}
-.backgrdleft52{
-	background:#FFF url(../images/triangle.png) no-repeat 52px -6px;
-}
-.backgrdleft60{
-	background:#FFF url(../images/triangle.png) no-repeat 60px -6px;
-}
+
 .select_item {
 display: inline;
 float:left;
-height: 25px;
-line-height: 25px;
+height: 28px;
+line-height: 28px;
 overflow: hidden;
 padding: 0 0 0 0px;
 white-space: nowrap;
 cursor: pointer;
 color: #333;
-/*width: 120px;*/
+width: 120px;
 text-align: left;
 font-weight: normal;
 font-size: 14px;
@@ -45,12 +34,12 @@ background:;
 .item_list {
 display: none;
 position: absolute;
-top: 25px;
+top: 28px;
 left: -1px;
 overflow: hidden;
 background: #fff;
 border: 1px solid #dfdfdf;
-width: 100%;
+width: 120px;
 margin: 0;
 height: auto;
 list-style:none;
@@ -75,18 +64,6 @@ height: 32px;
 line-height: 32px;
 text-align: left;
 float:left;
-}
-.state1{
-   color:#aaa;
-}
-.state2{
-    color:green;
-}
-.state3{
-    color:red;
-}
-.state4{
-    color:green;
 }
 .hover{background:red;}
 #select_prov_id{display:inline;}

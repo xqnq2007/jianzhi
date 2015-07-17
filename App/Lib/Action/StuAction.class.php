@@ -20,7 +20,7 @@ class StuAction extends Action {
         else{
 			$stupost=M('Stupost');
 			$stu=M('Stu');
-			$condition['username']=$_SESSION[stu_username];            
+			$condition['username']=$_SESSION[stu_username];        load("@.comfunc");    
 			$tmp=$stu->where($condition)->select();
 			$post_num=$stupost->where('')->count();
 			$title=trim($_POST['title']);
@@ -114,6 +114,7 @@ class StuAction extends Action {
       $condition['username']=$_SESSION[stu_username];
       $tmp=$stu->where($condition)->select();      
       $title=trim($_POST['title']);
+	  load("@.comfunc");
       $detail=detailSub($_POST['detail']);
       $phone=phoneSub($_POST['phone']);
 	  $weixin=weixinTest($_POST['user_weixin']);
@@ -176,7 +177,8 @@ class StuAction extends Action {
     	$stu=D("Stu");          
       $stu=M("Stu");
       $condition['username']=$_GET['cusername'];
-      $tmp=$stu->where($condition)->select(); 
+      $tmp=$stu->where($condition)->select();
+	  load("@.comfunc");
       $name=nameSub($_POST[name]);
       $phone=phoneSub($_POST[phone]);
 	  $weixin=weixinTest($_POST['user_weixin']);
@@ -234,20 +236,7 @@ class StuAction extends Action {
     	}else{    		
     		$this->error("密码不正确");
     	}     
-    }
-    public function replymsg(){
-	    if(!$_SESSION[stu_shell]){
-	    exit('Access Denied');
-	 }
-	  $stu=M("Stu");
-      $condition['username']=$_SESSION[stu_username];
-      $tmp=$stu->where($condition)->select();     
-      $this->assign('theinfo',$tmp);    	
-      $this->display('Boss:replymsg');
-    }
-	public function contactUs(){    	
-      $this->display('Boss:contactUs');
-    }  
+    }    
     public function register()//招聘用户注册
     { 	      
     	$tmp=new HeaderAction();	
@@ -271,7 +260,7 @@ class StuAction extends Action {
 			$this->error('验证码错误');  //如果验证码不对就退出程序         
 		}
         else{
-			load("@.ComFunc");
+			load("@.comfunc");
 			$stu=M('Stu');
 			$stu_num=$stu->where('')->count();       		   
 			$username=trim($_POST['user_username']); 
@@ -298,7 +287,7 @@ class StuAction extends Action {
 				$_SESSION[stu_shell]=md5($username.$pass);
 				$this->clearBossSession();				
 				$this->success('注册成功');
-				$this->redirect('/Stu/index');
+				$this->redirect('/Index/postinfo');
 			}
 			else{		      	
 				$this->error('注册失败');

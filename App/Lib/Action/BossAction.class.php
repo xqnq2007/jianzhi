@@ -47,9 +47,10 @@ class BossAction extends Action {
       if($_SESSION[boss_shell]){		
 		  $post=M('Post');
 		  $boss=M('Boss');
-		  $condition['username']=$_SESSION[boss_username];            
+		  $condition['username']=$_SESSION[boss_username];
 		  $tmp=$boss->where($condition)->select();
 		  $post_num=$post->where('')->count();
+		  load("@.comfunc");
 		  $detail=detailSub($_POST['detail']);			  
 		  $salary=salarySub($_POST['salary']);
 		  $num=numSub($_POST['num']);			  
@@ -107,6 +108,7 @@ class BossAction extends Action {
 			$boss=M('Boss');
 			$boss_num=$boss->where('')->count();
 			$username=trim($_POST['user_username']); 
+			load("@.comfunc");
 			$name=nameSub($_POST['user_name']); 
 			$pass=trim($_POST['user_password']);
 			$phone=trim($_POST['user_phone']);
@@ -131,7 +133,7 @@ class BossAction extends Action {
 				$tmp=new HeaderAction();
 				$this->success('注册成功');      	
 				$this->clearStuSession();
-				$this->redirect('/Boss');
+				$this->redirect('/Index/postinfo');
 		    }
 			else{      	
 				$this->error('注册失败');
@@ -220,6 +222,7 @@ class BossAction extends Action {
       $post=M('Post');
       $boss=M('Boss');
       $condition['username']=$_SESSION[boss_username];
+	  load("@.comfunc");
       $detail=detailSub($_POST['detail']);	
       $salary=salarySub($_POST['salary']);
 	  $num=numSub($_POST['num']);	
@@ -264,6 +267,7 @@ class BossAction extends Action {
       $boss=M('Boss');
       $condition['username']=$_GET['cusername'];
       $tmp=$boss->where($condition)->select();
+	  load("@.comfunc");
       $qq=qqSub($_POST['qq']);
 	  $email=emailTest($_POST['email']);    
       $name=nameSub($_POST['name']); 
@@ -348,7 +352,8 @@ class BossAction extends Action {
 		$('form[name=\"bossPostForm\"]').attr('action', '/index.php/Boss/addReply');
 		</script>";
     } 
-    public function addReply(){    	
+    public function addReply(){
+	 load("@.comfunc");
      $replymsg=M('Replymsg'); 
      $detail=detailSub($_POST['detail']);    
      $phone=phoneSub($_POST['phone']);
