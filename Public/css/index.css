@@ -18,12 +18,17 @@
 	text-overflow:ellipsis;
 	overflow:hidden;
 }
+#myModal .title{
+	font-size:22px;	
+	line-height:1.54;
+	white-space: normal;
+}
 .title a{
-	color:blue;
+	color:#1a0dab;
 	font-weight:normal
 }
 .title a:hover{
-	cusor:hand;
+	cursor:pointer;
 }
 .f13{
 	font-size:13px;	
@@ -79,4 +84,36 @@
 	margin-bottom: 14px;
 	padding-bottom: 5px;
 	border-bottom: 1px solid #f3f3f3;
+}
+#myModal .modal-body{
+	padding:10px 10px 0 10px;
+}
+#myModal .titleitem{	
+	padding:15px 15px 5px 15px;
+}
+#myModal .timeitem{
+	padding:0px 15px 5px 15px;
+	color:#666;
+	text-align:right;
+}
+#myModal .phoneitem{
+	padding-bottom:5px;
+	color:#666;
+	text-align:right;
+}
+#myModal .detailitem{
+	text-indent: 2em;
+}
+#myModal .detail{
+	font-size:14px;
+	line-height: 25px;
+}
+#myModal .list-group-item{
+	border:none;
+}
+.parenttime{
+	color:#666;
+}
+.parentcontact{
+	color:#006621;
 }

@@ -161,4 +161,19 @@ function stuhov(){
 		$(".current").hover(function(){
 			$(this).css('background','none');
 		});
+		$(".title").click(function() {
+			var title = $(this).find(".parenttitle").html();
+			var detail= $(this).parent().parent().find(".parentdetail").html();
+			var time = $(this).parent().parent().find(".parenttime").html();
+			var phone=$(this).parent().parent().find(".parentphone").html();
+			var weixin =$(this).parent().parent().find(".parentweixin").html();
+			var qq =$(this).parent().parent().find(".parentqq").html();			
+			$("#myModal").find(".title").html(title);
+			$("#myModal").find(".detail").html(detail);
+			$("#myModal").find(".time").html(time);
+			$("#myModal").find(".phone").html(phone);
+			$("#myModal").find(".weixin").html(weixin);
+			$("#myModal").find(".qq").html(qq);
+			$("#Modal").modal();
+		});
 	});		

@@ -31,12 +31,41 @@
       </ul>
       <ul class="nav navbar-nav navbar-right mr120">         
 		 <li>
-			 <button type="button" class="navbar-left btn btn-default navbar-btn">快捷发布</button>
+			 <span data-toggle="modal" data-target="#postModal">
+				<button type="button" class="navbar-left btn btn-default navbar-btn">快捷发布</button>
+			 </span>			 
 			 <p class="navbar-text navbar-left"><a href="#">登陆</a></p>
 			 <p class="navbar-text navbar-left"><a href="#">注册</a></p>		
 		</li>
-      </ul>	 
-   </div>
+      </ul>
+	<!-- 模态框（Modal） -->
+		<div class="modal fade" id="postModal" tabindex="-1" role="dialog" 
+		   aria-labelledby="myModalLabel" aria-hidden="true">
+		   <div class="modal-dialog">
+			  <div class="modal-content">
+				 <div class="modal-header">
+					<button type="button" class="close" 
+					   data-dismiss="modal" aria-hidden="true">
+						  &times;
+					</button>
+					<h4 class="modal-title" id="myModalLabel">
+					   模态框（Modal）标题
+					</h4>
+				 </div>
+				 <div class="modal-body">
+					在这里添加一些文本
+				 </div>
+				 <div class="modal-footer">
+					<button type="button" class="btn btn-default" 
+					   data-dismiss="modal">关闭
+					</button>
+					<button type="button" class="btn btn-primary">
+					   提交更改
+					</button>
+				 </div>
+			  </div><!-- /.modal-content -->
+			</div><!-- /.modal -->
+		</div>
 </nav>
 </body>
 </html>
@@ -51,41 +80,50 @@
 				<ul class="list-group f13">
 				<li class="list-group-item noborder titlepadding">
 					<div class="title" data-toggle="modal" data-target="#myModal">
-					<a>		<?php echo ($vo["title"]); ?>
+					<a class="parenttitle">	<?php echo ($vo["title"]); ?>
 					</a>
 					</div>
 					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 					   <div class="modal-dialog">
-						  <div class="modal-content">
-							 <div class="modal-header">
-								<button type="button" class="close" 
-								   data-dismiss="modal" aria-hidden="true">
-									  &times;
-								</button>
-								<h4 class="modal-title" id="myModalLabel">
-								   模态框（Modal）标题
-								</h4>
-							 </div>
+						  <div class="modal-content">							 
 							 <div class="modal-body">
-								在这里添加一些文本
-							 </div>
-							 <div class="modal-footer">
-								<button type="button" class="btn btn-default" 
-								   data-dismiss="modal">关闭
-								</button>
-								<button type="button" class="btn btn-primary">
-								   提交更改
-								</button>
-							 </div>
+								<div class="well">
+									<ul class="list-group">
+									<li class="list-group-item titleitem">
+									   <!--<h6><font class="area"></font>&nbsp;&nbsp;&nbsp;&nbsp;
+									   <font class="salary"></font>
+									   </h6>-->									  
+										<button type="button" class="close" 
+										   data-dismiss="modal" aria-hidden="true">
+											  &times;
+										</button>
+										 <h4 class="modal-title title" id="myModalLabel">
+										</h4>									
+									</li>
+									<li class="list-group-item timeitem">							
+										<font class="time"></font>
+									</li>
+									<li class="list-group-item detailitem">
+										<font class="detail"></font>
+									</li>
+									<li class="list-group-item phoneitem">
+									电话：<font class="phone"></font>&nbsp;&nbsp;&nbsp;&nbsp;微信：<font class="weixin"></font>&nbsp;&nbsp;&nbsp;&nbsp;QQ：<font class="qq"></font>
+									</li>									
+									</ul>
+								</div>
+							 </div>							 
 						  </div><!-- /.modal-content -->
 					</div><!-- /.modal -->
 					</div>
 				</li>
-				<li class="list-group-item noborder titlepadding"><?php echo ($vo["time"]); ?></li>
+				<li class="list-group-item noborder titlepadding"><span class="parenttime"><?php echo ($vo["time"]); ?></span></li>
 				<li class="list-group-item detail noborder detailpadding">
-				<?php echo ($vo["detail"]); ?>
+				<span class="parentdetail"><?php echo ($vo["detail"]); ?></span>
 				</li>
-				<li class="list-group-item noborder detailpadding h10"><span style="color:red"></span>电话：<?php echo ($vo["phone"]); ?>&nbsp;&nbsp;&nbsp;&nbsp;微信：<?php echo ($vo["weixin"]); ?>&nbsp;&nbsp;&nbsp;&nbsp;QQ：<?php echo ($vo["qq"]); ?>
+				<li class="list-group-item noborder detailpadding h10 parentcontact">
+				电话：<span class="parentphone"><?php echo ($vo["phone"]); ?></span>&nbsp;&nbsp;&nbsp;&nbsp;
+				微信：<span class="parentweixin"><?php echo ($vo["weixin"]); ?></span>&nbsp;&nbsp;&nbsp;&nbsp;
+				QQ：<span class="parentqq"><?php echo ($vo["qq"]); ?></span>
 				</li>				
 				</ul>
 				</div><?php endforeach; endif; else: echo "" ;endif; ?>
