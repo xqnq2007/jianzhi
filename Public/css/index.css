@@ -19,9 +19,10 @@
 	overflow:hidden;
 }
 #myModal .title{
-	font-size:22px;	
+	font-size:20px;	
 	line-height:1.54;
 	white-space: normal;
+	text-indent: 2em;
 }
 .title a{
 	color:#1a0dab;
@@ -71,7 +72,7 @@
 	padding-left:2px;
 }
 .resultpage{
-	width:630px;
+	width:700px;
 }
 .mb20{
 	margin-bottom:20px;
@@ -111,9 +112,17 @@
 #myModal .list-group-item{
 	border:none;
 }
+#myModal .close{
+	position: relative;
+	left: 10px;
+	top: -15px;
+}
 .parenttime{
 	color:#666;
 }
 .parentcontact{
 	color:#006621;
+}
+.white{
+	background:white;
 }

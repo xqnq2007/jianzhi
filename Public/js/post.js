@@ -2,8 +2,7 @@
 $(function(){	 
     var ok1=false;
     var ok2=false;
-    var ok3=false;
-	var ok4=false;	
+    var ok3=false;	
     // 验证标题 /Tpl/PUblic/register_do.php
     $("#title").blur(function(){
         var username=$(this).val();
@@ -37,12 +36,12 @@ $(function(){
         }             
     });  
 	$("#detail").keyup(function(){
-		maxlimit=500; 
+		maxlimit=1000; 
 		if (this.value.length > maxlimit) 
 		this.value = this.value.substring(0, maxlimit); 
 	}); 
  // 验证电话号码
-    $("#phone").blur(function(){
+    /*$("#phone").blur(function(){
     	var phone=$.trim($(this).val());
 		var patrn = /^(((\+?86)|(\(\+86\)))?\d{3,4}-)?\d{7,8}(-\d{3,4})?$/;
 		var validateReg = /^((\+?86)|(\(\+86\)))?1\d{10}$/;
@@ -53,7 +52,7 @@ $(function(){
         	$(this).next().text('');            
         }
          
-    }); 
+    }); */
     function phoneTest(){
     	var phone=$.trim($("#phone").val());
 		var patrn = /^(((\+?86)|(\(\+86\)))?\d{3,4}-)?\d{7,8}(-\d{3,4})?$/;
@@ -67,15 +66,14 @@ $(function(){
         }
     }
 	// 验证微信号
-	$("#user_weixin").blur(function(){
+	/*$("#weixin").blur(function(){
     	var weixin=$.trim($(this).val());
 		if(weixin==''){$(this).next().text('');}
     	else if(!(/^[a-zA-Z\d_]{5,20}$/).test(weixin)){
         	 $(this).next().text('格式不对').removeClass().addClass('state2');            
         }else{        	
-        	$(this).next().text('')            
-        }
-         
+        	$(this).next().text('');            
+        }         
     });  
 	// 验证QQ号码
     $("#qq").blur(function(){
@@ -86,7 +84,7 @@ $(function(){
         }else{
         	$(this).next().text('');            
         }         
-    });
+    });*/
 	//验证邮箱
     $("#email").blur(function(){
     	var email=$.trim($(this).val());
@@ -104,7 +102,7 @@ $(function(){
 	}).blur(function(){		
         var yzcode=$.trim($(this).val());
         if(yzcode==''){$(this).next().text('不能为空').removeClass().addClass('state3');}        
-        else if(!(/[0-9a-zA-Z]{4}/).test(yzcode)){
+        else if(!(/\d{4}/).test(yzcode)){
             $(this).next().text('格式不对').removeClass().addClass('state3');           
         }else{ 
 			var tmp=0;
@@ -116,19 +114,19 @@ $(function(){
 				tmp=1;
             }
             else{					
-				//alert('验证码错误');
-				//fleshVerify();
+				alert('验证码错误');
+				fleshVerify();
             }
    			});
 			if(tmp=='1'){
 				$(this).next().text('');
 			}
         }        
-    }); 
+    });   
     function yzcodeTest(){
     	var yzcode=$.trim($("#yzcodeInput").val());
         if(yzcode==''){$("#yzcodeInput").next().text('不能为空').removeClass().addClass('state3');}        
-        else if(!(/[0-9a-zA-Z]{4}/).test(yzcode)){
+        else if(!(/\d{4}/).test(yzcode)){
             $("#yzcodeInput").next().text('格式不对').removeClass().addClass('state3');           
         }else{
 			var tmp=0;
@@ -149,24 +147,39 @@ $(function(){
 				$(this).next().text('');
 			}
         }      
-    }	
+    }
+
     //提交按钮,所有验证通过方可提交
 	//公共发布页面提交
-    $("input[name='pubSubBut']").click(function(){
+    $("#submit-btn").click(function(){
     	var title=$.trim($("#title").val());
     	var phone=$.trim($("#phone").val());
     	var detail=$.trim($("#detail").val());
-		var yzcode=$.trim($("#yzcodeInput").val());
-    	if((title=='')||(phone=='')||(detail=='')||(yzcode=='')){
+		var weixin=$.trim($("#weixin").val());
+		var qq=$.trim($("#qq").val());
+    	if((title=='')||(phone=='')||(detail=='')){
     		alert('标星号内容不能为空');        		
     	}else{
-    		phoneTest();
-    		titleTest();
-    		detailTest();
-			yzcodeTest();			
-    		if(ok1 && ok2 && ok3 && ok4 ){
-            	$("form[name='pubPostForm']").submit();        	
-            } 
+    		phoneTest();    							
+    		if(ok2){            	
+				var tmp;
+				$.ajaxSetup({ 
+					async : false 
+				});			
+				$.post("/index.php/Post/pubBossPost",{title:title,phone:phone,detail:detail,weixin:weixin,qq:qq},function(data){			
+				if(data=='1'){
+						 $('#postModal').modal('hide');
+						$('#alertModal').modal('show');
+						setTimeout("$('#alertModal').modal('hide');",2000);
+						window.location.href="/index.php/Index";	  
+					 }
+					 else{
+						alert('提交失败');
+					 }
+				});			
+            }else{
+				alert('电话格式有误');
+			} 
     	}       
     });
 	//boss发布页面提交
@@ -308,40 +321,9 @@ function fleshVerify(){
 			$(this).parent().parent().find("font.select_area").html($(this).find("span").html());
 			$(this).parent().parent().find("input").val($(this).find("span").attr("dc"));           
 			$(this).parent().css("display","none");
-			if(className="select_payType_id"){
-				var payType=$(this).find("span").html();
-				switch(payType){
-					case "日结":						
-						$("#select_salaryType_id").find("font.select_area").html("元/时");
-						$("#select_salaryType_id").find("input").val(1);
-						break;
-					case "周结":						
-						$("#select_salaryType_id").find("font.select_area").html("元/日");
-						$("#select_salaryType_id").find("input").val(2);
-						break;
-					case "月结":						
-						$("#select_salaryType_id").find("font.select_area").html("元/月");
-						$("#select_salaryType_id").find("input").val(3);
-						break;
-					case "其它":						
-						break;
-				}
-			}
-		});
-	}
-	function payTypeSelect(){
-		var se=$("#select_payType_id");
-		var seli=se.find("ul.item_list li");			
-		seli.click(function(){
-			var payType=$(this).find("span").html();
-			alert(payType);
-			//$(this).parent().parent().find("font.select_area").html($(this).find("span").html());
-			//$(this).parent().parent().find("input").val($(this).find("span").attr("dc"));           
-			//$(this).parent().css("display","none");
 		});
 	}
 	repselect("select_prov_id");
 	repselect("select_payType_id");
 	repselect("select_salaryType_id");
-	//payTypeSelect();
 });

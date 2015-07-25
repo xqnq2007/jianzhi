@@ -10,6 +10,7 @@
 <script src="__PUBLIC__/js/jquery.min.js"></script>
 <script src="__PUBLIC__/boot/js/bootstrap.min.js"></script>
 <script src="__PUBLIC__/js/index_index.js"></script>
+<script src="__PUBLIC__/js/post.js"></script>
 </head>
 <body>
 <include file="Header:index" />
@@ -17,15 +18,15 @@
 	<div class="row-fluid">
 		<div class="col-md-6 pl110">
 			<div class="nums">
-				共有1000条信息
+				共有{$count}条信息
 			</div>
 			<div class="leftBlock"></div>
 			<volist name="list" id="vo">
 				<div class="well c-container">				
 				<ul class="list-group f13">
 				<li class="list-group-item noborder titlepadding">
-					<div class="title" data-toggle="modal" data-target="#myModal">
-					<a class="parenttitle">	{$vo.title}
+					<div class="title" >
+					<a class="parenttitle" data-toggle="modal" data-target="#myModal">	{$vo.title}
 					</a>
 					</div>
 					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -34,10 +35,7 @@
 							 <div class="modal-body">
 								<div class="well">
 									<ul class="list-group">
-									<li class="list-group-item titleitem">
-									   <!--<h6><font class="area"></font>&nbsp;&nbsp;&nbsp;&nbsp;
-									   <font class="salary"></font>
-									   </h6>-->									  
+									<li class="list-group-item titleitem">									   								  
 										<button type="button" class="close" 
 										   data-dismiss="modal" aria-hidden="true">
 											  &times;
@@ -52,7 +50,9 @@
 										<font class="detail"></font>
 									</li>
 									<li class="list-group-item phoneitem">
-									电话：<font class="phone"></font>&nbsp;&nbsp;&nbsp;&nbsp;微信：<font class="weixin"></font>&nbsp;&nbsp;&nbsp;&nbsp;QQ：<font class="qq"></font>
+									电话：<font class="phone"></font>&nbsp;&nbsp;&nbsp;&nbsp;
+									<span>微信：<font class="weixin"></font>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+									<span>QQ：<font class="qq"></font></span>
 									</li>									
 									</ul>
 								</div>
@@ -65,10 +65,10 @@
 				<li class="list-group-item detail noborder detailpadding">
 				<span class="parentdetail">{$vo.detail}</span>
 				</li>
-				<li class="list-group-item noborder detailpadding h10 parentcontact">
+				<li name="contactli" class="list-group-item noborder detailpadding h10 parentcontact">
 				电话：<span class="parentphone">{$vo.phone}</span>&nbsp;&nbsp;&nbsp;&nbsp;
-				微信：<span class="parentweixin">{$vo.weixin}</span>&nbsp;&nbsp;&nbsp;&nbsp;
-				QQ：<span class="parentqq">{$vo.qq}</span>
+				<span>微信：<span class="parentweixin">{$vo.weixin}</span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				<span>QQ：<span class="parentqq">{$vo.qq}</span></span>
 				</li>				
 				</ul>
 				</div>
@@ -78,7 +78,7 @@
 			<div class="resultpage">{$page}</div>			
 		</div>
 		<div class="col-md-6 pl110">
-			102fdsafds
+			<!-- 右侧页面-->
 		</div> 
 	</div>
 </div>

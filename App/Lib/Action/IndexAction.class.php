@@ -14,10 +14,28 @@ class IndexAction extends Action {
 	    $show= $Page->show();// 分页显示输出
 	    // 进行分页数据查询
 	    $list = $Data->where($map)->order('time desc')->limit($Page->firstRow.','.$Page->listRows)->select();
+		$this->assign('count',$count);
 	    $this->assign('list',$list);// 赋值数据集
 	    $this->assign('page',$show);// 赋值分页输出	
 	    $this->display(); // 输出模板		
-    }	
+    }
+	public function refreshIndex()
+    {
+	     $Data = M('Post'); // 实例化Data数据对象
+	    import('ORG.Util.Page');// 导入分页类
+	    $count= $Data->where($map)->count();// 查询满足要求的总记录数 $map表示查询条件
+	    $Page= new Page($count,10);// 实例化分页类 传入总记录数
+		$Page->setConfig(header,'个发布');
+		$Page->rollPage=10;
+	    //$Page->setConfig(theme,"%upPage% %first% %prePage% %linkPage% %downPage% %nowPage%/%totalPage% 页 %totalRow% %header%");
+		$Page->setConfig('theme',"<ul class='pagination'><li>%upPage%</li><li>%linkPage%</li><li>%downPage%</li></ul>");
+	    $show= $Page->show();// 分页显示输出
+	    // 进行分页数据查询
+	    $list = $Data->where($map)->order('time desc')->limit($Page->firstRow.','.$Page->listRows)->select();
+	    $this->assign('list',$list);// 赋值数据集
+	    $this->assign('page',$show);// 赋值分页输出	
+	    $this->display(); // 输出模板		
+    }
     public function _before_index(){
     	//检查用户是否登录
     	$tmp=new HeaderAction();
@@ -184,43 +202,6 @@ class IndexAction extends Action {
         	$this->error('发布失败');
         }   	
         
-    }	
-	public function pubBossPost()//未注册用户发布招聘信息
-    { 			    
-		$post=M('Post');      
-		$post_num=$post->where('')->count();
-		load("@.comfunc");		
-		$detail=detailSub($_POST['detail']);
-		$salary=salarySub($_POST['salary']);
-		$num=numSub($_POST['num']);
-		$qq=qqSub($_POST['qq']);
-		$title=trim($_POST['title']);
-		$phone=phoneSub($_POST['phone']);
-		$weixin=weixinTest($_POST['user_weixin']);		
-		$data=array(      
-			'id'=>(string)(10000+$post_num),
-			'username'=>'',
-			'name'=>'',
-			'title'=>$title,
-			'area'=>$_POST['area_id'],
-			'payTypeId'=>$_POST['payType_id'],
-			'salaryTypeId'=>$_POST['salaryType_id'], 
-			'salary'=>$salary,
-			'numwant'=>$num,      
-			'detail'=>$detail,
-			'time'=> date('Y-m-d H:i:s',time()),
-			'phone'=>$phone,
-			'weixin'=>$weixin,
-			'qq'=>$qq,      
-		);
-		if($post->add($data)){
-			$this->success("发布成功");
-			$this->redirect("Index/index");			
-						
-		}else{			
-			$this->error("发布失败");
-			$this->redirect("Index/postinfo");		
-		}
     }
 }
 ?>

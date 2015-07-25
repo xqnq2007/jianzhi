@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 <head>
 	<title>兼职信息</title>
@@ -35,30 +35,28 @@
 </nav>
 <div class="well">
 </div>
-<volist name="post" id="vo">
-<div class="well">
+<?php if(is_array($post)): $i = 0; $__LIST__ = $post;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="well">
 <ul class="list-group">
 <li class="list-group-item">
 	<!--<img src="http://www.iconpng.com/png/long_shadow_icons/user.png">-->
 <div style="height:50px;">
-	<h5><font class="title">{$vo.title}</font></h5>
-  <h6 class="time">{$vo.time}</h6></div>
+	<h5><font class="title"><?php echo ($vo["title"]); ?></font></h5>
+  <h6 class="time"><?php echo ($vo["time"]); ?></h6></div>
 </li>
 <li class="list-group-item detail">
 	<div class="wrap">
 			<div class="detailcontent">
-				{$vo.detail}
+				<?php echo ($vo["detail"]); ?>
 			</div>
 			<div class="gradient"></div>
 	</div>
 	<div class="read-more"></div>
 </li>
-<li class="list-group-item"><span style="color:red"></span>电话：{$vo.phone}&nbsp;&nbsp;&nbsp;&nbsp;
-<span>微信：<span class="weixin">{$vo.weixin}</span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<div>QQ：<span class="qq">{$vo.qq}</span></div>
+<li class="list-group-item"><span style="color:red"></span>电话：<?php echo ($vo["phone"]); ?>&nbsp;&nbsp;&nbsp;&nbsp;
+<span>微信：<span class="weixin"><?php echo ($vo["weixin"]); ?></span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<div>QQ：<span class="qq"><?php echo ($vo["qq"]); ?></span></div>
 </li>
 </ul>
-</div>
-</volist>
+</div><?php endforeach; endif; else: echo "" ;endif; ?>
 </body>
 </html>

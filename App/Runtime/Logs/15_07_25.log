@@ -1,0 +1,446 @@
+[ 2015-07-25T11:54:32+08:00 ] 127.0.0.1 /jianzhi/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000772s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000877s ]
+NOTIC: [8] Use of undefined constant boss_username - assumed 'boss_username' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Undefined index: boss_username D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant stu_username - assumed 'stu_username' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 20 行.
+NOTIC: [8] Undefined index: stu_username D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `jz_post` [ RunTime:0.007367s ]
+NOTIC: [8] Undefined variable: map D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 8 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `jz_post` LIMIT 1   [ RunTime:0.000920s ]
+NOTIC: [8] Use of undefined constant header - assumed 'header' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 10 行.
+NOTIC: [8] Undefined variable: map D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 16 行.
+SQL: SELECT * FROM `jz_post` ORDER BY time desc LIMIT 0,10   [ RunTime:0.000533s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000710s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000766s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.013922s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013986s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000702s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000449s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000295s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000518s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002102s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000551s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000596s ]
+
+[ 2015-07-25T12:00:34+08:00 ] 127.0.0.1 /jianzhi/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000672s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000763s ]
+NOTIC: [8] Use of undefined constant boss_username - assumed 'boss_username' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Undefined index: boss_username D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant stu_username - assumed 'stu_username' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 20 行.
+NOTIC: [8] Undefined index: stu_username D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `jz_post` [ RunTime:0.002904s ]
+NOTIC: [8] Undefined variable: map D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 8 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `jz_post` LIMIT 1   [ RunTime:0.000492s ]
+NOTIC: [8] Use of undefined constant header - assumed 'header' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 10 行.
+NOTIC: [8] Undefined variable: map D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 16 行.
+SQL: SELECT * FROM `jz_post` ORDER BY time desc LIMIT 0,10   [ RunTime:0.000720s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000745s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000805s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: count D:\wamp\www\jianzhishidai\jianzhi\App\Runtime\Cache\f331a3f0d874c4248458495ef2c2c2d1.php 第 135 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.014478s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014538s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000751s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000456s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000329s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000766s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002474s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001085s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001172s ]
+
+[ 2015-07-25T12:01:06+08:00 ] 127.0.0.1 /jianzhi/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000722s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000817s ]
+NOTIC: [8] Use of undefined constant boss_username - assumed 'boss_username' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Undefined index: boss_username D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant stu_username - assumed 'stu_username' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 20 行.
+NOTIC: [8] Undefined index: stu_username D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `jz_post` [ RunTime:0.002406s ]
+NOTIC: [8] Undefined variable: map D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 8 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `jz_post` LIMIT 1   [ RunTime:0.000304s ]
+NOTIC: [8] Use of undefined constant header - assumed 'header' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 10 行.
+NOTIC: [8] Undefined variable: map D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 16 行.
+SQL: SELECT * FROM `jz_post` ORDER BY time desc LIMIT 0,10   [ RunTime:0.000468s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000806s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000866s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: count D:\wamp\www\jianzhishidai\jianzhi\App\Runtime\Cache\f331a3f0d874c4248458495ef2c2c2d1.php 第 135 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.014289s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014346s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000693s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000431s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000306s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000509s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002075s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000636s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000692s ]
+
+[ 2015-07-25T12:01:06+08:00 ] 127.0.0.1 /jianzhi/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000693s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000787s ]
+NOTIC: [8] Use of undefined constant boss_username - assumed 'boss_username' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Undefined index: boss_username D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant stu_username - assumed 'stu_username' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 20 行.
+NOTIC: [8] Undefined index: stu_username D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `jz_post` [ RunTime:0.002500s ]
+NOTIC: [8] Undefined variable: map D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 8 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `jz_post` LIMIT 1   [ RunTime:0.000543s ]
+NOTIC: [8] Use of undefined constant header - assumed 'header' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 10 行.
+NOTIC: [8] Undefined variable: map D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 16 行.
+SQL: SELECT * FROM `jz_post` ORDER BY time desc LIMIT 0,10   [ RunTime:0.000531s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000968s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001024s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: count D:\wamp\www\jianzhishidai\jianzhi\App\Runtime\Cache\f331a3f0d874c4248458495ef2c2c2d1.php 第 135 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.014580s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014639s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000704s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000431s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000312s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000513s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002095s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000588s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000636s ]
+
+[ 2015-07-25T12:01:06+08:00 ] 127.0.0.1 /jianzhi/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000689s ]
+NOTIC: [8] Use of undefined constant boss_username - assumed 'boss_username' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Undefined index: boss_username D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant stu_username - assumed 'stu_username' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 20 行.
+NOTIC: [8] Undefined index: stu_username D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `jz_post` [ RunTime:0.002540s ]
+NOTIC: [8] Undefined variable: map D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 8 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `jz_post` LIMIT 1   [ RunTime:0.000316s ]
+NOTIC: [8] Use of undefined constant header - assumed 'header' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 10 行.
+NOTIC: [8] Undefined variable: map D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 16 行.
+SQL: SELECT * FROM `jz_post` ORDER BY time desc LIMIT 0,10   [ RunTime:0.000462s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000736s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000795s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: count D:\wamp\www\jianzhishidai\jianzhi\App\Runtime\Cache\f331a3f0d874c4248458495ef2c2c2d1.php 第 135 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.013494s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013550s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000665s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000401s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000321s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000481s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002004s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000569s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000615s ]
+
+[ 2015-07-25T12:01:07+08:00 ] 127.0.0.1 /jianzhi/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000637s ]
+NOTIC: [8] Use of undefined constant boss_username - assumed 'boss_username' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Undefined index: boss_username D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant stu_username - assumed 'stu_username' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 20 行.
+NOTIC: [8] Undefined index: stu_username D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `jz_post` [ RunTime:0.003614s ]
+NOTIC: [8] Undefined variable: map D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 8 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `jz_post` LIMIT 1   [ RunTime:0.000373s ]
+NOTIC: [8] Use of undefined constant header - assumed 'header' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 10 行.
+NOTIC: [8] Undefined variable: map D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 16 行.
+SQL: SELECT * FROM `jz_post` ORDER BY time desc LIMIT 0,10   [ RunTime:0.000578s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000453s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000520s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: count D:\wamp\www\jianzhishidai\jianzhi\App\Runtime\Cache\f331a3f0d874c4248458495ef2c2c2d1.php 第 135 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.015093s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015155s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000610s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000354s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000232s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000439s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001777s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000536s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000588s ]
+
+[ 2015-07-25T12:01:07+08:00 ] 127.0.0.1 /jianzhi/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000805s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000928s ]
+NOTIC: [8] Use of undefined constant boss_username - assumed 'boss_username' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Undefined index: boss_username D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant stu_username - assumed 'stu_username' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 20 行.
+NOTIC: [8] Undefined index: stu_username D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `jz_post` [ RunTime:0.002614s ]
+NOTIC: [8] Undefined variable: map D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 8 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `jz_post` LIMIT 1   [ RunTime:0.000386s ]
+NOTIC: [8] Use of undefined constant header - assumed 'header' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 10 行.
+NOTIC: [8] Undefined variable: map D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 16 行.
+SQL: SELECT * FROM `jz_post` ORDER BY time desc LIMIT 0,10   [ RunTime:0.000513s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000473s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000526s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: count D:\wamp\www\jianzhishidai\jianzhi\App\Runtime\Cache\f331a3f0d874c4248458495ef2c2c2d1.php 第 135 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.012798s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012851s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000636s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000334s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000326s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000454s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001889s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000571s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000619s ]
+
+[ 2015-07-25T12:01:42+08:00 ] 127.0.0.1 /jianzhi/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000690s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000800s ]
+NOTIC: [8] Use of undefined constant boss_username - assumed 'boss_username' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Undefined index: boss_username D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant stu_username - assumed 'stu_username' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 20 行.
+NOTIC: [8] Undefined index: stu_username D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `jz_post` [ RunTime:0.002580s ]
+NOTIC: [8] Undefined variable: map D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 8 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `jz_post` LIMIT 1   [ RunTime:0.000356s ]
+NOTIC: [8] Use of undefined constant header - assumed 'header' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 10 行.
+NOTIC: [8] Undefined variable: map D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 16 行.
+SQL: SELECT * FROM `jz_post` ORDER BY time desc LIMIT 0,10   [ RunTime:0.000618s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000421s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000478s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.013394s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013456s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000593s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000343s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000224s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000431s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001726s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000501s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000549s ]
+
+[ 2015-07-25T12:02:03+08:00 ] 127.0.0.1 /jianzhi/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000580s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000677s ]
+NOTIC: [8] Use of undefined constant boss_username - assumed 'boss_username' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Undefined index: boss_username D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant stu_username - assumed 'stu_username' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 20 行.
+NOTIC: [8] Undefined index: stu_username D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `jz_post` [ RunTime:0.002735s ]
+NOTIC: [8] Undefined variable: map D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 8 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `jz_post` LIMIT 1   [ RunTime:0.000312s ]
+NOTIC: [8] Use of undefined constant header - assumed 'header' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 10 行.
+NOTIC: [8] Undefined variable: map D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 16 行.
+SQL: SELECT * FROM `jz_post` ORDER BY time desc LIMIT 0,10   [ RunTime:0.000494s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000437s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000507s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.014309s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014379s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000618s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000346s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000225s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000436s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001758s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000497s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000543s ]
+
+[ 2015-07-25T12:02:30+08:00 ] 127.0.0.1 /jianzhi/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000697s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000788s ]
+NOTIC: [8] Use of undefined constant boss_username - assumed 'boss_username' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Undefined index: boss_username D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant stu_username - assumed 'stu_username' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 20 行.
+NOTIC: [8] Undefined index: stu_username D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `jz_post` [ RunTime:0.002697s ]
+NOTIC: [8] Undefined variable: map D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 8 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `jz_post` LIMIT 1   [ RunTime:0.000414s ]
+NOTIC: [8] Use of undefined constant header - assumed 'header' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 10 行.
+NOTIC: [8] Undefined variable: map D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 16 行.
+SQL: SELECT * FROM `jz_post` ORDER BY time desc LIMIT 0,10   [ RunTime:0.000783s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001802s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001874s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.014887s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014956s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000705s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000442s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000332s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000535s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002160s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000614s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000662s ]
+
+[ 2015-07-25T12:03:31+08:00 ] 127.0.0.1 /jianzhi/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000645s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000723s ]
+NOTIC: [8] Use of undefined constant boss_username - assumed 'boss_username' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Undefined index: boss_username D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant stu_username - assumed 'stu_username' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 20 行.
+NOTIC: [8] Undefined index: stu_username D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `jz_post` [ RunTime:0.003266s ]
+NOTIC: [8] Undefined variable: map D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 8 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `jz_post` LIMIT 1   [ RunTime:0.000335s ]
+NOTIC: [8] Use of undefined constant header - assumed 'header' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 10 行.
+NOTIC: [8] Undefined variable: map D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 16 行.
+SQL: SELECT * FROM `jz_post` ORDER BY time desc LIMIT 0,10   [ RunTime:0.000503s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000982s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001044s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.014507s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014574s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000760s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000517s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000379s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000559s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002380s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000605s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000653s ]
+
+[ 2015-07-25T12:05:11+08:00 ] 127.0.0.1 /jianzhi/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000853s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000963s ]
+NOTIC: [8] Use of undefined constant boss_username - assumed 'boss_username' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Undefined index: boss_username D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant stu_username - assumed 'stu_username' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 20 行.
+NOTIC: [8] Undefined index: stu_username D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `jz_post` [ RunTime:0.003533s ]
+NOTIC: [8] Undefined variable: map D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 8 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `jz_post` LIMIT 1   [ RunTime:0.000457s ]
+NOTIC: [8] Use of undefined constant header - assumed 'header' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 10 行.
+NOTIC: [8] Undefined variable: map D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 16 行.
+SQL: SELECT * FROM `jz_post` ORDER BY time desc LIMIT 0,10   [ RunTime:0.000644s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000711s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000772s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.014404s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014471s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000702s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000439s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000325s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000524s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002135s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000614s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000666s ]
+
+[ 2015-07-25T12:05:47+08:00 ] 127.0.0.1 /jianzhi/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001131s ]
+NOTIC: [8] Use of undefined constant boss_username - assumed 'boss_username' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Undefined index: boss_username D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant stu_username - assumed 'stu_username' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 20 行.
+NOTIC: [8] Undefined index: stu_username D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\HeaderAction.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `jz_post` [ RunTime:0.003022s ]
+NOTIC: [8] Undefined variable: map D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 8 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `jz_post` LIMIT 1   [ RunTime:0.000313s ]
+NOTIC: [8] Use of undefined constant header - assumed 'header' D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 10 行.
+NOTIC: [8] Undefined variable: map D:\wamp\www\jianzhishidai\jianzhi\App\Lib\Action\IndexAction.class.php 第 16 行.
+SQL: SELECT * FROM `jz_post` ORDER BY time desc LIMIT 0,10   [ RunTime:0.000438s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000729s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000797s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.014364s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014429s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000699s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000433s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000318s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000514s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002102s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000589s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000637s ]
+
+[ 2015-07-25T12:05:57+08:00 ] 127.0.0.1 /jianzhi/index.php/Wei
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.039086s ]
+INFO: [ route_check ] --END-- [ RunTime:0.039180s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000581s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000637s ]
+SQL: SHOW COLUMNS FROM `jz_post` [ RunTime:0.005114s ]
+SQL: SELECT * FROM `jz_post` ORDER BY id DESC LIMIT 100   [ RunTime:0.002349s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001959s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002105s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.072785s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.072897s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000919s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000475s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000309s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000566s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002418s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000708s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000762s ]
+
+[ 2015-07-25T12:06:10+08:00 ] 127.0.0.1 /jianzhi/index.php/Wei
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000856s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000930s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000512s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000562s ]
+SQL: SHOW COLUMNS FROM `jz_post` [ RunTime:0.002594s ]
+SQL: SELECT * FROM `jz_post` ORDER BY id DESC LIMIT 100   [ RunTime:0.001246s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000735s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000800s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.008837s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008936s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000976s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000493s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000315s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000563s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002493s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000604s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000652s ]
+

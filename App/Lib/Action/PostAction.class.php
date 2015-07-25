@@ -1,10 +1,34 @@
 <?php
-// 本类由系统自动生成，仅供测试用途
-class PostAction extends Action {	
+class PostAction extends Action {
     public function index()
     { 	
        $this->display('Post:index'); // 输出模板    	
-    }    
+    }
+    public function add()//未注册用户发布信息
+    { 	
+      $post=M('Post');
+      $data=array(      
+      'id'=>'',
+      'username'=>'xxx',
+      'title'=>$_POST['title'],
+      'area'=>$_POST['area_id'],
+      'salary'=>$_POST['salary'],
+      'numwant'=>$_POST['num'],
+      'detail'=>$_POST['detail'],      
+      'time'=> date('Y-m-d H:i:s',time()),      
+      'phone'=>$_POST['phone'],
+      'qq'=>$_POST['qq'],      
+      );
+      if($post->add($data)){
+      	echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
+      	echo "<script type='text/javascript'>alert('发布成功');window.location.href='';</script>";
+      }
+      else{
+      	echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
+      	echo "<script type='text/javascript'>alert('发布失败');window.location.href='/index.php/post';</script>";
+      }
+    
+    }
 	public function postDetail(){    	  
 		$post=M('Post');
 		$boss=M('Boss');
@@ -45,10 +69,69 @@ class PostAction extends Action {
 			};
 			$('span[name=\"areaSpan\"]').css(numcss);
 		</script>";
-    }	
-	Public function yanzhengma(){
-		import('ORG.Util.Image');		
-        Image::buildImageVerify();			
-	}
+    }
+	public function pubBossPost()//未注册用户发布招聘信息
+    { 			    
+		$post=M('Post');      
+		$post_num=$post->where('')->count();
+		load("@.comfunc");		
+		$detail=detailSub($_POST['detail']);
+		$qq=qqSub($_POST['qq']);
+		$title=trim($_POST['title']);
+		$phone=phoneSub($_POST['phone']);
+		$weixin=weixinTest($_POST['weixin']);		
+		$data=array(      
+			'id'=>(string)(10000+$post_num),
+			'username'=>'',
+			'name'=>'',
+			'title'=>$title,
+			'area'=>'',
+			'payTypeId'=>'',
+			'salaryTypeId'=>'', 
+			'salary'=>'',
+			'numwant'=>'',      
+			'detail'=>$detail,
+			'time'=> date('Y-m-d H:i:s',time()),
+			'phone'=>$phone,
+			'weixin'=>$weixin,
+			'qq'=>$qq,      
+		);
+		if($post->add($data)){
+			echo "1";		
+						
+		}else{			
+			echo "0";		
+		}
+    }
+	public function test(){
+		$post=M('Post');
+		$data=array(      
+		'id'=>'',
+		'username'=>'xx',
+		'title'=>$_POST['title'],
+		'area'=>$_POST['area_id'],
+		'salary'=>$_POST['salary'],
+		'numwant'=>$_POST['num'],
+		'detail'=>$_POST['detail'],      
+		'time'=> date('Y-m-d H:i:s',time()),      
+		'phone'=>$_POST['phone'],
+		'qq'=>$_POST['qq'],      
+        );
+		dump($data);
+		if($post->add($data)){      	
+			echo "<script type='text/javascript'>";
+			echo "alert('发布成功');window.location.href='__APP__';";
+			echo "</script>";
+		}
+		else{
+			echo "发布失败";
+		}
+		$this->display('Post:index');
+   }
+Public function yanzhengma(){
+	import('ORG.Util.Image');
+    Image::buildImageVerify();
+		//Image::GBVerify();
+ }
 }
 ?>

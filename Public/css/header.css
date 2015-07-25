@@ -1,3 +1,109 @@
 .ml125{
 	margin-left:125px;
 }
+.h50{
+	height:50px;
+}
+.postBtn{
+	font-size:36px;
+	margin:0;
+}
+.navbar-header {
+float: left;
+}
+.navbar-nav>li {
+float: left;
+position: relative;
+display: block;
+}
+.navbar-right {
+float: right!important;
+margin-right: -15px;
+}
+.mr120{
+	margin-right:120px;
+}
+.navbar-left {
+float: left!important;
+}
+.navbar-brand {
+float: left;
+height: 50px;
+padding: 15px 15px;
+font-size: 18px;
+line-height: 20px;
+}
+p{
+	vertical-align:middle;
+	margin-top:-10px;
+}
+#postModal .modal-header{
+	text-align:center;
+	font-size:20px;
+	padding: 15px 15px 0px 15px;
+	border-bottom:0px;
+}
+#postModal .modal-footer{
+	padding: 25px;
+	text-align:center;
+	border:none;
+}
+#postModal .modal-body{
+	padding: 15px 15px 0 0;
+}
+#postModal .col-sm-10{
+	padding-left:0;
+	padding-right:15px;
+}
+#postModal .col-sm-2{
+	padding-left:0;
+	padding-right:0;
+}
+#postModal .modal-dialog {
+	width: 500px;	
+}
+#alertModal .modal-dialog{
+	width: 150px;
+}
+#alertModal .modal-title{
+	text-align: center;
+}
+.modal-header.subbtn{
+	background-color: #3ba3ff;
+	border: none;
+}
+.modal-header.canbtn{
+	background-color: #e08941;
+	color: white;
+	margin-right: 25px;
+	border:none;
+}
+.logo{
+	position:absolute;
+	top:5px;
+}
+.subbtn{
+	background-color: #3ba3ff;
+	border:none;
+	padding:6px 20px;
+	font-size:20px;	
+}
+.canbtn{
+	background-color: #e08941;
+	color: white;
+	padding:6px 20px;
+	margin-right: 50px;
+	font-size:20px;	
+	border:none;
+}
+.canbtn:hover{
+	background-color: #a47431;
+	color: white;
+	padding:6px 20px;
+	margin-right: 50px;
+	font-size:20px;	
+	border:none;
+}
+textarea.form-control {
+	height:150px;
+}

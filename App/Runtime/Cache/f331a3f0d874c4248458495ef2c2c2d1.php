@@ -10,6 +10,7 @@
 <script src="__PUBLIC__/js/jquery.min.js"></script>
 <script src="__PUBLIC__/boot/js/bootstrap.min.js"></script>
 <script src="__PUBLIC__/js/index_index.js"></script>
+<script src="__PUBLIC__/js/post.js"></script>
 </head>
 <body>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -18,14 +19,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <link href="__PUBLIC__/css/header.css" rel="stylesheet" type="text/css" />
+<script src="__PUBLIC__/js/header.js"></script>
 </head>
 <body>
-  <nav class="navbar navbar-default" role="navigation">
+  <nav class="navbar navbar-default white h50" role="navigation">
    <div class="navbar-header ml125">
-      <a class="navbar-brand" href="#"><font style="font-size:36px;margin:0;">快捷发布</font></a>
+      <a class="navbar-brand" href="__APP__/Index">
+		<img width="120" height="36" src="/Public/images/bigelogo.jpg" class="logo">
+	  </a>
    </div>
    <div>      
-      <ul class="nav navbar-nav navbar-left">         
+      <ul class="nav navbar-nav navbar-left" style="display:none;">         
 		 <li><p class="navbar-text navbar-left">jianzhi022.com</p>		 
 		 </li>
       </ul>
@@ -34,11 +38,11 @@
 			 <span data-toggle="modal" data-target="#postModal">
 				<button type="button" class="navbar-left btn btn-default navbar-btn">快捷发布</button>
 			 </span>			 
-			 <p class="navbar-text navbar-left"><a href="#">登陆</a></p>
-			 <p class="navbar-text navbar-left"><a href="#">注册</a></p>		
+			 <p class="navbar-text navbar-left" style="display:none;"><a href="#">登陆</a></p>
+			 <p class="navbar-text navbar-left" style="display:none;"><a href="#">注册</a></p>		
 		</li>
-      </ul>
-	<!-- 模态框（Modal） -->
+      </ul>	 
+	  <!-- 模态框（Modal） -->
 		<div class="modal fade" id="postModal" tabindex="-1" role="dialog" 
 		   aria-labelledby="myModalLabel" aria-hidden="true">
 		   <div class="modal-dialog">
@@ -48,24 +52,79 @@
 					   data-dismiss="modal" aria-hidden="true">
 						  &times;
 					</button>
-					<h4 class="modal-title" id="myModalLabel">
-					   模态框（Modal）标题
-					</h4>
+					<span class="modal-title" id="myModalLabel">
+					   <span class="glyphicon glyphicon-pencil"></span>&nbsp;发布兼职
+					</span>
 				 </div>
-				 <div class="modal-body">
-					在这里添加一些文本
+				 <div class="modal-body">					
+					<!-- fabu begin -->	
+					<form class="form-horizontal" role="form" method="post" id="postForm" name="postForm">
+					   <div class="form-group">
+						  <label for="firstname" class="col-sm-2 control-label">
+							<font style="color:red">*</font>&nbsp;标题：
+						  </label>
+						  <div class="col-sm-10">
+							 <input type="text" class="form-control" id="title" name="title" placeholder="请输入标题" maxlength="50">
+						  </div>
+					   </div>
+					   <div class="form-group">
+						  <label for="lastname" class="col-sm-2 control-label">
+							<font style="color:red">*</font>&nbsp;内容：
+						  </label>
+						  <div class="col-sm-10">
+							 <textarea type="text" id="detail" name="detail" class="form-control h150" placeholder="请输入兼职内容"></textarea>
+						  </div>
+					   </div>
+					   <div class="form-group">
+						  <label for="firstname" class="col-sm-2 control-label">
+							<font style="color:red">*</font>&nbsp;电话：
+						  </label>
+						  <div class="col-sm-10">
+							 <input type="text" class="form-control" id="phone" name="phone" placeholder="请输入你的电话" maxlength='20'>
+						  </div>
+					   </div>
+					   <div class="form-group">
+						  <label for="firstname" class="col-sm-2 control-label">
+							微信：
+						  </label>
+						  <div class="col-sm-10">
+							 <input type="text" class="form-control" id="weixin" name="weixin" placeholder="请输入你的微信" maxlength='20'>
+						  </div>
+					   </div>
+					   <div class="form-group">
+						  <label for="firstname" class="col-sm-2 control-label">
+							Q&nbsp;Q：
+						  </label>
+						  <div class="col-sm-10">
+							 <input type="text" class="form-control" id="qq" name="qq" placeholder="请输入你的QQ" maxlength='20'>
+						  </div>
+					   </div>					   
+					</form>					
 				 </div>
 				 <div class="modal-footer">
-					<button type="button" class="btn btn-default" 
+					<button type="button" class="btn btn-default canbtn" 
 					   data-dismiss="modal">关闭
 					</button>
-					<button type="button" class="btn btn-primary">
-					   提交更改
+					<button type="button" class="btn btn-primary subbtn" type="submit" id="submit-btn">
+					   提交
 					</button>
 				 </div>
 			  </div><!-- /.modal-content -->
-			</div><!-- /.modal -->
-		</div>
+		</div><!-- /.modal -->
+   </div>
+   
+   <!-- 模态框（Modal） -->
+<div class="modal fade" id="alertModal" tabindex="-1" role="dialog" 
+   aria-labelledby="myModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">            
+            <h4 class="modal-title" id="myModalLabel">
+               提交成功！
+            </h4>
+         </div>         
+      </div><!-- /.modal-content -->
+</div></div><!-- /.modal -->
 </nav>
 </body>
 </html>
@@ -73,14 +132,14 @@
 	<div class="row-fluid">
 		<div class="col-md-6 pl110">
 			<div class="nums">
-				共有1000条信息
+				共有<?php echo ($count); ?>条信息
 			</div>
 			<div class="leftBlock"></div>
 			<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="well c-container">				
 				<ul class="list-group f13">
 				<li class="list-group-item noborder titlepadding">
-					<div class="title" data-toggle="modal" data-target="#myModal">
-					<a class="parenttitle">	<?php echo ($vo["title"]); ?>
+					<div class="title" >
+					<a class="parenttitle" data-toggle="modal" data-target="#myModal">	<?php echo ($vo["title"]); ?>
 					</a>
 					</div>
 					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -89,10 +148,7 @@
 							 <div class="modal-body">
 								<div class="well">
 									<ul class="list-group">
-									<li class="list-group-item titleitem">
-									   <!--<h6><font class="area"></font>&nbsp;&nbsp;&nbsp;&nbsp;
-									   <font class="salary"></font>
-									   </h6>-->									  
+									<li class="list-group-item titleitem">									   								  
 										<button type="button" class="close" 
 										   data-dismiss="modal" aria-hidden="true">
 											  &times;
@@ -107,7 +163,9 @@
 										<font class="detail"></font>
 									</li>
 									<li class="list-group-item phoneitem">
-									电话：<font class="phone"></font>&nbsp;&nbsp;&nbsp;&nbsp;微信：<font class="weixin"></font>&nbsp;&nbsp;&nbsp;&nbsp;QQ：<font class="qq"></font>
+									电话：<font class="phone"></font>&nbsp;&nbsp;&nbsp;&nbsp;
+									<span>微信：<font class="weixin"></font>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+									<span>QQ：<font class="qq"></font></span>
 									</li>									
 									</ul>
 								</div>
@@ -120,10 +178,10 @@
 				<li class="list-group-item detail noborder detailpadding">
 				<span class="parentdetail"><?php echo ($vo["detail"]); ?></span>
 				</li>
-				<li class="list-group-item noborder detailpadding h10 parentcontact">
+				<li name="contactli" class="list-group-item noborder detailpadding h10 parentcontact">
 				电话：<span class="parentphone"><?php echo ($vo["phone"]); ?></span>&nbsp;&nbsp;&nbsp;&nbsp;
-				微信：<span class="parentweixin"><?php echo ($vo["weixin"]); ?></span>&nbsp;&nbsp;&nbsp;&nbsp;
-				QQ：<span class="parentqq"><?php echo ($vo["qq"]); ?></span>
+				<span>微信：<span class="parentweixin"><?php echo ($vo["weixin"]); ?></span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				<span>QQ：<span class="parentqq"><?php echo ($vo["qq"]); ?></span></span>
 				</li>				
 				</ul>
 				</div><?php endforeach; endif; else: echo "" ;endif; ?>
@@ -131,7 +189,7 @@
 			<div class="resultpage"><?php echo ($page); ?></div>			
 		</div>
 		<div class="col-md-6 pl110">
-			102fdsafds
+			<!-- 右侧页面-->
 		</div> 
 	</div>
 </div>
@@ -147,16 +205,16 @@
 <div>
 	<nav class="navbar navbar-default mb0" role="navigation">   
 	   <div class="footer">
-	   <div>
+	   <div style="display:none;">
 		  <p class="navbar-text"><a href="__APP____PUBLIC__/contactUs"  rel="nofollow">帮助</a></p>
 	   </div>
-	   <div>
+	   <div style="display:none;">
 		  <p class="navbar-text"><a href="__APP__/Public/replymsg"  rel="nofollow">建议</a></p>
 	   </div>
-	   <div>
+	   <div style="display:none;">
 		  <p class="navbar-text"><a href="__APP__/Public/replymsg"  rel="nofollow">关于我们</a></p>
 	   </div>
-	   <div>
+	   <div style="display:none;">
 		  <p class="navbar-text"><a href="__APP__/Public/contactUs"  rel="nofollow">联系我们</a></p>
 	   </div>
 		<div>
