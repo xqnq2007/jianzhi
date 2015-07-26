@@ -9,7 +9,7 @@
 	<link href="__PUBLIC__/boot/css/bootstrap.min.css" rel="stylesheet">
 	<script src="__PUBLIC__/js/jquery.min.js"></script>	
 	<script src="__PUBLIC__/boot/js/bootstrap.min.js"></script>	
-	<script src="__PUBLIC__/js/index.js"></script>
+	<script src="__PUBLIC__/js/Wei/index.js"></script>
 	<style type="text/css">
 	body{padding-top: 50px;background: #DADAD8}
 	* a{text-decoration: none !important;}
@@ -26,6 +26,26 @@
 	.fabu{
 		color: #3BA3FF;
 	}
+	
+	.loading-wrap{
+	bottom: 50px;
+	width: 100%;
+	height: 52px;
+	text-align: center;
+	display: none;
+	}
+	.loading {
+		padding: 10px 10px 10px 52px;
+		height: 32px;
+		line-height: 28px;
+		color: #FFF;
+		font-size: 20px;
+		border-radius: 5px;
+		background: 10px center rgba(0,0,0,.7);
+	}
+	.footer{
+		border: 2px solid #D4D4D4;
+	}
 	</style>	
 </head>
 <body>
@@ -33,12 +53,11 @@
 <nav class="navbar navbar-fixed-top text-center">
 <a class="fabu" href="__ROOT__/index.php/Wei/post"><span class="glyphicon glyphicon-pencil"></span>&nbsp;发布兼职</a>
 </nav>
-<div class="well">
-</div>
+<div id="mainlist" class="">
 <?php if(is_array($post)): $i = 0; $__LIST__ = $post;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="well">
+<input type="hidden" name="id" value=<?php echo ($vo["id"]); ?>/>
 <ul class="list-group">
-<li class="list-group-item">
-	<!--<img src="http://www.iconpng.com/png/long_shadow_icons/user.png">-->
+<li class="list-group-item">	
 <div style="height:50px;">
 	<h5><font class="title"><?php echo ($vo["title"]); ?></font></h5>
   <h6 class="time"><?php echo ($vo["time"]); ?></h6></div>
@@ -58,5 +77,11 @@
 </li>
 </ul>
 </div><?php endforeach; endif; else: echo "" ;endif; ?>
+</div>
+
+<div id="loading" class="loading-wrap">
+	<span class="loading">加载中，请稍后...</span>
+</div>
+<div class="footer"><center>我是页脚</center></div>
 </body>
 </html>

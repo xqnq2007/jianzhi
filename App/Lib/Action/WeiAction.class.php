@@ -5,10 +5,17 @@ class WeiAction extends Action {
     public function index()
     {  	
 	    $post=M("Post");
-		$res=$post->order('id DESC')->limit(100)->select();
+		$res=$post->order('id DESC')->limit(10)->select();
 		$this->assign('post',$res);
 		$this->display(); // 输出模板		  	
-    }		
+    }
+	//获取下一栏数据
+	public function getDbMore(){		
+		$tmp=(int)$this->_get('last_id');
+        $map['id'] = array('lt', $tmp);
+        $list = D('Post')->where($map)->order('id DESC')->limit(10)->select();
+        $this->ajaxReturn($list);
+	}
 	public function post(){	
 	if(IS_POST){
 	  $post=M('Post');
