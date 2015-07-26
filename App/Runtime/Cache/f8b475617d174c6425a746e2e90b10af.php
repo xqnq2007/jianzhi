@@ -16,7 +16,7 @@
 <nav class="navbar navbar-fixed-top text-center">
 <a class="fabu" href="__ROOT__/index.php/Wei/post"><span class="glyphicon glyphicon-pencil"></span>&nbsp;发布兼职</a>
 </nav>
-<div id="mainlist" class="">
+<div id="mainlist">
 <?php if(is_array($post)): $i = 0; $__LIST__ = $post;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="well">
 <input type="hidden" name="id" value=<?php echo ($vo["id"]); ?>/>
 <ul class="list-group">
@@ -41,10 +41,9 @@
 </ul>
 </div><?php endforeach; endif; else: echo "" ;endif; ?>
 </div>
-
 <div id="loading" class="loading-wrap">
-	<span class="loading">加载中，请稍后...</span>
+	<span class="loading">加载中...</span>
 </div>
-<div class="footer"><center>我是页脚</center></div>
+<div class="footer"><center>没有更多数据</center></div>
 </body>
 </html>

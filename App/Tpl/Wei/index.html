@@ -16,7 +16,7 @@
 <nav class="navbar navbar-fixed-top text-center">
 <a class="fabu" href="__ROOT__/index.php/Wei/post"><span class="glyphicon glyphicon-pencil"></span>&nbsp;发布兼职</a>
 </nav>
-<div id="mainlist" class="">
+<div id="mainlist">
 <volist name="post" id="vo">
 <div class="well">
 <input type="hidden" name="id" value={$vo.id}/>
@@ -43,10 +43,9 @@
 </div>
 </volist>
 </div>
-
 <div id="loading" class="loading-wrap">
-	<span class="loading">加载中，请稍后...</span>
+	<span class="loading">加载中...</span>
 </div>
-<div class="footer"><center>我是页脚</center></div>
+<div class="footer"><center>没有更多数据</center></div>
 </body>
 </html>
