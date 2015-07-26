@@ -57,8 +57,11 @@ height: 52px;
 text-align: center;
 display: none;
 }
+#loading{
+	margin-top:20px;
+}
 .loading {
-	padding: 10px 10px 10px 52px;
+	padding: 10px 10px;
 	height: 32px;
 	line-height: 28px;
 	color: #FFF;
@@ -68,4 +71,5 @@ display: none;
 }
 .footer{
 	border: 2px solid #D4D4D4;
+	display:none;
 }

@@ -72,8 +72,7 @@ $(function(){
 								html+="<div>QQ：<span class=\"qq\">"+data[i]['qq']+"</span></div></div>";
 							}
 							html+="</li></ul></div>";									
-						}						
-						console.log(html);
+						}
 						$(html).appendTo($container);						
 						scrollnum+=10;
 						testDetail(scrollnum);						
