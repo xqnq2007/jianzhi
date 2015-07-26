@@ -5,48 +5,11 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maxinum-scale=1.0,user-scalable=no">
 	<link href="__PUBLIC__/css/Wei/slide.css" rel="stylesheet" type="text/css" media="screen" />
-	<link href="__PUBLIC__/css/Wei/weicss.css" rel="stylesheet"	type="text/css" />
+	<link href="__PUBLIC__/css/Wei/index.css" rel="stylesheet"	type="text/css" />
 	<link href="__PUBLIC__/boot/css/bootstrap.min.css" rel="stylesheet">
 	<script src="__PUBLIC__/js/jquery.min.js"></script>	
 	<script src="__PUBLIC__/boot/js/bootstrap.min.js"></script>	
-	<script src="__PUBLIC__/js/Wei/index.js"></script>
-	<style type="text/css">
-	body{padding-top: 50px;background: #DADAD8}
-	* a{text-decoration: none !important;}
-	.navbar{background: #fff;color:#08a5e0 !important;font-size:20px;font-weight:700;line-height: 50px;}
-	.navbar-brand{color:#fff}
-	.well{background: #DADAD8;border:0px;margin-bottom: -20px;padding:10px;position: relative;border-radius:0px;}
-	.well img{height:50px;width: 50px;}
-	.well h5{position: absolute;height:30px;line-height:30px;top: 0px;left: 15px;font-size: 18px;color:#4E6694;font-weight: 700;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;width:290px;}
-	.well h6{position: absolute;height:20px;top:30px;left: 15px;font-size: 12px;color: #B7B7B7}
-
-	.list-group{border: 0px;border-radius:0px;overflow:hidden}
-	.list-group-item{color: #292929;font-size: 14px;font-weight: 500;border: 1px solid #eaeaea;border-radius:0px !important;}
-	.posttitle{height:50px;}
-	.fabu{
-		color: #3BA3FF;
-	}
-	
-	.loading-wrap{
-	bottom: 50px;
-	width: 100%;
-	height: 52px;
-	text-align: center;
-	display: none;
-	}
-	.loading {
-		padding: 10px 10px 10px 52px;
-		height: 32px;
-		line-height: 28px;
-		color: #FFF;
-		font-size: 20px;
-		border-radius: 5px;
-		background: 10px center rgba(0,0,0,.7);
-	}
-	.footer{
-		border: 2px solid #D4D4D4;
-	}
-	</style>	
+	<script src="__PUBLIC__/js/Wei/index.js"></script>	
 </head>
 <body>
 <!-- header begin -->

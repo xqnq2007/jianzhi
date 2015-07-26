@@ -5,14 +5,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maxinum-scale=1.0,user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
-	<link href="__PUBLIC__/css/Wei/weicss.css" rel="stylesheet"	type="text/css" />
+	<link href="__PUBLIC__/css/Wei/index.css" rel="stylesheet"	type="text/css" />
+	<link href="__PUBLIC__/css/Wei/comcss.css" rel="stylesheet"	type="text/css" />
 	<script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-	<script type="text/javascript" src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-	<style type="text/css">
-	body{padding-top:50px;}
-	* a{text-decoration: none !important;}
-	.navbar{background: #fff;color:#08a5e0 !important;font-size:20px;font-weight:700;line-height: 50px;}
-	.navbar-brand{color:#fff}</style>
+	<script type="text/javascript" src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>	
 </head>
 <body>
 <!-- header begin -->
@@ -21,7 +17,7 @@
 <a class="fabu" href="__ROOT__/index.php/Wei/index"><span class="glyphicon glyphicon-eye-open"></span>&nbsp;查看兼职</a>
 </nav>
 <!-- fabu begin -->
-<div class="well f18">
+<div class="well f18 bgf5">
 <form method="post">
 <div class="form-group">
 <label for="name">标题&nbsp;<font style="color:red">*</font></label>
