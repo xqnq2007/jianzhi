@@ -19,7 +19,7 @@ $(function(){
 		$(".detail").each(function(index,element){			
 			if(index<listId){		
 			}else{
-				var slideHeight = 123; // px
+				var slideHeight = 116; // px
 				var defHeight = $(this).find(".wrap").find(".detailcontent").height();
 				if(defHeight >= slideHeight){
 					$(this).find(".wrap").find(".detailcontent").css('height' , slideHeight + 'px');
@@ -68,7 +68,7 @@ $(function(){
 					var html = "";					
 					if($.isArray(data)){						
 						for(i in data){							
-							html+="<div class=\"well\"><input type=\"hidden\" name=\"id\" value=\""+data[i]['id']+"\"/><ul class=\"list-group\"><li class=\"list-group-item\"><div class=\"h40\"><h5><font class=\"title\">"+data[i]['title']+"</font></h5><h6 class=\"time\">"+data[i]['time']+"</h6></div></li><li class=\"list-group-item detail\"><div class=\"wrap\"><div class=\"detailcontent\">"+data[i]['detail']+"</div><div class=\"gradient\"></div></div><div class=\"read-more\"></div></li><li class=\"list-group-item colorphone f13\">电话："+data[i]['phone']+"&nbsp;&nbsp;";
+							html+="<div class=\"well\"><input type=\"hidden\" name=\"id\" value=\""+data[i]['id']+"\"/><ul class=\"list-group\"><li class=\"list-group-item\"><div class=\"title\">"+data[i]['title']+"</div><div class=\"time\">"+data[i]['time']+"</div></li><li class=\"list-group-item detail\"><div class=\"wrap\"><div class=\"detailcontent\">"+data[i]['detail']+"</div><div class=\"gradient\"></div></div><div class=\"read-more\"></div></li><li class=\"list-group-item phone\">电话："+data[i]['phone']+"&nbsp;&nbsp;";
 							if(data[i]['weixin']){
 								html+="<span>微信：<span class=\"weixin\">"+data[i]['weixin']+"</span></span>";
 							}

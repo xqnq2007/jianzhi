@@ -1,3 +1,9 @@
+.detailcontent{
+	color: #262626;
+	font-size: 14px;
+	line-height: 19px;
+	margin: 7px 0 0 0;
+}
 .subbtn{
 	background-color: #3BA3FF;
 	border-color: #3BA3FF;
@@ -8,10 +14,18 @@
 	color: #3BA3FF;
 }
 .title{
-	color:#4b83b2;
+	color: #0000cc;
+	font-size: 17px;
+	line-height: 21px;
+	padding-top: 6px;
+	margin-top:6px;	
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width:290px;
 }
-.h40{
-	height:40px;
+.pt6{
+	padding-top:6px;
 }
 .f18{
 	font-size:18px;
@@ -19,53 +33,46 @@
 * a{text-decoration: none !important;}
 .navbar-brand{color:#fff}
 #mainlist{
-	background: #F5F5F5;	
-}
-#mainlist .well{
 	background: #F5F5F5;
-	border:0px;
-	margin-bottom: 0px;
-	padding:10px 10px 0 10px;
+	padding:6px;
+	text-align:left;
+}
+#mainlist .well{	
+	padding: 5px 10px 0px;
 	position: relative;
-	border-radius:0px;
-	border:none;	
+	margin: 6px 0;
+	border-radius:0px;		
 	webkit-box-shadow:none;
 	box-shadow:none;
+	background: #fff;
+	border: 1px solid #e0e0e0;
 }
 #mainlist .list-group{
-	margin-bottom: 5px;
+	margin-bottom: 6px;
+	border: 0px;
+	border-radius:0px;
+	overflow:hidden;	
 }
-.well h5{
-	position: absolute;
-	height:25px;
-	line-height:25px;
-	top: 0px;
-	left: 15px;
-	font-size: 18px;
-	color:#4E6694;
-	font-weight: 700;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	width:290px;
-}
-.well h6{
-	position: absolute;
-	height:20px;
-	top:27px;
-	left: 15px;
+.well .time{	
 	font-size: 12px;
-	color: #666;
+	color: #666;	
 }
-
-.list-group{border: 0px;border-radius:0px;overflow:hidden}
-.list-group-item{color: #292929;font-size: 14px;font-weight: 500;border: 1px solid #eaeaea;border-radius:0px !important;}
-.posttitle{height:50px;}
+#mainlist .list-group-item{
+	color: #292929;
+	font-size: 14px;
+	font-weight: 500;	
+	border-radius:0px !important;
+	padding:0;
+	border:0;
+}
+.posttitle{
+	height:50px;
+}
 .loading-wrap{
-bottom: 50px;
-width: 100%;
-height: 52px;
-text-align: center;
+	bottom: 50px;
+	width: 100%;
+	height: 52px;
+	text-align: center;
 }
 #loading{
 	margin-top:20px;
@@ -82,4 +89,9 @@ text-align: center;
 .footer{
 	border: 2px solid #D4D4D4;
 	display:none;
+}
+#mainlist .phone{
+	color:#1f992f;
+	font-size:13px;
+	margin-top:7px;
 }
