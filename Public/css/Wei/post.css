@@ -1,0 +1,15 @@
+.h35{
+	height:35px;
+}
+.postForm textarea{
+	height:80px;
+}
+.subbtn{
+	background-color: #3BA3FF;
+	border-color: #3BA3FF;
+	padding:6px 20px;
+	font-size:18px;	
+}
+a:hover{
+	text-decoration:none;
+}

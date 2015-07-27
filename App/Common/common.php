@@ -39,7 +39,7 @@ function show_db_errorxx(){
 		return $num;	  
     }
       function qqSub($str){
-     if(preg_match("/^[1-9][0-9]{4,9}$/",trim($str))){ 
+     if(preg_match("/^[1-9][0-9]{4,10}$/",trim($str))){ 
 		$qq=trim($str); 
 	  }else{
 		$qq=''; 
@@ -64,11 +64,36 @@ function show_db_errorxx(){
 	  return $email;  
     }
 	  function weixinTest($str){
-    if(preg_match("/^[a-zA-Z\d_]{5,20}$/",trim($str))){ 
+    if(preg_match("/^[a-zA-Z\d_]{5,13}$/",trim($str))){ 
 		$email=trim($str); 
 	  }else{
 		$email=''; 
 	  }
 	  return $email;  
-    }    
+    }
+	/**
+	 * 计算给定时间戳与当前时间相差的时间，并以一种比较友好的方式输出
+	 * @param  [int] $timestamp [给定的时间戳]
+	 * @param  [int] $current_time [要与之相减的时间戳，默认为当前时间]
+	 * @return [string]            [相差天数]
+	 */
+	function tmspan($timestamp,$current_time=0){
+    if(!$current_time) $current_time=date("Y-m-d H:i:s");
+    $span=strtotime($current_time)-strtotime($timestamp);	
+    if($span<10){
+        return "刚刚";
+    }else if($span<60){
+        return intval($span)."秒前";
+    }else if($span<3600){
+        return intval($span/60)."分钟前";
+    }else if($span<24*3600){
+        return intval($span/3600)."小时前";
+    }else if($span<2*24*3600){
+        return "昨天";
+    }else if($span<(30*24*3600)){
+        return intval($span/(24*3600))."天前";
+    }else{        
+		return $timestamp;
+    }
+}
 ?>

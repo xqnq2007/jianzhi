@@ -3,12 +3,16 @@ $(function(){
                 var tmpweixin = $(this).html();			
 				if(!tmpweixin){					
 					$(this).parent().css("display","none");
+					var theqq=$(this).parent().parent().find(".qq").html();
+					if(theqq){
+						$(this).parent().parent().find(".qqdiv").css("display","inline");
+					}
 				}				
             });
 	$(".qq").each(function(){
 			var tmpqq = $(this).html();					
 			if(!tmpqq){					
-				$(this).parent().css("display","none");
+				$(this).parent().css("display","none");				
 			}
 		});		 
 	function testDetail(listId){
@@ -58,18 +62,18 @@ $(function(){
 		if(loading.data("on")) return;
 		if($(document).scrollTop() > 
 			$(document).height()-$(window).height()-$('.footer').height()){
-			//加载更多数据			
+			//加载更多数据		
 			loading.data("on", true).fadeIn();
-			$.get("/index.php/Wei/getDbMore",{"last_id" : $("#mainlist>div:last>input").val()},function(data){			
+			$.get("/index.php/Wei/getDbMore",{"last_id" : $("#mainlist>div:last>input").val()},function(data){	
 					var html = "";					
 					if($.isArray(data)){						
 						for(i in data){							
-							html+="<div class=\"well\"><input type=\"hidden\" name=\"id\" value=\""+data[i]['id']+"\"/><ul class=\"list-group\"><li class=\"list-group-item\"><div style=\"height:50px;\"><h5><font class=\"title\">"+data[i]['title']+"</font></h5><h6 class=\"time\">"+data[i]['time']+"</h6></div></li><li class=\"list-group-item detail\"><div class=\"wrap\"><div class=\"detailcontent\">"+data[i]['detail']+"</div><div class=\"gradient\"></div></div><div class=\"read-more\"></div></li><li class=\"list-group-item\"><span style=\"color:red\"></span>电话："+data[i]['phone'];
+							html+="<div class=\"well\"><input type=\"hidden\" name=\"id\" value=\""+data[i]['id']+"\"/><ul class=\"list-group\"><li class=\"list-group-item\"><div class=\"h40\"><h5><font class=\"title\">"+data[i]['title']+"</font></h5><h6 class=\"time\">"+data[i]['time']+"</h6></div></li><li class=\"list-group-item detail\"><div class=\"wrap\"><div class=\"detailcontent\">"+data[i]['detail']+"</div><div class=\"gradient\"></div></div><div class=\"read-more\"></div></li><li class=\"list-group-item colorphone f13\">电话："+data[i]['phone']+"&nbsp;&nbsp;";
 							if(data[i]['weixin']){
-								html+="&nbsp;&nbsp;&nbsp;&nbsp;<span>微信：<span class=\"weixin\">"+data[i]['weixin']+"</span></span>";
+								html+="<span>微信：<span class=\"weixin\">"+data[i]['weixin']+"</span></span>";
 							}
 							if(data[i]['qq']){
-								html+="<div>QQ：<span class=\"qq\">"+data[i]['qq']+"</span></div></div>";
+								html+="<div class=\"qqdiv\">Q&nbsp;<font class=\"mr2\">Q</font>：<span class=\"qq\">"+data[i]['qq']+"</span></div></div>";
 							}
 							html+="</li></ul></div>";									
 						}

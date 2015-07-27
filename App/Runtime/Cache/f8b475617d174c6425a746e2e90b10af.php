@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maxinum-scale=1.0,user-scalable=no">
 	<link href="__PUBLIC__/css/Wei/slide.css" rel="stylesheet" type="text/css" media="screen" />
 	<link href="__PUBLIC__/css/Wei/index.css" rel="stylesheet"	type="text/css" />
+	<link href="__PUBLIC__/css/Wei/comcss.css" rel="stylesheet"	type="text/css" />
 	<link href="__PUBLIC__/boot/css/bootstrap.min.css" rel="stylesheet">
 	<script src="__PUBLIC__/js/jquery.min.js"></script>	
 	<script src="__PUBLIC__/boot/js/bootstrap.min.js"></script>	
@@ -21,7 +22,7 @@
 <input type="hidden" name="id" value=<?php echo ($vo["id"]); ?>/>
 <ul class="list-group">
 <li class="list-group-item">	
-<div style="height:50px;">
+<div class="h40">
 	<h5><font class="title"><?php echo ($vo["title"]); ?></font></h5>
   <h6 class="time"><?php echo ($vo["time"]); ?></h6></div>
 </li>
@@ -34,9 +35,9 @@
 	</div>
 	<div class="read-more"></div>
 </li>
-<li class="list-group-item"><span style="color:red"></span>电话：<?php echo ($vo["phone"]); ?>&nbsp;&nbsp;&nbsp;&nbsp;
-<span>微信：<span class="weixin"><?php echo ($vo["weixin"]); ?></span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<div>QQ：<span class="qq"><?php echo ($vo["qq"]); ?></span></div>
+<li class="list-group-item colorphone f13">电话：<?php echo ($vo["phone"]); ?>&nbsp;&nbsp;
+<span>微信：<span class="weixin"><?php echo ($vo["weixin"]); ?></span></span>
+<div class="qqdiv">Q&nbsp;<font class="mr2">Q</font>：<span class="qq"><?php echo ($vo["qq"]); ?></span></div>
 </li>
 </ul>
 </div><?php endforeach; endif; else: echo "" ;endif; ?>

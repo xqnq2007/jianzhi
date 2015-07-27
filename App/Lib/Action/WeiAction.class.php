@@ -1,19 +1,24 @@
 <?php
 // 本类由系统自动生成，仅供测试用途
-
-class WeiAction extends Action {
+class WeiAction extends Action {	
     public function index()
     {  	
 	    $post=M("Post");
-		$res=$post->order('id DESC')->limit(10)->select();
+		$res=$post->order('id DESC')->limit(10)->select();			
+		for($i=0;$i<count($res);$i++){
+			$res[$i]["time"]=tmspan($res[$i]["time"]);			
+		}
 		$this->assign('post',$res);
-		$this->display(); // 输出模板		  	
+		$this->display(); // 输出模板			
     }
 	//获取下一栏数据
 	public function getDbMore(){		
 		$tmp=(int)$this->_get('last_id');
         $map['id'] = array('lt', $tmp);
         $list = D('Post')->where($map)->order('id DESC')->limit(10)->select();
+		for($i=0;$i<count($list);$i++){
+			$list[$i]["time"]=tmspan($list[$i]["time"]);			
+		}
         $this->ajaxReturn($list);
 	}
 	public function post(){	

@@ -1,6 +1,3 @@
-.tacenter{
-	text-align:center;
-}
 .subbtn{
 	background-color: #3BA3FF;
 	border-color: #3BA3FF;
@@ -11,7 +8,7 @@
 	color: #3BA3FF;
 }
 .title{
-	color:#494949;
+	color:#4b83b2;
 }
 .h40{
 	height:40px;
@@ -19,9 +16,7 @@
 .f18{
 	font-size:18px;
 }
-body{padding-top: 50px;background: #DADAD8}
 * a{text-decoration: none !important;}
-.navbar{background: #fff;color:#08a5e0 !important;font-size:20px;font-weight:700;line-height: 50px;}
 .navbar-brand{color:#fff}
 #mainlist{
 	background: #F5F5F5;	
@@ -40,22 +35,37 @@ body{padding-top: 50px;background: #DADAD8}
 #mainlist .list-group{
 	margin-bottom: 5px;
 }
-.well h5{position: absolute;height:30px;line-height:30px;top: 0px;left: 15px;font-size: 18px;color:#4E6694;font-weight: 700;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;width:290px;}
-.well h6{position: absolute;height:20px;top:30px;left: 15px;font-size: 12px;color: #B7B7B7}
+.well h5{
+	position: absolute;
+	height:25px;
+	line-height:25px;
+	top: 0px;
+	left: 15px;
+	font-size: 18px;
+	color:#4E6694;
+	font-weight: 700;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width:290px;
+}
+.well h6{
+	position: absolute;
+	height:20px;
+	top:27px;
+	left: 15px;
+	font-size: 12px;
+	color: #666;
+}
 
 .list-group{border: 0px;border-radius:0px;overflow:hidden}
 .list-group-item{color: #292929;font-size: 14px;font-weight: 500;border: 1px solid #eaeaea;border-radius:0px !important;}
 .posttitle{height:50px;}
-.fabu{
-	color: #3BA3FF;
-}
-
 .loading-wrap{
 bottom: 50px;
 width: 100%;
 height: 52px;
 text-align: center;
-display: none;
 }
 #loading{
 	margin-top:20px;
