@@ -387,8 +387,7 @@ class BossAction extends Action {
 			echo "1";	
 		}else{	
 			echo "0";	
-		}   	
-    	
+		}
     }                
 }
 ?>

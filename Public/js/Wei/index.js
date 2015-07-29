@@ -1,4 +1,4 @@
-$(function(){
+$(function(){	
 	$(".weixin").each(function(){			
                 var tmpweixin = $(this).html();			
 				if(!tmpweixin){					
@@ -68,12 +68,12 @@ $(function(){
 					var html = "";					
 					if($.isArray(data)){						
 						for(i in data){							
-							html+="<div class=\"well\"><input type=\"hidden\" name=\"id\" value=\""+data[i]['id']+"\"/><ul class=\"list-group\"><li class=\"list-group-item\"><div class=\"title\">"+data[i]['title']+"</div><div class=\"time\">"+data[i]['time']+"</div></li><li class=\"list-group-item detail\"><div class=\"wrap\"><div class=\"detailcontent\">"+data[i]['detail']+"</div><div class=\"gradient\"></div></div><div class=\"read-more\"></div></li><li class=\"list-group-item phone\">电话："+data[i]['phone']+"&nbsp;&nbsp;";
+							html+="<div class=\"well\"><input type=\"hidden\" name=\"id\" value=\""+data[i]['id']+"\"/><ul class=\"list-group\"><li class=\"list-group-item\"><div class=\"title\">"+data[i]['title']+"</div><div class=\"time\">"+data[i]['time']+"</div></li><li class=\"list-group-item detail\"><div class=\"wrap\"><div class=\"detailcontent\">"+data[i]['detail']+"</div><div class=\"gradient\"></div></div><div class=\"read-more\"></div></li><li class=\"list-group-item phone\"><span class=\"fl\">电话："+data[i]['phone']+"&nbsp;&nbsp;</span>";
 							if(data[i]['weixin']){
-								html+="<span>微信：<span class=\"weixin\">"+data[i]['weixin']+"</span></span>";
+								html+="<span class=\"clrrig\">微信：<span class=\"weixin\">"+data[i]['weixin']+"</span></span>";
 							}
 							if(data[i]['qq']){
-								html+="<div class=\"qqdiv\">Q&nbsp;<font class=\"mr2\">Q</font>：<span class=\"qq\">"+data[i]['qq']+"</span></div></div>";
+								html+="<div class=\"qqdiv\"><span class=\"qqspan fl\"><font class=\"fl\">Q</font><font class=\"fr\">Q</font></span>：<span class=\"qq\">"+data[i]['qq']+"</span></div></div>";
 							}
 							html+="</li></ul></div>";									
 						}

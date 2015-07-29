@@ -1,0 +1,24 @@
+.nav>li {
+	position: relative;
+	display: block;
+	float: left;
+}
+.logo {
+	float:left;
+	width:100px;
+	height:30px;
+	position: absolute;	
+	left: 10px;
+	top:10px;
+}
+.pr10{
+	padding-right:15px;
+}
+.navbar{
+	background: #fff;
+	color:#08a5e0 !important;
+	font-size:16px;
+	font-weight:700;
+	line-height: 50px;
+	height:50px;
+}

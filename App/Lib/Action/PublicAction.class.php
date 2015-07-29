@@ -26,6 +26,16 @@ class PublicAction extends Action {
 		else{	
 			echo "1";	
 		}
+    }
+	public function isLogin()
+    { 
+    	if($_SESSION[boss_shell])
+		{  
+			 echo "1";	      
+		}
+		else{	
+			echo "0";	
+		}
     }	
 }
 ?>
