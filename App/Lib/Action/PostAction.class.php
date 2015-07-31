@@ -28,7 +28,7 @@ class PostAction extends Action {
       	echo "<script type='text/javascript'>alert('发布失败');window.location.href='/index.php/post';</script>";
       }
     
-    }
+    }	
 	public function postDetail(){    	  
 		$post=M('Post');
 		$boss=M('Boss');

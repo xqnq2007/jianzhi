@@ -4,12 +4,9 @@
 		});
 		$.post("/index.php/Public/isLogin",function(data){
 			if(data=='1'){
-				 $("#postBtn").css("color","#337aB7");
-				 $("#loginBtn").hide();
-			}
-			else{
-				$("#postBtn").css("color","#4cded1");
-			}
+				 $("#loginBtn").hide();				 
+				  $("#postBtn").show();				
+			}			
 		});	
 	$('#postBtn').click(function(){	
 		$.ajaxSetup({ 
@@ -24,5 +21,11 @@
 				return false;
 			}
 		});		
-	});	
+	});
+	$("#searchBtn").click(function(){	
+		$tmpkey=$.trim($("#keywords").val());
+		if($tmpkey){
+			location.href='/index.php/Wei/search?k='+$tmpkey;
+		}						
+	});
 });

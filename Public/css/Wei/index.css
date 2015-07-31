@@ -32,8 +32,7 @@
 }
 * a{text-decoration: none !important;}
 .navbar-brand{color:#fff}
-#mainlist{
-	background: #F5F5F5;
+#mainlist{	
 	padding:6px;
 	text-align:left;
 }
@@ -77,6 +76,7 @@
 }
 #loading{
 	margin-top:20px;
+	display:none;
 }
 .loading {
 	padding: 10px 10px;
@@ -98,4 +98,7 @@
 }
 .qqspan{
 	width:26px;
+}
+#searchForm{
+	height:50px;	
 }

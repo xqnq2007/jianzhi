@@ -14,7 +14,7 @@ $(function(){
 			if(!tmpqq){					
 				$(this).parent().css("display","none");				
 			}
-		});		 
+		});	
 	function testDetail(listId){
 		$(".detail").each(function(index,element){			
 			if(index<listId){		
@@ -55,7 +55,7 @@ $(function(){
         }
     }); 
     //执行瀑布流	
-    var $container = $('#mainlist');	  
+    var $container = $('#mainlist');		
 	var loading = $("#loading").data("on", false);
 	var scrollnum=0;
 	$(window).scroll(function(){		
@@ -63,6 +63,7 @@ $(function(){
 		if($(document).scrollTop() > 
 			$(document).height()-$(window).height()-$('.footer').height()){
 			//加载更多数据		
+			$("#loading").css("display", "block");	
 			loading.data("on", true).fadeIn();
 			$.get("/index.php/Wei/getDbMore",{"last_id" : $("#mainlist>div:last>input").val()},function(data){	
 					var html = "";					
@@ -86,4 +87,4 @@ $(function(){
 				},"json");
 		}		
 	});	
-});		
+});

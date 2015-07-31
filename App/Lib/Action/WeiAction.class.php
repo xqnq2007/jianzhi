@@ -1,20 +1,44 @@
 <?php
 // 本类由系统自动生成，仅供测试用途
-class WeiAction extends Action {	
+class WeiAction extends Action {		
     public function index()
     {  	
-	    $post=M("Post");
+	   $_SESSION[keywords]='';
+		$post=M("Post");
 		$res=$post->order('id DESC')->limit(10)->select();			
 		for($i=0;$i<count($res);$i++){
 			$res[$i]["time"]=tmspan($res[$i]["time"]);			
 		}
 		$this->assign('post',$res);
 		$this->display(); // 输出模板			
-    }
+    }	
+	public function nodata(){
+		$this->display();
+	}
+	public function search(){
+		$keywords = trim($_GET['k']);  //获取搜索关键字		
+		$_SESSION[keywords]=$keywords;
+		$tmparr=getLikeArr($keywords);		
+		$where['title|detail'] = array('like',$tmparr,'OR');  //用like条件搜索title和content两个字段 
+		$data = M('Post')->where($where)->order('id DESC')->limit(10)->select();
+		if($data){
+			for($i=0;$i<count($data);$i++){
+				$data[$i]["time"]=tmspan($data[$i]["time"]);			
+			}	
+		$this->assign('post',$data);
+		$this->display('Wei:index');
+		}else{
+			$this->display('Wei:nodata');
+		}	
+	}
 	//获取下一栏数据
 	public function getDbMore(){		
 		$tmp=(int)$this->_get('last_id');
         $map['id'] = array('lt', $tmp);
+		if($_SESSION[keywords]){
+			$tmparr=getLikeArr($_SESSION[keywords]);
+			$map['title|detail'] = array('like',$tmparr,'OR');  //用like条件搜索title和content两个字段 
+		}
         $list = D('Post')->where($map)->order('id DESC')->limit(10)->select();
 		for($i=0;$i<count($list);$i++){
 			$list[$i]["time"]=tmspan($list[$i]["time"]);			
