@@ -102,3 +102,32 @@
 #searchForm{
 	height:50px;	
 }
+.comtModal .modal-body{
+	padding:0;
+	position:absolute;
+	top:450px;
+	left:0;
+}
+#mainlist .comtBtn{
+	padding:4px 6px;
+	font-size:12px;
+	background: #87907d;
+	color: #e1ead7;
+}
+#mainlist .comtBtnLi{
+	text-align:right;
+	padding: 5px 0;
+	text-align:right;	
+}
+#mainlist .comtLi{
+	padding:5px;
+	font-size:12px;
+	background: #f1f1f1;
+	max-height: 41px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	display:block;
+}
+.comtName{
+	color:#336699;
+}

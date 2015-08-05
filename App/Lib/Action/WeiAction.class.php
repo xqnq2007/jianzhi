@@ -5,9 +5,11 @@ class WeiAction extends Action {
     {  	
 	   $_SESSION[keywords]='';
 		$post=M("Post");
+		$comt=M("Comment");
 		$res=$post->order('id DESC')->limit(10)->select();			
 		for($i=0;$i<count($res);$i++){
-			$res[$i]["time"]=tmspan($res[$i]["time"]);			
+			$res[$i]["time"]=tmspan($res[$i]["time"]);
+			$res[$i]['voo']=$comt->where('postId='.$res[$i]['id'])->order('postTime DESC')->select();  
 		}
 		$this->assign('post',$res);
 		$this->display(); // 输出模板			
@@ -16,14 +18,16 @@ class WeiAction extends Action {
 		$this->display();
 	}
 	public function search(){
-		$keywords = trim($_GET['k']);  //获取搜索关键字		
+		$keywords = trim($_GET['k']);  //获取搜索关键字
+		$comt=M("Comment");
 		$_SESSION[keywords]=$keywords;
 		$tmparr=getLikeArr($keywords);		
 		$where['title|detail'] = array('like',$tmparr,'OR');  //用like条件搜索title和content两个字段 
 		$data = M('Post')->where($where)->order('id DESC')->limit(10)->select();
 		if($data){
 			for($i=0;$i<count($data);$i++){
-				$data[$i]["time"]=tmspan($data[$i]["time"]);			
+				$data[$i]["time"]=tmspan($data[$i]["time"]);	
+				$data[$i]['voo']=$comt->where('postId='.$data[$i]['id'])->order('postTime DESC')->select();  
 			}	
 		$this->assign('post',$data);
 		$this->display('Wei:index');
@@ -32,7 +36,8 @@ class WeiAction extends Action {
 		}	
 	}
 	//获取下一栏数据
-	public function getDbMore(){		
+	public function getDbMore(){	
+		$comt=M("Comment");
 		$tmp=(int)$this->_get('last_id');
         $map['id'] = array('lt', $tmp);
 		if($_SESSION[keywords]){
@@ -41,7 +46,8 @@ class WeiAction extends Action {
 		}
         $list = D('Post')->where($map)->order('id DESC')->limit(10)->select();
 		for($i=0;$i<count($list);$i++){
-			$list[$i]["time"]=tmspan($list[$i]["time"]);			
+			$list[$i]["time"]=tmspan($list[$i]["time"]);
+			$list[$i]['voo']=$comt->where('postId='.$list[$i]['id'])->order('postTime DESC')->select(); 
 		}
         $this->ajaxReturn($list);
 	}
@@ -123,5 +129,29 @@ class WeiAction extends Action {
 			$this->display();
 		}
 	}
+	public function postComt(){
+		$comt=M('Comment');		
+		load("@.comfunc");
+		$postid=$this->_get('postid');
+		$postername=$_SESSION[boss_name];
+		$postcont=$this->_get('postcont');		
+		$comtdata=array(      
+			'id'=>'',
+			'postId'=>$postid,
+			'posterName'=>$postername,
+			'postContent'=>$postcont,			
+			'postTime'=> date('Y-m-d H:i:s',time()) 
+		);	  
+		if($comt->add($comtdata)){
+			$data['status'] = 1;
+			$data['name'] =$postername ;
+			$data['postcont'] = $postcont;			
+			$this->ajaxReturn($data,'JSON');
+		}
+		else{
+			$data['status'] = 0;					
+			$this->ajaxReturn($data,'JSON');
+		}		
+    } 
 }
 ?>
