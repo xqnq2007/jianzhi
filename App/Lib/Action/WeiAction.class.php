@@ -3,7 +3,8 @@
 class WeiAction extends Action {		
     public function index()
     {  	
-	   $_SESSION[keywords]='';
+		load("@.comfunc");
+	   $_SESSION[keywords]='';	   
 		$post=M("Post");
 		$comt=M("Comment");
 		$res=$post->order('id DESC')->limit(10)->select();			
@@ -18,6 +19,7 @@ class WeiAction extends Action {
 		$this->display();
 	}
 	public function search(){
+		load("@.comfunc");
 		$keywords = trim($_GET['k']);  //获取搜索关键字
 		$comt=M("Comment");
 		$_SESSION[keywords]=$keywords;
@@ -36,7 +38,8 @@ class WeiAction extends Action {
 		}	
 	}
 	//获取下一栏数据
-	public function getDbMore(){	
+	public function getDbMore(){
+		load("@.comfunc");
 		$comt=M("Comment");
 		$tmp=(int)$this->_get('last_id');
         $map['id'] = array('lt', $tmp);
@@ -90,12 +93,12 @@ class WeiAction extends Action {
 			$this->display();
 		}		
     } 
-	public function reg(){
+	public function reg(){		
 		if(IS_POST){
+			load("@.comfunc");
 			$boss=M('Boss');
 			$boss_num=$boss->where('')->count();
-			$username=trim($_POST['phone']); 
-			load("@.comfunc");
+			$username=trim($_POST['phone']); 			
 			$name=nameSub($_POST['name']); 
 			$pass=trim($_POST['pass']);
 			$phone=trim($_POST['phone']);

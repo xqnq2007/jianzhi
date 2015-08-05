@@ -1,34 +1,4 @@
-$(function(){		
-	/*$(".comtBtn").click(function(){
-		if(!$("#postBtn").is(":hidden")){
-				var postid=$(this).parent().parent().parent().find(".postid").val();				
-				var tmpul=$(this).parent().parent();	
-				var tmpmodal=$(this).parent().find(".comtModal");
-				var sendbtn=$(this).parent().find(".comtSendBtn");
-				var tmpinput=$(this).parent().find(".comtInput");
-				$(this).parent().find(".modalComtId").val(postid);	
-				tmpinput.focus();
-				tmpinput.val('');
-				tmpmodal.modal('show');				
-				var postfunc=function(){		
-					var postcont=tmpinput.val();
-					if(postcont){	
-						$.get("/index.php/Wei/postComt",{"postid":postid,"postcont" :postcont },function(data){	
-								var html = "";					
-								if(data['status']=='1'){							
-									html=html+data['name']+data['postcont'];									
-									tmpul.append(html);									
-									tmpmodal.modal('hide');
-									sendbtn.unbind();
-								}
-							},"json");
-					}
-				};
-				sendbtn.bind("click",postfunc);				
-		}else{
-			alert('您还没有登陆');
-		}		
-	});	*/	
+$(function(){
 	$(".weixin").each(function(){			
                 var tmpweixin = $(this).html();			
 				if(!tmpweixin){					
