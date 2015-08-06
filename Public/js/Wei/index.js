@@ -1,4 +1,4 @@
-$(function(){
+$(function(){	
 	$(".weixin").each(function(){			
                 var tmpweixin = $(this).html();			
 				if(!tmpweixin){					
@@ -14,7 +14,7 @@ $(function(){
 			if(!tmpqq){					
 				$(this).parent().css("display","none");				
 			}
-		});	
+		});
 	function testDetail(listId){
 		$(".detail").each(function(index,element){			
 			if(index<listId){		
@@ -90,6 +90,7 @@ $(function(){
 	}
 	testDetail(0);
 	addComtFunc(0);
+	//testWQ(0);
 	$.ajaxSetup({
 		timeout:5000,
         error: function(XmlHttpRequest,textStatus, errorThrown){
@@ -111,13 +112,17 @@ $(function(){
 					var html = "";					
 					if($.isArray(data)){						
 						for(i in data){							
-							html+="<div class=\"well\"><input type=\"hidden\" class=\"postid\" value=\""+data[i]['id']+"\"/><ul class=\"list-group\"><li class=\"list-group-item\"><div class=\"title\">"+data[i]['title']+"</div><div class=\"time\">"+data[i]['time']+"</div></li><li class=\"list-group-item detail\"><div class=\"wrap\"><div class=\"detailcontent\">"+data[i]['detail']+"</div><div class=\"gradient\"></div></div><div class=\"read-more\"></div></li><li class=\"list-group-item phone\"><span class=\"fl\">电话："+data[i]['phone']+"&nbsp;&nbsp;</span>";
+							html+="<div class=\"well\"><input type=\"hidden\" class=\"postid\" value=\""+data[i]['id']+"\"/><ul class=\"list-group\"><li class=\"list-group-item\"><div class=\"title\">"+data[i]['title']+"</div><div class=\"time\">"+data[i]['time']+"</div></li><li class=\"list-group-item detail\"><div class=\"wrap\"><div class=\"detailcontent\">"+data[i]['detail']+"</div><div class=\"gradient\"></div></div><div class=\"read-more\"></div></li><li class=\"list-group-item phone\"><span>电话："+data[i]['phone']+"&nbsp;&nbsp;</span>";
 							if(data[i]['weixin']){
 								html+="<span class=\"clrrig\">微信：<span class=\"weixin\">"+data[i]['weixin']+"</span></span>";
-							}
-							if(data[i]['qq']){
-								html+="<div class=\"qqdiv\"><span class=\"qqspan fl\"><font class=\"fl\">Q</font><font class=\"fr\">Q</font></span>：<span class=\"qq\">"+data[i]['qq']+"</span></div>";
-							}
+								if(data[i]['qq']){
+									html+="<div class=\"qqdiv\"><span class=\"qqspan\"><font>Q</font><font class=\"ml6\">Q</font></span>：<span class=\"qq\">"+data[i]['qq']+"</span></div>";
+								}
+							}else{
+								if(data[i]['qq']){
+									html+="<div class=\"qqdivinline\"><span class=\"qqspan\"><font>Q</font><font class=\"ml6\">Q</font></span>：<span class=\"qq\">"+data[i]['qq']+"</span></div>";
+								}
+							}							
 							html+="</li><li class=\"list-group-item comtBtnLi\" >"+
 								"<button  class=\"btn comtBtn\">评论</button>"+
 								"<div class=\"modal fade comtModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\" >"+
@@ -146,7 +151,8 @@ $(function(){
 						$(html).appendTo($container);						
 						scrollnum+=10;					
 						addComtFunc(scrollnum);								
-						testDetail(scrollnum);						
+						testDetail(scrollnum);
+						//testWQ(scrollnum);						
 				        loading.data("on", false);
 					}
 					loading.fadeOut();
