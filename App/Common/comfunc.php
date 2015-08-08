@@ -9,6 +9,15 @@ function detailSub($str){
       return $detail;
    
     } 
+	function comtSub($str){
+    $comt_num=mb_strlen(trim($str),'utf8');
+      if($comt_num>50){
+      	$comt=mb_substr(trim($str),0,50,'utf8');
+      }else{
+      	$comt=trim($str);
+      }
+      return $comt;   
+    } 
 	function phoneSub($str){
 		$patrn = "/^(((\+?86)|(\(\+86\)))?\d{3,4}-)?\d{7,8}(-\d{3,4})?$/";
 		$validateReg = "/^((\+?86)|(\(\+86\)))?1\d{10}$/";		

@@ -1,4 +1,4 @@
-$(function(){	
+$(function(){
 	$(".weixin").each(function(){			
                 var tmpweixin = $(this).html();			
 				if(!tmpweixin){					
@@ -14,83 +14,100 @@ $(function(){
 			if(!tmpqq){					
 				$(this).parent().css("display","none");				
 			}
-		});
-	function testDetail(listId){
-		$(".detail").each(function(index,element){			
-			if(index<listId){		
-			}else{
-				var slideHeight = 116; // px
-				var defHeight = $(this).find(".wrap").find(".detailcontent").height();
-				if(defHeight >= slideHeight){
-					$(this).find(".wrap").find(".detailcontent").css('height' , slideHeight + 'px');
-					$(this).find(".read-more").append('<a href="#">全文</a>');
-					$(this).find(".read-more").click(function(){
-						var curHeight = $(this).parent().find(".wrap").find(".detailcontent").height();
-						if(curHeight == slideHeight){
-							$(this).parent().find(".wrap").find(".detailcontent").animate({
-							  height: defHeight
-							}, "normal");
-							$(this).find("a").html("收起");
-							$(this).parent().find(".wrap").find(".gradient").fadeOut();
-						}else{
-							$(this).parent().find(".wrap").find(".detailcontent").animate({
-							  height: slideHeight
-							}, "normal");
-							$(this).find("a").html("全文");
-							$(this).parent().find(".wrap").find(".gradient").fadeIn();
-						}
-						return false;
-					});		
-				}else{
+		});	
+	$('.detail').livequery(function() {  
+        var slideHeight = 116; // px
+		var defHeight = $(this).find(".wrap").find(".detailcontent").height();
+		if(defHeight >= slideHeight){
+			$(this).find(".wrap").find(".detailcontent").css('height' , slideHeight + 'px');
+			$(this).find(".read-more").append('<a href="#">全文</a>');
+			$(this).find(".read-more").click(function(){
+				var curHeight = $(this).parent().find(".wrap").find(".detailcontent").height();
+				if(curHeight == slideHeight){
+					$(this).parent().find(".wrap").find(".detailcontent").animate({
+					  height: defHeight
+					}, "normal");
+					$(this).find("a").html("收起");
 					$(this).parent().find(".wrap").find(".gradient").fadeOut();
+				}else{
+					$(this).parent().find(".wrap").find(".detailcontent").animate({
+					  height: slideHeight
+					}, "normal");
+					$(this).find("a").html("全文");
+					$(this).parent().find(".wrap").find(".gradient").fadeIn();
 				}
+				return false;
+			});		
+		}else{
+			$(this).parent().find(".wrap").find(".gradient").fadeOut();
+		}       
+    });  
+	$('.well').livequery(function() {  
+        var tmplis=$(this).find(".comtLi");
+		if(tmplis.length>10){
+			for(i=0;i<tmplis.length-10;i++){
+				tmplis.eq(i).addClass("hid");
 			}
-		});		
-	}
-	function addComtFunc(listId){
-		$(".comtBtn").each(function(index,element){			
-			if(index<listId){		
-			}else{				 
-				 var  postfunc=function(){
-					if(!$("#postBtn").is(":hidden")){
-					var postid=$(this).parent().parent().parent().find(".postid").val();				
-					var tmpul=$(this).parent().parent();	
-					var tmpmodal=$(this).parent().find(".comtModal");
-					var sendbtn=$(this).parent().find(".comtSendBtn");
-					var tmpinput=$(this).parent().find(".comtInput");
-					var tmpli=$(this).parent();
-					$(this).parent().find(".modalComtId").val(postid);	
+			$(this).find(".allComtBtnLi").show();			
+		}		          
+    });  
+	$("#mainlist").on('click','.comtBtn',function(){
+		if(!$("#postBtn").is(":hidden")){					
+					var tmpmodal=$(this).parent().find(".comtModal");					
+					var tmpinput=$(this).parent().find(".comtInput");	
 					tmpinput.focus();
 					tmpinput.val('');
-					tmpmodal.modal('show');				
-					var postfunc=function(){		
-						var postcont=tmpinput.val();
-						if(postcont){	
-							$.get("/index.php/Wei/postComt",{"postid":postid,"postcont" :postcont },function(data){	
-									var html = "";					
-									if(data['status']=='1'){										
-										html=html+"<li class=\"list-group-item comtLi\"><span class=\"comtName\">"+data['name']+
-										"</span>:&nbsp;&nbsp;"+data['postcont']+"</li>";							
-										tmpul.append(html);
-										tmpli.css("margin-bottom","5px");
-										tmpmodal.modal('hide');
-										sendbtn.unbind();
-									}
-								},"json");
-						}
-						};
-						sendbtn.bind("click",postfunc);				
-					}else{
-						alert('您还没有登陆');
-					}	
-				 }	;				
-				$(this).bind("click",postfunc);	
-			}
-		});		
-	}
-	testDetail(0);
-	addComtFunc(0);
-	//testWQ(0);
+					tmpmodal.modal('show');	
+		}else{
+			alert('您还没有登陆');
+		}	
+	})	;
+	$("#mainlist").on('click','.allComtBtn',function(){
+		var t=$(this).text();
+		var tmpul=$(this).parent().parent();
+		if(t=="全部评论"){
+			tmpul.find(".hid").addClass("show");
+			$(this).text("收起");
+		}else{
+			tmpul.find(".hid").removeClass("show");
+			$(this).text("全部评论");
+		}  
+	})
+	$("#mainlist").on('click','.comtSendBtn',function(){		
+		var postid=$(this).parents(".well").eq(0) .find(".postid").val();		
+		var postcont=$(this).parent().parent().find(".comtInput").val();
+		var tmpul=$(this).closest("ul");	
+		var tmpli=$(this).parents(".comtBtnLi").eq(0);	
+		var tmpmodal=$(this).parents(".comtModal").eq(0);
+		if($.trim(postcont)){
+			$.get("/index.php/Wei/postComt",{"postid":postid,"postcont" :postcont },function(data){					
+					var html = "";					
+					if(data['status']=='1'){							
+						html=html+"<li class=\"list-group-item comtLi\"><span class=\"comtName\">"+data['name']+
+						"</span>:&nbsp;&nbsp;"+data['postcont']+"</li>";							
+						tmpul.append(html);
+						if(parseInt(tmpli.css("marginBottom"))!=5){
+							tmpli.css("margin-bottom","5px");
+						}	
+						var tmplis=tmpul.find(".comtLi");
+						if(tmplis.length>10){
+							var allbtnli=tmpul.find(".allComtBtnLi");
+							if(!allbtnli.is(":visible")){
+								allbtnli.show();
+							}
+							var togbtn=tmpul.find(".allComtBtn");
+							var t=togbtn.text();
+							if(t=="全部评论"){				
+								tmplis.eq(tmplis.length-10-1).addClass("hid");	
+							}else{
+								tmplis.eq(tmplis.length-10-1).addClass("hid show");
+							} 
+						}						
+						tmpmodal.modal('hide');						
+					}
+				},"json");
+		}
+	})		
 	$.ajaxSetup({
 		timeout:5000,
         error: function(XmlHttpRequest,textStatus, errorThrown){
@@ -106,13 +123,13 @@ $(function(){
 		if($(document).scrollTop() > 
 			$(document).height()-$(window).height()-$('.footer').height()){
 			//加载更多数据		
-			//$("#loading").css("display", "block");	
+			$("#loading").css("display", "block");	
 			loading.data("on", true).fadeIn();
 			$.get("/index.php/Wei/getDbMore",{"last_id" : $("#mainlist>div:last>input").val()},function(data){	
 					var html = "";					
 					if($.isArray(data)){						
 						for(i in data){							
-							html+="<div class=\"well\"><input type=\"hidden\" class=\"postid\" value=\""+data[i]['id']+"\"/><ul class=\"list-group\"><li class=\"list-group-item\"><div class=\"title\">"+data[i]['title']+"</div><div class=\"time\">"+data[i]['time']+"</div></li><li class=\"list-group-item detail\"><div class=\"wrap\"><div class=\"detailcontent\">"+data[i]['detail']+"</div><div class=\"gradient\"></div></div><div class=\"read-more\"></div></li><li class=\"list-group-item phone\"><span>电话："+data[i]['phone']+"&nbsp;&nbsp;</span>";
+							html+="<div class=\"well\"><input type=\"hidden\" class=\"postid\" value=\""+data[i]['id']+"\"/><ul class=\"list-group\"><li class=\"list-group-item\"><div class=\"title\">"+data[i]['title']+"</div><div class=\"time\">"+data[i]['time']+"</div></li><li class=\"list-group-item detail\"><div class=\"wrap\"><div class=\"detailcontent\">"+data[i]['detail']+"</div><div class=\"gradient\"></div></div><div class=\"read-more\"></div></li><li class=\"list-group-item phone\"><span>电话："+data[i]['phone']+"&nbsp;&nbsp;&nbsp;&nbsp;</span>";
 							if(data[i]['weixin']){
 								html+="<span class=\"clrrig\">微信：<span class=\"weixin\">"+data[i]['weixin']+"</span></span>";
 								if(data[i]['qq']){
@@ -130,7 +147,7 @@ $(function(){
 									 " <div class=\"modal-content\">"+
 										 "<div class=\"modal-body\">"+
 											 "<div class=\"input-group\">"+					
-											 " <input type=\"text\" class=\"form-control comtInput\" placeholder=\"评价一下吧\" >"+
+											 " <input type=\"text\" class=\"form-control comtInput\" placeholder=\"评价一下吧\" maxlength=\"50\" >"+
 											 "<span class=\"input-group-btn\">" +
 												"<button class=\"btn btn-default comtSendBtn\" type=\"button\">发送</button>"+
 											 " </span>"+
@@ -141,6 +158,7 @@ $(function(){
 								"</div>"+
 							"</li>";
 							if(data[i]['voo']){
+								html+="<li class=\"list-group-item allComtBtnLi\" style=\"display:none;\"><font  class=\"allComtBtn\">全部评论</font></li>";
 								var comtarr=data[i]['voo'];
 								for(j in comtarr){
 									html+="<li class=\"list-group-item comtLi\"><span class=\"comtName\">"+comtarr[j]['posterName']+"</span>:&nbsp;&nbsp;"+comtarr[j]['postContent']+"</li>";
@@ -148,11 +166,7 @@ $(function(){
 							}							
 							html+="</ul></div>";									
 						}
-						$(html).appendTo($container);						
-						scrollnum+=10;					
-						addComtFunc(scrollnum);								
-						testDetail(scrollnum);
-						//testWQ(scrollnum);						
+						$(html).appendTo($container);
 				        loading.data("on", false);
 					}
 					loading.fadeOut();

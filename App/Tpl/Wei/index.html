@@ -4,13 +4,14 @@
 	<title>兼职信息</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maxinum-scale=1.0,user-scalable=no">
-	<link href="__PUBLIC__/boot/css/bootstrap.min.css" rel="stylesheet">
+	<link href="__PUBLIC__/boot/css/bootstrap.min.css" rel="stylesheet">	
 	<link href="__PUBLIC__/css/Wei/slide.css" rel="stylesheet" type="text/css" media="screen" />	
 	<link href="__PUBLIC__/css/Wei/comcss.css" rel="stylesheet"	type="text/css" />
 	<link href="__PUBLIC__/css/Wei/index.css" rel="stylesheet"	type="text/css" />	
 	<script src="__PUBLIC__/js/jquery.min.js"></script>	
+	<script src="__PUBLIC__/js/jquery.livequery.js" type="text/javascript"></script>  
 	<script src="__PUBLIC__/boot/js/bootstrap.min.js"></script>	
-	<script src="__PUBLIC__/js/Wei/index.js"></script>	
+	<script src="__PUBLIC__/js/Wei/index.js"></script>
 </head>
 <body>
 <include file="Wei:header" />
@@ -32,7 +33,7 @@
 	</div>
 	<div class="read-more"></div>
 </li>
-<li class="list-group-item phone"><span>电话：{$vo.phone}&nbsp;&nbsp;</span>
+<li class="list-group-item phone"><span>电话：{$vo.phone}&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="clrrig">微信：<span class="weixin">{$vo.weixin}</span></span>
 <div class="qqdiv"><span class="qqspan"><font>Q</font><font class="ml6">Q</font></span><font>：</font><span class="qq">{$vo.qq}</span></div>  
 </li>
@@ -44,7 +45,7 @@
 		  <div class="modal-content">			 
 			 <div class="modal-body">
 				  <div class="input-group">					
-				  <input type="text" class="form-control comtInput" placeholder="评价一下吧" />
+				  <input type="text" class="form-control comtInput" placeholder="评价一下吧" maxlength="50" />
 				  <span class="input-group-btn">
 					<button class="btn btn-default comtSendBtn" type="button">发送</button>
 				  </span>
@@ -54,9 +55,11 @@
 	</div>
 	</div>
 </li>
-<volist name="vo['voo']" id="sub">  
-	<li class="list-group-item comtLi"><span class="comtName">{$sub.posterName}</span>:&nbsp;&nbsp;{$sub.postContent}</li>       
- </volist>  
+<li class="list-group-item allComtBtnLi" style="display:none;">
+<font  class="allComtBtn">全部评论</font></li>
+<volist name="vo['voo']" id="sub"> 
+	<li class="list-group-item comtLi"><span class="comtName">{$sub.posterName}</span>:&nbsp;&nbsp;{$sub.postContent}</li>     
+ </volist> 
 </ul>
 </div>
 </volist>

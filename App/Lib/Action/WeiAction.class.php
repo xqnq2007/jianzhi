@@ -10,7 +10,7 @@ class WeiAction extends Action {
 		$res=$post->order('id DESC')->limit(10)->select();			
 		for($i=0;$i<count($res);$i++){
 			$res[$i]["time"]=tmspan($res[$i]["time"]);
-			$res[$i]['voo']=$comt->where('postId='.$res[$i]['id'])->order('postTime DESC')->select();  
+			$res[$i]['voo']=$comt->where('postId='.$res[$i]['id'])->order('postTime ASC')->select();  
 		}
 		$this->assign('post',$res);
 		$this->display(); // 输出模板			
@@ -29,7 +29,7 @@ class WeiAction extends Action {
 		if($data){
 			for($i=0;$i<count($data);$i++){
 				$data[$i]["time"]=tmspan($data[$i]["time"]);	
-				$data[$i]['voo']=$comt->where('postId='.$data[$i]['id'])->order('postTime DESC')->select();  
+				$data[$i]['voo']=$comt->where('postId='.$data[$i]['id'])->order('postTime ASC')->select();  
 			}	
 		$this->assign('post',$data);
 		$this->display('Wei:index');
@@ -50,7 +50,7 @@ class WeiAction extends Action {
         $list = D('Post')->where($map)->order('id DESC')->limit(10)->select();
 		for($i=0;$i<count($list);$i++){
 			$list[$i]["time"]=tmspan($list[$i]["time"]);
-			$list[$i]['voo']=$comt->where('postId='.$list[$i]['id'])->order('postTime DESC')->select(); 
+			$list[$i]['voo']=$comt->where('postId='.$list[$i]['id'])->order('postTime ASC')->select(); 
 		}
         $this->ajaxReturn($list);
 	}
@@ -142,13 +142,13 @@ class WeiAction extends Action {
 			'id'=>'',
 			'postId'=>$postid,
 			'posterName'=>$postername,
-			'postContent'=>$postcont,			
+			'postContent'=>comtSub($postcont),			
 			'postTime'=> date('Y-m-d H:i:s',time()) 
 		);	  
 		if($comt->add($comtdata)){
 			$data['status'] = 1;
 			$data['name'] =$postername ;
-			$data['postcont'] = $postcont;			
+			$data['postcont'] = comtSub($postcont);			
 			$this->ajaxReturn($data,'JSON');
 		}
 		else{
