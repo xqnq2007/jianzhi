@@ -1,0 +1,14 @@
+#emptylist {
+	text-align:center;
+	margin-top:100px;
+}
+#container {
+	word-break: break-all;
+	word-wrap: break-word;
+}
+.container_l {
+	width: 1212px;
+}
+.content_none {
+	padding: 85px 0 415px 121px;
+}

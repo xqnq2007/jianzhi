@@ -126,3 +126,6 @@
 .white{
 	background:white;
 }
+.container-fluid{
+	min-height:495px;
+}

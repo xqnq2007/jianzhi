@@ -54,8 +54,8 @@ function detailSub($str){
     }
 	  function nameSub($str){
 	$name_num=mb_strlen(trim($str),'utf8');
-	if($name_num>5){
-      	$name=mb_substr(trim($str),0,5,'utf8');
+	if($name_num>10){
+      	$name=mb_substr(trim($str),0,10,'utf8');
       }else{
       	$name=trim($str);
       }

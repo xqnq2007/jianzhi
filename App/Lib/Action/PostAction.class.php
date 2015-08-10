@@ -128,10 +128,5 @@ class PostAction extends Action {
 		}
 		$this->display('Post:index');
    }
-Public function yanzhengma(){
-	import('ORG.Util.Image');
-    Image::buildImageVerify();
-		//Image::GBVerify();
- }
 }
 ?>

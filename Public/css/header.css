@@ -1,8 +1,8 @@
-.ml125{
-	margin-left:125px;
+.ml105{
+	margin-left:105px;
 }
-.h50{
-	height:50px;
+.h60{
+	height:60px;
 }
 .postBtn{
 	font-size:36px;
@@ -80,7 +80,7 @@ p{
 }
 .logo{
 	position:absolute;
-	top:5px;
+	top:10px;
 }
 .subbtn{
 	background-color: #3ba3ff;
@@ -106,4 +106,37 @@ p{
 }
 textarea.form-control {
 	height:150px;
+}
+#postBtn{
+	margin-right:20px;
+}
+#menunav{
+	height:38px;
+	min-height:38px;	
+	padding-left:125px;
+	background:#f8f8f8;
+}
+.navbar{
+	margin-bottom:0;
+}
+#menunav li a{
+	padding:10px 15px;
+	line-height:18px;
+}
+#menunav .dropdown-menu{
+	min-width:0;
+	width:72px;
+	padding:0;
+}
+#menunav .divider{
+	margin:0;
+}
+#menunav  .dropdown-menu li a{
+	padding:10px 14px;
+	line-height:18px;
+}
+hr{
+	margin-top:1px;
+	margin-bottom:0;
+	border:0;
 }

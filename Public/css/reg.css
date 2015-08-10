@@ -1,0 +1,111 @@
+#head,#content, #foot {
+	width: 980px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#nav .nav-2 {
+	height: 20px;
+	background: url(/static/passpc-account/img/reg/reg_hr_e84a6d3b.png) no-repeat center top;
+}
+ .pass-generalError {
+	color: #fc4343;
+	display: block;
+	height: 40px;
+	font-size: 12px;
+	line-height: 40px;
+}
+.pass-form-item-isAgree {
+	margin-left: 60px;
+	font-size: 12px;
+}
+#regForm .pass-checkbox-isAgree {
+	vertical-align: middle;
+	margin:0;
+}
+.pass-form-item-isAgree label {
+	color: #666;
+	font-size: 12px;
+	margin-left: 5px;
+}
+.pass-form-item-isAgree a {
+	text-decoration: none;
+	color: #1b66c7;
+}
+.form-group{
+	marign-bottom:20px;
+}
+.inputlabel{
+	float: left;
+	width: 65px;
+	margin-right:10px;
+	line-height: 40px;
+	margin-bottom: 0;
+	color:#666;	
+	text-align: right;
+}
+.inputtext{
+	float: left;
+	width: 350px;
+	height: 40px;	
+}
+.form-item-btn {	
+	border: none;	
+	width: 350px;
+	margin-left:60px;
+}
+.pass-button-full {
+	color: #fff;
+	font-size: 16px;
+	width: 100%;
+	line-height: 44px;
+	background: #488ee7;
+	border: 1px solid #488ee7;
+	-webkit-box-sizing: border-box;	
+	-webkit-border-radius: 2px;
+	cursor: pointer;
+	display: block;
+	text-align: center;		
+}
+#head .mod-header {
+	display: block;
+	width: 330px;
+	background: url(/static/passpc-account/img/reg/logo_eeeeeb34.png) right no-repeat;
+}
+.mod-header {
+	display: inline;	
+}
+#head {
+	height: 75px;
+	z-index: 100;
+}
+#head .mod-header a {
+	width: 330px;
+	padding-top: 35px;
+	font-size: 28px;
+	text-decoration: none;
+	color: black;
+	margin-left:90px;
+}
+#foot {
+	text-align: center;
+	color: #7a77c8;
+	margin-top: 80px;
+	margin-bottom: 20px;
+}
+#verifyCode{
+	width:156px;
+}
+#verifyImg{
+	height: 38px;
+	width: 100px;
+	border: 1px solid #ddd;
+	margin: 0 10px;
+}
+#verifyImg a{
+	text-decoration: none;
+}
+#regForm .alertSpan{
+	font-size:12px;		
+	margin-left:10px;
+	line-height: 40px;
+}

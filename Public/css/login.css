@@ -1,0 +1,64 @@
+#loginModal .modal-body{
+	padding:0 20px 15px ;
+}
+#loginModal .modal-dialog{
+	width:403px;
+	height:320px;
+	margin-top:150px;
+}
+.error_area {
+	min-height: 14px;
+	padding: 5px 10px 5px 18px;
+	line-height: 14px;
+	font-size: 14px;
+	height:25px;	
+}
+.inputlabel{
+	float: left;
+	width: 50px;
+	line-height: 44px;
+	margin-bottom: 0;
+	color:#666;
+	font-size: 16px;
+}
+.inputtext{
+	float: left;
+	width: 281px;
+	height: 42px;
+	border: none;
+}
+#loginForm .form-group{
+	margin-left:0;
+	margin-right:0;			
+	padding: 0 14px;	
+	border: 1px solid #ccc;
+	height: 44px;
+}
+#loginForm .form-control{		
+	-webkit-box-shadow: none;	
+}
+.form-item-btn {	
+	border: none;
+	padding: 15px  0;
+	width: auto;
+}
+.pass-button-full {
+	color: #fff;
+	font-size: 16px;
+	width: 100%;
+	line-height: 44px;
+	background: #488ee7;
+	border: 1px solid #488ee7;
+	-webkit-box-sizing: border-box;	
+	-webkit-border-radius: 2px;
+	cursor: pointer;
+	display: block;
+	text-align: center;		
+}
+.headertext{
+	height: 18px;
+	font-size: 16px;
+	font-family: "å®‹ä½“";
+	font-weight: bold;
+	color: #666;
+}

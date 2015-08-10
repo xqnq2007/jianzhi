@@ -9,8 +9,7 @@
 <link href="__PUBLIC__/css/index.css" rel="stylesheet" type="text/css" />
 <script src="__PUBLIC__/js/jquery.min.js"></script>
 <script src="__PUBLIC__/boot/js/bootstrap.min.js"></script>
-<script src="__PUBLIC__/js/index_index.js"></script>
-<script src="__PUBLIC__/js/post.js"></script>
+<script src="__PUBLIC__/js/index.js"></script>
 </head>
 <body>
 <include file="Header:index" />
@@ -20,7 +19,7 @@
 			<div class="nums">
 				共有{$count}条信息
 			</div>
-			<div class="leftBlock"></div>
+			<!--<div class="leftBlock"></div>-->
 			<volist name="list" id="vo">
 				<div class="well c-container">				
 				<ul class="list-group f13">
@@ -72,10 +71,9 @@
 				</li>				
 				</ul>
 				</div>
-
-			</volist>
-			<div class="leftBlock"></div>
-			<div class="resultpage">{$page}</div>			
+			</volist>			
+			<div class="resultpage">{$page}</div>
+			<!--<div class="leftBlock"></div>-->
 		</div>
 		<div class="col-md-6 pl110">
 			<!-- 右侧页面-->

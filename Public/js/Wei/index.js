@@ -157,8 +157,8 @@ $(function(){
 									  "</div>"+
 								"</div>"+
 							"</li>";
-							if(data[i]['voo']){
-								html+="<li class=\"list-group-item allComtBtnLi\" style=\"display:none;\"><font  class=\"allComtBtn\">全部评论</font></li>";
+							html+="<li class=\"list-group-item allComtBtnLi\" style=\"display:none;\"><font  class=\"allComtBtn\">全部评论</font></li>";
+							if(data[i]['voo']){								
 								var comtarr=data[i]['voo'];
 								for(j in comtarr){
 									html+="<li class=\"list-group-item comtLi\"><span class=\"comtName\">"+comtarr[j]['posterName']+"</span>:&nbsp;&nbsp;"+comtarr[j]['postContent']+"</li>";

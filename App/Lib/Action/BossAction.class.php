@@ -1,8 +1,5 @@
 <?php
 // 本类由系统自动生成，仅供测试用途
-/*if(!defined($_SESSION[boss_shell])){
-    exit('Access Denied');
- }*/
 class BossAction extends Action {	
     public function index()
     { 	
@@ -13,7 +10,7 @@ class BossAction extends Action {
     }
 	public function _before_index(){
     	//检查用户是否登录
-    	$tmp=new HeaderAction();
+    	//$tmp=new HeaderAction();
     }
     public function post(){    	
 		if($_SESSION[boss_shell]){    	
@@ -89,8 +86,45 @@ class BossAction extends Action {
     }
     public function register()//招聘用户注册
     { 	
-        $tmp=new HeaderAction();	
-    	$this->display('Boss:register');
+        //$tmp=new HeaderAction();	
+    	//$this->display('Boss:register');
+		if(IS_POST){
+			$post=M('Post');
+			$post_num=$post->where('')->count();
+			load("@.comfunc");
+			$detail=detailSub($_POST['content']);
+			$phone=phoneSub($_POST['phone']);
+			$weixin=weixinTest($_POST['weixin']);
+			$qq=qqSub($_POST['qq']);
+			$data=array(      
+			'id'=>(string)(10000+$post_num),
+			'username'=>'',
+			'name'=>'',
+			'title'=>trim($_POST['title']),
+			'area'=>'0',
+			'payTypeId'=>'0',
+			'salary'=>'',
+			'salaryTypeId'=>'0',
+			'numwant'=>'',
+			'detail'=>$detail,      
+			'time'=> date('Y-m-d H:i:s',time()),      
+			'phone'=>$phone,
+			'weixin'=>$weixin,
+			'qq'=>$qq,      
+			);	  
+			if($post->add($data)){
+			echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
+			$this->success("发布成功");
+			$this->redirect('Wei:index');
+			}
+			else{
+			echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
+			$this->success("发布失败");
+			$this->redirect('Wei:post');
+			}
+		}else{
+			$this->display();
+		}		
     }
 	public function clearStuSession()//清除BOSS Session
     { 	
@@ -98,23 +132,26 @@ class BossAction extends Action {
        $_SESSION[stu_username]='';
        $_SESSION[stu_shell]='';
     }
-    public function reg(){    	
-	if (md5(trim($_POST['yzmInput']))!= $_SESSION['verify'])
-	{
-		echo "<script>fleshVerify();</script>"; 
-		$this->error('验证码错误');  //如果验证码不对就退出程序
-	}
-	else{				
+    public function reg(){ 
+		if(IS_POST){
 			$boss=M('Boss');
 			$boss_num=$boss->where('')->count();
-			$username=trim($_POST['user_username']); 
+			$username=trim($_POST['username']); 
 			load("@.comfunc");
-			$name=nameSub($_POST['user_name']); 
-			$pass=trim($_POST['user_password']);
-			$phone=trim($_POST['user_phone']);
-			$weixin=weixinTest($_POST['user_weixin']);
-			$qq=qqSub($_POST['user_qq']);
-			$email=emailTest($_POST['user_email']);          
+			$name=nameSub($_POST['name']); 
+			$pass=trim($_POST['pass']);
+			$phoneReg = "/^1\d{10}$/";	
+			$emailReg="/^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/";
+			if(preg_match($phoneReg,$username)){
+				$phone=$username;
+				$email='';
+			}else if(preg_match($emailReg,$username)){
+				$email=$username;
+				$phone='';
+			}else{
+				$email='';
+				$phone='';
+			}			 
 			$data=array( 	           
 				'id'=>(string)(10000+$boss_num),	      
 				'username'=>$username,
@@ -126,19 +163,19 @@ class BossAction extends Action {
 				'bossmail'=>$email,        
 				'regtime'=> date('Y-m-d H:i:s',time())			
 			);      
-		    if($boss->add($data)){
+			if($boss->add($data)){
 				$_SESSION[boss_name]=$name;
 				$_SESSION[boss_username]=$username;
-				$_SESSION[boss_shell]=md5($username.$pass);		
-				$tmp=new HeaderAction();
-				$this->success('注册成功');      	
-				$this->clearStuSession();
-				$this->redirect('/Index/postinfo');
-		    }
+				$_SESSION[boss_shell]=md5($username.$pass);						
+				$this->success('注册成功'); 
+				$this->redirect('Index/index');				
+			}
 			else{      	
 				$this->error('注册失败');
-			}
-		} 
+			}			
+		}else{
+			$this->display();
+		}		
     }
     public function managepost(){
 		    if(!$_SESSION[boss_shell]){
@@ -379,15 +416,33 @@ class BossAction extends Action {
       $this->display();
     }
     public function usernameTest(){
-    	$stu=M('Boss');
+    	$boss=M('Boss');
     	$username=$_POST['name'];
 		$map['username']=$username;
-		$tmp= $stu->where($map)->select();
+		$tmp= $boss->where($map)->select();
 		if($tmp){
 			echo "1";	
 		}else{	
 			echo "0";	
 		}
-    }                
+    } 
+	public function bossLoginTest(){ 	
+		$boss_username=$_POST['username'];
+		$boss_password=$_POST['pass'];
+		$boss=M('Boss');    
+		$condition['username']=$boss_username;
+		$tmp=$boss->where($condition)->select();
+		$b=is_array($tmp);
+		$ps=$b ? $boss_password==$tmp[0]["pass"]:FALSE;    
+		if($ps){				
+			$_SESSION[boss_name]=$tmp[0]["name"];
+			$_SESSION[boss_username]=$tmp[0]["username"];		
+			$_SESSION[boss_shell]=md5($tmp[0]["username"].$tmp[0]["pass"]);
+			echo "1";	
+		}
+		else{
+			echo "0";
+		}  
+    }
 }
 ?>

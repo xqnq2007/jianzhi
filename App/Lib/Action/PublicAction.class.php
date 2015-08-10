@@ -19,12 +19,12 @@ class PublicAction extends Action {
     }
 	public function testyzcode()
     { 
-    	if(md5(strtolower(trim($_POST['yzcodenum'])))!= $_SESSION['verify'])
+    	if(md5(strtolower(trim($_POST['yzcodenum'])))== $_SESSION['verify'])
 		{  
-			 echo "0";	      
+			 echo "1";	      
 		}
 		else{	
-			echo "1";	
+			echo "0";	
 		}
     }
 	public function isLogin()
@@ -36,6 +36,11 @@ class PublicAction extends Action {
 		else{	
 			echo "0";	
 		}
-    }	
+    }
+	Public function yanzhengma(){
+		import('ORG.Util.Image');
+		Image::buildImageVerify();
+			//Image::GBVerify();
+	}
 }
 ?>

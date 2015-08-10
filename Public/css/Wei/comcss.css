@@ -105,9 +105,3 @@ body{
 	left: 20px;
 	top: 10px;
 }
-#mainlist .hid{
-	display:none;
-}
-#mainlist .show{
-	display:block;
-}

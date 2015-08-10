@@ -76,7 +76,7 @@
 }
 #loading{
 	margin-top:20px;
-	/*display:none;*/
+	display:none;
 }
 .loading {
 	padding: 10px 10px;
@@ -140,4 +140,10 @@
 }
 .qqdivinline{
 	display:inline;
+}
+#mainlist .hid{
+	display:none;
+}
+#mainlist .show{
+	display:block;
 }

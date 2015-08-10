@@ -1,24 +1,59 @@
-<?php
+﻿<?php
 // 本类由系统自动生成，仅供测试用途
 class IndexAction extends Action {	
     public function index()
     {
-	     $Data = M('Post'); // 实例化Data数据对象
+	      $_SESSION[keywords]='';
+		  load("@.comfunc");
+		 $Data = M('Post'); // 实例化Data数据对象
 	    import('ORG.Util.Page');// 导入分页类
 	    $count= $Data->where($map)->count();// 查询满足要求的总记录数 $map表示查询条件
 	    $Page= new Page($count,10);// 实例化分页类 传入总记录数
 		$Page->setConfig(header,'个发布');
-		$Page->rollPage=10;
-	    //$Page->setConfig(theme,"%upPage% %first% %prePage% %linkPage% %downPage% %nowPage%/%totalPage% 页 %totalRow% %header%");
+		$Page->rollPage=10;	    
 		$Page->setConfig('theme',"<ul class='pagination'><li>%upPage%</li><li>%linkPage%</li><li>%downPage%</li></ul>");
 	    $show= $Page->show();// 分页显示输出
 	    // 进行分页数据查询
 	    $list = $Data->where($map)->order('time desc')->limit($Page->firstRow.','.$Page->listRows)->select();
+		if($list){
+			for($i=0;$i<count($list);$i++){
+				$list[$i]["time"]=tmspan($list[$i]["time"]);	
+			}
+		}	
 		$this->assign('count',$count);
 	    $this->assign('list',$list);// 赋值数据集
 	    $this->assign('page',$show);// 赋值分页输出	
 	    $this->display(); // 输出模板		
     }
+	public function search(){
+		load("@.comfunc");
+		$Data = M('Post'); // 实例化Data数据对象
+	    import('ORG.Util.Page');// 导入分页类
+		$keywords = trim($_GET['k']);  //获取搜索关键字		
+		$_SESSION[keywords]=$keywords;
+		$tmparr=getLikeArr($keywords);		
+		$where['title|detail'] = array('like',$tmparr,'OR');  //用like条件搜索title和content两个字段 
+	    $count= $Data->where($where)->count();// 查询满足要求的总记录数 $map表示查询条件
+	    $Page= new Page($count,10);// 实例化分页类 传入总记录数
+		$Page->setConfig(header,'个发布');
+		$Page->rollPage=10;	    
+		$Page->setConfig('theme',"<ul class='pagination'><li>%upPage%</li><li>%linkPage%</li><li>%downPage%</li></ul>");
+	    $show= $Page->show();// 分页显示输出
+	    // 进行分页数据查询
+	    $list = $Data->where($where)->order('time desc')->limit($Page->firstRow.','.$Page->listRows)->select();
+		if($list){
+			for($i=0;$i<count($list);$i++){
+				$list[$i]["time"]=tmspan($list[$i]["time"]);				
+			}
+			$this->assign('count',$count);
+			$this->assign('list',$list);// 赋值数据集
+			$this->assign('page',$show);// 赋值分页输出	
+			$this->display('Index:index'); // 输出模板	
+		}else{
+			$this->assign('keywords',$keywords);
+			$this->display('Public:nodata');
+		}			
+	}
 	public function refreshIndex()
     {
 	     $Data = M('Post'); // 实例化Data数据对象
@@ -63,27 +98,7 @@ class IndexAction extends Action {
        $_SESSION[boss_name]='';
        $_SESSION[boss_username]='';
        $_SESSION[boss_shell]='';
-    }
-	public function bossLoginTest(){ 	
-		$boss_username=$_POST['name'];
-		$boss_password=$_POST['pass'];
-		$boss=M('Boss');    
-		$condition['username']=$boss_username;
-		$tmp=$boss->where($condition)->select();
-		$b=is_array($tmp);
-		$ps=$b ? $boss_password==$tmp[0]["pass"]:FALSE;    
-		if($ps){		
-			echo "1";			
-			$this->clearStuSession();
-			$this->clearBossSession();
-			$_SESSION[boss_name]=$tmp[0]["name"];
-			$_SESSION[boss_username]=$tmp[0]["username"];		
-			$_SESSION[boss_shell]=md5($tmp[0]["username"].$tmp[0]["pass"]);
-		}
-		else{
-			echo "0";
-		}  
-    }
+    }	
 	public function stuLoginTest(){ 	
 		$stu_id=trim($_POST['name']);
 		$stu_password=trim($_POST['pass']);
