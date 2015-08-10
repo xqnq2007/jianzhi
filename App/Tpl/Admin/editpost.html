@@ -4,11 +4,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title> 
-<link href="/Public/css/boss_editpost.css" rel="stylesheet"	type="text/css" />
-<script src="/Public/js/jquery.js"></script>
-<script type="text/javascript" src="/Public/js/selectArea.js"></script>
-<link href="/Public/css/selectArea.css" type="text/css" rel="stylesheet">
-<script src="/Public/js/boss_editpost.js"></script>
+<link href="__PUBLIC__/css/Admin/boss_editpost.css" rel="stylesheet"	type="text/css" />
+<script src="__PUBLIC__/js/jquery.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/selectArea.js"></script>
+<link href="__PUBLIC__/css/selectArea.css" type="text/css" rel="stylesheet">
+<script src="__PUBLIC__/js/Admin/boss_editpost.js"></script>
 </head>
 <body>
 <div id="body1">
@@ -18,7 +18,7 @@
 <ul class="formul">
 	<li class="formli" style="margin-bottom:2px;"><span class="test" ><span style="margin-left:-11px;"><font color="#FF0000"style="margin-right:5px;">*</font>标题</span></span><span style="margin-right:10px;">:</span><input id="title" name="title" style="vertical-align:middle;"type="text" class="h15 in1 border"value='{$thepost[0][title]}'maxlength="25" />&nbsp;<span ></span></li>
 	<li class="formli"><span class="test" >地区</span><span style="float:left;margin-right:10px;">:</span>
-	<div class="input_select_menu" id="select_prov_id"><span class="select_item"><font class="select_area"style="margin-left:12px;">{$thearea}</font><input name="area_id"class="input" value={$theareaid} style="display:none;"/></span>
+	<div class="input_select_menu" id="select_prov_id"><span class="select_item"><font class="select_area"style="margin-left:12px;">{$thearea}</font><input name="area_id" class="input" value='{$theareaid}' style="display:none;"/></span>
         <ul class="item_list" style="display: none;">
 			<li><span dc="120101" >和平区</span></li>
 			<li><span dc="120102" >河东区</span></li>
