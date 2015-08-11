@@ -34,3 +34,12 @@
 .mt10{
 	margin-top:10px;
 }
+.pr15{
+	padding-right:15px;
+}
+.hid{
+	display:none;
+}
+.show{
+	display:block;
+}

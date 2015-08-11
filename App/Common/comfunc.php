@@ -11,8 +11,8 @@ function detailSub($str){
     } 
 	function comtSub($str){
     $comt_num=mb_strlen(trim($str),'utf8');
-      if($comt_num>50){
-      	$comt=mb_substr(trim($str),0,50,'utf8');
+      if($comt_num>500){
+      	$comt=mb_substr(trim($str),0,500,'utf8');
       }else{
       	$comt=trim($str);
       }

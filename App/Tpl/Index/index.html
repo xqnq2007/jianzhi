@@ -7,6 +7,7 @@
 <title>兼职时代</title>
 <link href="__PUBLIC__/boot/css/bootstrap.min.css" rel="stylesheet">
 <link href="__PUBLIC__/css/index.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/css/comcss.css" rel="stylesheet" type="text/css" />
 <script src="__PUBLIC__/js/jquery.min.js"></script>
 <script src="__PUBLIC__/boot/js/bootstrap.min.js"></script>
 <script src="__PUBLIC__/js/index.js"></script>
@@ -22,18 +23,18 @@
 			<!--<div class="leftBlock"></div>-->
 			<volist name="list" id="vo">
 				<div class="well c-container">				
-				<ul class="list-group f13">
+				<ul class="list-group f13">				
 				<li class="list-group-item noborder titlepadding">
+					<input   class="postid hid" value={$vo.id} />
 					<div class="title" >
-					<a class="parenttitle" data-toggle="modal" data-target="#myModal">	{$vo.title}
-					</a>
+					<a class="parenttitle" >	{$vo.title}</a>
 					</div>
 					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 					   <div class="modal-dialog">
 						  <div class="modal-content">							 
 							 <div class="modal-body">
 								<div class="well">
-									<ul class="list-group">
+									<ul class="list-group">									
 									<li class="list-group-item titleitem">									   								  
 										<button type="button" class="close" 
 										   data-dismiss="modal" aria-hidden="true">
@@ -52,8 +53,16 @@
 									电话：<font class="phone"></font>&nbsp;&nbsp;&nbsp;&nbsp;
 									<span>微信：<font class="weixin"></font>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 									<span>QQ：<font class="qq"></font></span>
-									</li>									
+									</li>
+									<li class="list-group-item allComtBtnLi hid"><a><font  class="allComtBtn">全部评论</font></a></li>									
+									</ul>																
+									<ul class="comtul list-group" id="comtul">
 									</ul>
+									<ul class="list-group">
+										<li><input   type="text" id="modalid" class="hid"/></li>
+										<li class="comtInputLi"><input   class="form-control comtInput" placeholder="评价一下吧" maxlength="500" /></li>
+										<li class="textalirig mt10 pr15"><button class="btn btn-default comtSendBtn" type="button">评价</button></li>										
+									</ul>		
 								</div>
 							 </div>							 
 						  </div><!-- /.modal-content -->

@@ -125,13 +125,7 @@ class BossAction extends Action {
 		}else{
 			$this->display();
 		}		
-    }
-	public function clearStuSession()//清除BOSS Session
-    { 	
-       $_SESSION[stu_name]='';
-       $_SESSION[stu_username]='';
-       $_SESSION[stu_shell]='';
-    }
+    }	
     public function reg(){ 
 		if(IS_POST){
 			$boss=M('Boss');
@@ -444,5 +438,22 @@ class BossAction extends Action {
 			echo "0";
 		}  
     }
+	public function getComt(){
+		$comt=M('Comment');		
+		load("@.comfunc");
+		$postid=$this->_get('postid');
+		$comtlist = $comt->where('postId='.$postid)->order('postTime ASC')->select();
+		if($comtlist){
+			for($i=0;$i<count($comtlist);$i++){
+			$comtlist[$i]["postTime"]=tmspan($comtlist[$i]["postTime"]);			
+			}
+			$data['status'] = 1;
+			$data['comtlist'] =$comtlist;		
+			$this->ajaxReturn($data,'JSON');        
+		}else{
+			$data['status'] = 0;					
+			$this->ajaxReturn($data,'JSON');
+		}		
+	}
 }
 ?>
