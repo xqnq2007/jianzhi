@@ -22,7 +22,7 @@
 	font-size:20px;	
 	line-height:1.54;
 	white-space: normal;
-	text-indent: 2em;
+	text-indent: 1.2em;
 }
 .title a{
 	color:#1a0dab;
@@ -163,4 +163,18 @@
 }
 .allComtBtnLi{
 	padding:10px 15px 0;
+}
+[class^="icon-"], [class*=" icon-"] {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+  vertical-align: text-top;
+  background-image: url("../img/glyphicons-halflings.png");
+  background-position: 14px 14px;
+  background-repeat: no-repeat;
+  *margin-right: .3em;
+}
+.icon-search {
+  background-position: -48px 0;
 }
