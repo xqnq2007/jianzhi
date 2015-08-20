@@ -1,13 +1,21 @@
 <?php
-function detailSub($str){
-    $detail_num=mb_strlen(trim($str),'utf8');
-      if($detail_num>1000){
-      	$detail=mb_substr(trim($str),0,1000,'utf8');
-      }else{
-      	$detail=trim($str);
-      }
-      return $detail;
-   
+	function titleSub($str){
+		$title_num=mb_strlen(trim($str),'utf8');
+		if($title_num>50){
+			$title=mb_substr(trim($str),0,50,'utf8');
+		  }else{
+			$title=trim($str);
+		  }
+		  return $title;   
+    } 
+	function detailSub($str){
+		$detail_num=mb_strlen(trim($str),'utf8');
+		if($detail_num>1000){
+			$detail=mb_substr(trim($str),0,1000,'utf8');
+		  }else{
+			$detail=trim($str);
+		  }
+		  return $detail;   
     } 
 	function comtSub($str){
     $comt_num=mb_strlen(trim($str),'utf8');

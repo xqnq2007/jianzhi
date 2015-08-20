@@ -143,10 +143,12 @@ hr{
 #keywords{
 	width: 210px;
 	border-radius:0;
+	border-right: none;
 }
 #searchBtn{
 	margin-left:-5px;
 	border-radius:0;
 	background: #3385ff;
 	color: white;
+	border-left: none;
 }
