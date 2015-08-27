@@ -1,5 +1,12 @@
 ﻿$(function(){
-	$('#submit-btn').click(function(){		
+	$.post("/tj/Public/curcity",function(data){
+			if(data['status']=='1'){				
+				var str=data['curcity'];
+				var backurl="/"+str+"/Wei";
+				$('#goBack').attr('href', backurl);
+			}
+	});	
+	$('#submit-btn').click(function(){				
 		if($('#title').val()==''){
 		alert('请输入标题');
 		return false;}

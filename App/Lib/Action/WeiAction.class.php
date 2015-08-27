@@ -4,15 +4,31 @@ class WeiAction extends Action {
     public function index()
     {  	
 		load("@.comfunc");
-	   $_SESSION[keywords]='';	   
-		$post=M("Post");
-		$comt=M("Comment");
+		$curcity='';				
+		 if(!$_GET['city']){
+			 if(!$_SESSION[curcity]){				
+				$curcity=getCurCity();				
+				session('curcity',$curcity);
+			 }else{				 
+				 $curcity=$_SESSION['curcity'];
+			 }
+		 }else{			
+			 $curcity=$_SESSION[curcity]=$_GET['city'];			
+		 }
+		 if($_SESSION[curcity]){
+			 $cityname=getCityName($_SESSION[curcity]);
+			 $post=getPostData($_SESSION[curcity]);
+			$comt=getComtData($_SESSION[curcity]);				 
+		 }				
+	    $_SESSION[keywords]='';	
 		$res=$post->order('id DESC')->limit(10)->select();			
 		for($i=0;$i<count($res);$i++){
 			$res[$i]["time"]=tmspan($res[$i]["time"]);
-			$res[$i]['voo']=$comt->where('postId='.$res[$i]['id'])->order('postTime ASC')->select();  
+			$res[$i]['voo']=$comt->where('postId='.$res[$i]['postId'])->order('postTime ASC')->select();  
 		}
 		$this->assign('post',$res);
+		$this->assign('curcity',$cityname);
+		$this->assign('appurl',$curcity);
 		$this->display(); // 输出模板			
     }	
 	public function nodata(){
@@ -21,15 +37,19 @@ class WeiAction extends Action {
 	public function search(){
 		load("@.comfunc");
 		$keywords = trim($_GET['k']);  //获取搜索关键字
-		$comt=M("Comment");
+		$cityname=getCityName($_SESSION[curcity]);
+		 $post=getPostData($_SESSION[curcity]);
+		$comt=getComtData($_SESSION[curcity]);
 		$_SESSION[keywords]=$keywords;
 		$tmparr=getLikeArr($keywords);		
 		$where['title|detail'] = array('like',$tmparr,'OR');  //用like条件搜索title和content两个字段 
-		$data = M('Post')->where($where)->order('id DESC')->limit(10)->select();
+		$data = $post->where($where)->order('id DESC')->limit(10)->select();
+		$this->assign('curcity',$cityname);
+		$this->assign('appurl',$_SESSION[curcity]);
 		if($data){
 			for($i=0;$i<count($data);$i++){
 				$data[$i]["time"]=tmspan($data[$i]["time"]);	
-				$data[$i]['voo']=$comt->where('postId='.$data[$i]['id'])->order('postTime ASC')->select();  
+				$data[$i]['voo']=$comt->where('postId='.$data[$i]['postId'])->order('postTime ASC')->select();  
 			}	
 		$this->assign('post',$data);
 		$this->display('Wei:index');
@@ -40,33 +60,37 @@ class WeiAction extends Action {
 	//获取下一栏数据
 	public function getDbMore(){
 		load("@.comfunc");
-		$comt=M("Comment");
+		 $post=getPostData($_SESSION[curcity]);
+		$comt=getComtData($_SESSION[curcity]);	
 		$tmp=(int)$this->_get('last_id');
-        $map['id'] = array('lt', $tmp);
+        $map['postId'] = array('lt', $tmp);
 		if($_SESSION[keywords]){
 			$tmparr=getLikeArr($_SESSION[keywords]);
 			$map['title|detail'] = array('like',$tmparr,'OR');  //用like条件搜索title和content两个字段 
 		}
-        $list = D('Post')->where($map)->order('id DESC')->limit(10)->select();
+        $list =  $post->where($map)->order('id DESC')->limit(10)->select();
 		for($i=0;$i<count($list);$i++){
 			$list[$i]["time"]=tmspan($list[$i]["time"]);
-			$list[$i]['voo']=$comt->where('postId='.$list[$i]['id'])->order('postTime ASC')->select(); 
+			$list[$i]['voo']=$comt->where('postId='.$list[$i]['postId'])->order('postTime ASC')->select(); 
 		}
         $this->ajaxReturn($list);
 	}
 	public function post(){	
 		if(IS_POST){
-			$post=M('Post');
-			$post_num=$post->where('')->count();
 			load("@.comfunc");
+			$post=getPostData($_SESSION[curcity]);
+			$username=$_SESSION[boss_username];
+			$name=$_SESSION[boss_name];
+			$post_num=$post->where('')->count();			
 			$detail=detailSub($_POST['content']);
 			$phone=phoneSub($_POST['phone']);
 			$weixin=weixinTest($_POST['weixin']);
 			$qq=qqSub($_POST['qq']);
 			$data=array(      
-			'id'=>(string)(10000+$post_num),
-			'username'=>'',
-			'name'=>'',
+			'id'=>'',
+			'postId'=>(string)(10000+$post_num),
+			'username'=>$username,
+			'name'=>$name,
 			'title'=>trim($_POST['title']),
 			'area'=>'0',
 			'payTypeId'=>'0',
@@ -81,13 +105,15 @@ class WeiAction extends Action {
 			);	  
 			if($post->add($data)){
 			echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
-			$this->success("发布成功");
-			$this->redirect('Wei:index');
+			$this->success("发布成功");			
+			$tmpurl="/".$_SESSION['curcity']."/Wei";			
+			echo "<script>location.href='$tmpurl';</script>";			
 			}
 			else{
 			echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
-			$this->success("发布失败");
-			$this->redirect('Wei:post');
+			$this->success("发布失败");			
+			$tmpurl="/".$_SESSION['curcity']."/Wei/index";
+			echo "<script>location.href='$tmpurl';</script>";	
 			}
 		}else{
 			$this->display();
@@ -122,19 +148,21 @@ class WeiAction extends Action {
 				$_SESSION[boss_shell]=md5($phone.$pass);
 				$this->success('注册成功');	
 				$this->assign('phone',$phone);
-				$this->redirect('/Wei/post');			
+				$tmpurl="/".$_SESSION['curcity']."/Wei/index";
+				$this->redirect($tmpurl);
 			}
 			else{      	
 				$this->error('注册失败');
-				$this->redirect('/Wei/reg');
+				$tmpurl="/".$_SESSION['curcity']."/Wei/reg";
+				$this->redirect($tmpurl);
 			}		 
 		}else{
 			$this->display();
 		}
 	}
 	public function postComt(){
-		$comt=M('Comment');		
 		load("@.comfunc");
+		$comt=getComtData($_SESSION[curcity]);				
 		$postid=$this->_get('postid');
 		$postername=$_SESSION[boss_name];
 		$postcont=$this->_get('postcont');		

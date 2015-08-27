@@ -138,4 +138,63 @@
 		}
 		return $arr;
 	}
+	function getCurCity(){
+		$ip=get_client_ip();
+		//$clientIP="218.247.237.26";
+		$taobaoIP = 'http://ip.taobao.com/service/getIpInfo.php?ip='.$clientIP;
+		$IPinfo = json_decode(file_get_contents($taobaoIP));
+        $province = $IPinfo->data->region;
+        $city = $IPinfo->data->city;
+		switch($city){
+			case '北京市':
+				$city='bj';
+				break;
+			case '天津市':
+				$city='tj';
+				break;
+			default:
+				$city='tj';
+		}
+        $data = $city;
+		return $data;
+	}	
+	function getPostData($str){		
+		switch($str){
+			case 'bj':				
+				 $Data = M('Bjpost');
+				break;
+			case 'tj':				
+				 $Data = M('Post');
+				break;
+			default:				
+				 $Data = M('Post');
+		}
+		return $Data;
+	}	
+	function getComtData($str){		
+		switch($str){
+			case 'bj':				
+				 $Data = M('Bjcomment');
+				break;
+			case 'tj':				
+				 $Data = M('Comment');
+				break;
+			default:				
+				 $Data = M('Comment');
+		}
+		return $Data;
+	}
+	function getCityName($str){		
+		switch($str){
+			case 'bj':				
+				$cityname='北京';
+				break;
+			case 'tj':				
+				$cityname='天津';
+				break;
+			default:				
+				$cityname='天津';
+		}
+		return $cityname;
+	}
 ?>

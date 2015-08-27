@@ -11,10 +11,24 @@
 <body>
   <nav class="navbar navbar-default white h60" role="navigation">
   <div class="navbar-header ml105">
-      <a class="navbar-brand" href="__APP__/Index">
+      <a class="navbar-brand" href="/{$appurl}/Index">
 		<img width="120" height="36" src="/Public/images/bigelogo1.jpg" class="logo">
-	  </a>  
-   </div>
+	  </a>  	 
+   </div>   
+   <div id="citynav">
+   <ul class="nav navbar-nav">   
+   <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+               {$curcity}
+               <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu" >
+               <li id="bj"><a href="/bj">北京</a></li>
+               <li id="tj"><a href="/tj">天津</a></li>			   
+            </ul>			
+         </li>
+	</ul>
+	</div>
       <form class="navbar-form navbar-left ml300 mt10" role="search">        
             <input type="text" id="keywords" class="form-control" placeholder="输入兼职类型或地区">        
          <button type="button" class="btn btn-default" id="searchBtn">搜索</button>
@@ -34,44 +48,68 @@
 <nav class="navbar" id="menunav">      
   <div>
       <ul class="nav navbar-nav">
-         <li class="active indexli"><a href="__APP__/Index">首页</a></li>
+         <li class="active indexli"><a href="/{$appurl}/Index">首页</a></li>
          <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                分类
                <b class="caret"></b>
             </a>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu" >
-               <li><a href="__APP__/Index/search?k=发单">发单</a></li>
-               <li><a href="__APP__/Index/search?k=客服">客服</a></li>
-			   <li><a href="__APP__/Index/search?k=促销">促销</a></li>               
-			   <li><a href="__APP__/Index/search?k=保安">保安</a></li>
-			   <li><a href="__APP__/Index/search?k=服务员">服务员</a></li>
-               <li><a href="__APP__/Index/search?k=暑假工">暑假工</a></li>
+               <li><a href="/{$appurl}/Index/search?k=发单">发单</a></li>
+               <li><a href="/{$appurl}/Index/search?k=客服">客服</a></li>
+			   <li><a href="/{$appurl}/Index/search?k=促销">促销</a></li>               
+			   <li><a href="/{$appurl}/Index/search?k=保安">保安</a></li>
+			   <li><a href="/{$appurl}/Index/search?k=服务员">服务员</a></li>
+               <li><a href="/{$appurl}/Index/search?k=暑假工">暑假工</a></li>
                <li class="divider"></li>
-               <li><a href="__APP__/Index/search?k=家教">家教</a></li>               
+               <li><a href="/{$appurl}/Index/search?k=家教">家教</a></li>               
             </ul>			
          </li>
-		 <li class="dropdown">
+		 <li class="dropdown" id="tjarea">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                地区
                <b class="caret"></b>
             </a>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu" >
-               <li><a href="__APP__/Index/search?k=西青">西青</a></li>
-               <li><a href="__APP__/Index/search?k=和平">和平</a></li>
-			   <li><a href="__APP__/Index/search?k=南开">南开</a></li>               
-			   <li><a href="__APP__/Index/search?k=河东">河东</a></li>
-			   <li><a href="__APP__/Index/search?k=河西">河西</a></li>
-               <li><a href="__APP__/Index/search?k=河北">河北</a></li>
-			   <li><a href="__APP__/Index/search?k=红桥">红桥</a></li>
-               <li><a href="__APP__/Index/search?k=塘沽">塘沽</a></li>
-			   <li><a href="__APP__/Index/search?k=汉沽">汉沽</a></li>               
-			   <li><a href="__APP__/Index/search?k=大港">大港</a></li>
-			   <li><a href="__APP__/Index/search?k=东丽">东丽</a></li>
-               <li><a href="__APP__/Index/search?k=津南">津南</a></li>
-			   <li><a href="__APP__/Index/search?k=北辰">北辰</a></li>
-               <li><a href="__APP__/Index/search?k=武清">武清</a></li>
-			   <li><a href="__APP__/Index/search?k=宝坻">宝坻</a></li> 
+               <li><a href="/{$appurl}/Index/search?k=西青">西青</a></li>
+               <li><a href="/{$appurl}/Index/search?k=和平">和平</a></li>
+			   <li><a href="/{$appurl}/Index/search?k=南开">南开</a></li>               
+			   <li><a href="/{$appurl}/Index/search?k=河东">河东</a></li>
+			   <li><a href="/{$appurl}/Index/search?k=河西">河西</a></li>
+               <li><a href="/{$appurl}/Index/search?k=河北">河北</a></li>
+			   <li><a href="/{$appurl}/Index/search?k=红桥">红桥</a></li>
+               <li><a href="/{$appurl}/Index/search?k=塘沽">塘沽</a></li>
+			   <li><a href="/{$appurl}/Index/search?k=汉沽">汉沽</a></li>               
+			   <li><a href="/{$appurl}/Index/search?k=大港">大港</a></li>
+			   <li><a href="/{$appurl}/Index/search?k=东丽">东丽</a></li>
+               <li><a href="/{$appurl}/Index/search?k=津南">津南</a></li>
+			   <li><a href="/{$appurl}/Index/search?k=北辰">北辰</a></li>
+               <li><a href="/{$appurl}/Index/search?k=武清">武清</a></li>
+			   <li><a href="/{$appurl}/Index/search?k=宝坻">宝坻</a></li> 
+            </ul>			
+         </li>
+		  <li class="dropdown" id="bjarea">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+               地区
+               <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu" >
+               <li><a href="/{$appurl}/Index/search?k=东城">东城</a></li>
+               <li><a href="/{$appurl}/Index/search?k=西城">西城</a></li>
+			   <li><a href="/{$appurl}/Index/search?k=海淀">海淀</a></li>               
+			   <li><a href="/{$appurl}/Index/search?k=朝阳">朝阳</a></li>
+			   <li><a href="/{$appurl}/Index/search?k=丰台">丰台</a></li>
+               <li><a href="/{$appurl}/Index/search?k=石景山">石景山</a></li>
+			   <li><a href="/{$appurl}/Index/search?k=通州">通州</a></li>
+               <li><a href="/{$appurl}/Index/search?k=顺义">顺义</a></li>
+			   <li><a href="/{$appurl}/Index/search?k=房山">房山</a></li>               
+			   <li><a href="/{$appurl}/Index/search?k=大兴">大兴</a></li>
+			   <li><a href="/{$appurl}/Index/search?k=昌平">昌平</a></li>
+               <li><a href="/{$appurl}/Index/search?k=怀柔">怀柔</a></li>
+			   <li><a href="/{$appurl}/Index/search?k=平谷">平谷</a></li>
+               <li><a href="/{$appurl}/Index/search?k=门头沟">门头沟</a></li>
+			   <li><a href="/{$appurl}/Index/search?k=密云">密云</a></li> 
+			   <li><a href="/{$appurl}/Index/search?k=延庆">延庆</a></li> 
             </ul>			
          </li>
       </ul>
@@ -105,7 +143,7 @@
 						<button class="pass-button-full" id="login-btn">登陆</button>
 						</div>	
 						<div class="textalirig">
-							<a class="pass-reglink" href="__APP__/Boss/reg" target="_blank">立即注册</a>
+							<a class="pass-reglink" href="/tj/Boss/reg" target="_blank">立即注册</a>
 						</div>												
 				</form>		
 				 </div>				 

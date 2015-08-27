@@ -70,20 +70,25 @@ class PostAction extends Action {
 			$('span[name=\"areaSpan\"]').css(numcss);
 		</script>";
     }
-	public function pubBossPost()//未注册用户发布招聘信息
+	public function bossPost()//注册用户发布招聘信息
     { 			    
-		$post=M('Post');      
-		$post_num=$post->where('')->count();
 		load("@.comfunc");		
+		if($_SESSION[curcity]){
+			$post=getPostData($_SESSION[curcity]);			
+		}				
+		$post_num=$post->where('')->count();		
+		$username=$_SESSION[boss_username];
+		$name=$_SESSION[boss_name];
 		$detail=detailSub($_POST['detail']);
 		$qq=qqSub($_POST['qq']);
 		$title=trim($_POST['title']);
 		$phone=phoneSub($_POST['phone']);
 		$weixin=weixinTest($_POST['weixin']);		
-		$data=array(      
-			'id'=>(string)(10000+$post_num),
-			'username'=>'',
-			'name'=>'',
+		$data=array(   
+			'id'=>'',
+			'postId'=>(string)(10000+$post_num),
+			'username'=>$username,
+			'name'=>$name,
 			'title'=>$title,
 			'area'=>'',
 			'payTypeId'=>'',
@@ -94,14 +99,13 @@ class PostAction extends Action {
 			'time'=> date('Y-m-d H:i:s',time()),
 			'phone'=>$phone,
 			'weixin'=>$weixin,
-			'qq'=>$qq,      
-		);
+			'qq'=>$qq    
+		);		
 		if($post->add($data)){
-			echo "1";		
-						
+			echo "1";	
 		}else{			
 			echo "0";		
-		}
+		}		
     }
 	public function test(){
 		$post=M('Post');

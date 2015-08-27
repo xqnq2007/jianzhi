@@ -4,6 +4,32 @@
 				$('#loginBtn').hide();
 			}
 		});
+	$.post("/index.php/Public/curcity",function(data){
+			if(data['status']=='1'){			
+				var str=data['curcity'];					
+				var tmpurl="/"+str+"/Boss/reg";
+				$('.pass-reglink').attr('href', tmpurl);	
+				switch(str){
+					case 'bj':				
+						$('#bjarea').show();
+						$('#tjarea').hide();
+						$('#tj').show();
+						$('#bj').hide();
+						break;
+					case 'tj':
+						$('#tjarea').show();
+						$('#bjarea').hide();
+						$('#bj').show();
+						$('#tj').hide();
+						break;
+					default:
+						 $('#tjarea').show();
+						$('#bjarea').hide();
+						$('#bj').show();
+						$('#tj').hide();
+				}
+			}
+		});
 	$('#postBtn').click(function(){		
 		$.post("/index.php/Public/isLogin",function(data){			
 			if(data=='0'){
@@ -15,8 +41,14 @@
 	});
 	$("#searchBtn").click(function(){	
 		var tmpkey=$.trim($("#keywords").val());
-		if(tmpkey){			
-			location.href='/index.php/Index/search?k='+tmpkey;						
+		if(tmpkey){		
+			$.post("/tj/Public/curcity",function(data){
+			if(data['status']=='1'){			
+				var str=data['curcity'];					
+				var tmpurl="/"+str+"/Index/search?k="+tmpkey;
+				location.href=tmpurl;
+			}
+			});								
 		}						
 	});
 	$("#login-btn").click(function(){		
@@ -30,7 +62,7 @@
 			$.ajaxSetup({ 
 				async : false 
 			});			
-			$.post("/index.php/Boss/bossLoginTest",{username:username,pass:pass},function(data){				
+			$.post("/tj/Boss/bossLoginTest",{username:username,pass:pass},function(data){	
 				if(data=='1'){					
 					tmp='1';
 				 }				
@@ -44,8 +76,7 @@
 				$('#loginModal').modal('hide');
 					$('#alertModalLabel').text('登陆成功!');
 					$('#alertModal').modal('show');	
-					setTimeout("$('#alertModal').modal('hide');",2000);
-					window.location.href="/index.php/Index";	
+					setTimeout("$('#alertModal').modal('hide');",2000);					
 			}
 		}
     });	
@@ -108,12 +139,19 @@ $(function(){
 				$.ajaxSetup({ 
 					async : false 
 				});			
-				$.post("/index.php/Post/pubBossPost",{title:title,phone:phone,detail:detail,weixin:weixin,qq:qq},function(data){			
+				$.post("/tj/Post/bossPost",{title:title,phone:phone,detail:detail,weixin:weixin,qq:qq},function(data){	
 				if(data=='1'){
 						 $('#postModal').modal('hide');
 						$('#alertModal').modal('show');
 						setTimeout("$('#alertModal').modal('hide');",2000);
-						window.location.href="/index.php/Index";	  
+						$.post("/index.php/Public/curcity",function(data){
+							if(data['status']=='1'){			
+								var str=data['curcity'];					
+								var tmpurl="/"+str;
+								window.location.href=tmpurl;	  
+							}
+						});
+						
 					 }
 					 else{
 						alert('提交失败');

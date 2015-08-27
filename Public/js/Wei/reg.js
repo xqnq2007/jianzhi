@@ -1,4 +1,11 @@
 ﻿$(function(){
+	$.post("/tj/Public/curcity",function(data){
+			if(data['status']=='1'){				
+				var str=data['curcity'];
+				var backurl="/"+str+"/Wei/login";
+				$('#goBack').attr('href', backurl);
+			}
+	});	
 	$('#submit-btn').click(function(){
 		var ok1=false;
 		function usernameTest(){
@@ -6,8 +13,9 @@
 			$.ajaxSetup({ 
 				async : false 
 			});
-			$.post("/index.php/Boss/usernameTest",{name:username},function(data){
-				if(data=='0'){            		            		 
+			$.post("/tj/Boss/usernameTest",{name:username},function(data){
+				alert(data);
+				if(data=='0'){      					
 					 ok1=true;				 
 				}
 				else{

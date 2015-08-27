@@ -152,3 +152,16 @@ hr{
 	color: white;
 	border-left: none;
 }
+#citynav{
+	margin-left:250px;
+}
+#citynav  .dropdown-menu{
+	min-width:52px;
+}
+#citynav li a{
+	padding: 5px;
+	margin: 10px 0 0;
+}
+#citynav  .dropdown-menu li a{
+	margin:0px;
+}

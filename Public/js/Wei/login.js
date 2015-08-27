@@ -1,4 +1,14 @@
-$(function(){
+$(function(){	
+	$.post("/tj/Public/curcity",function(data){
+			if(data['status']=='1'){				
+				var str=data['curcity'];
+				var backurl="/"+str+"/Wei";
+				$('#goBack').attr('href', backurl);	
+				var regurl="/"+str+"/Wei/reg";
+				$('.pass-header-links').attr('href', regurl);					
+				$('#postForm').attr('action', backurl);							
+			}
+	});	
 	$('#submit-btn').click(function(){
 		var ok1=false;
 		function bossLoginTest(){
@@ -7,7 +17,7 @@ $(function(){
 		$.ajaxSetup({ 
 			async : false 
 		});
-		$.post("/index.php/Index/bossLoginTest",{name:username,pass:password},function(data){			
+		$.post("/tj/Boss/bossLoginTest",{username:username,pass:password},function(data){			
 			if(data=='1'){            		
 				ok1=true;
 			}
@@ -27,7 +37,6 @@ $(function(){
 				return false;				
 			}
 		}
-
 		$pass=$.trim($('#pass').val());
 		if($pass==''){
 			alert('请输入密码');

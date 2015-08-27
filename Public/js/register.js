@@ -1,8 +1,15 @@
 $(function(){
+	$.post("/index.php/Public/curcity",function(data){
+			if(data['status']=='1'){			
+				var str=data['curcity'];
+				var tmpurl="/"+str+"/Public/agree";
+				$('#agreehref').attr('href', tmpurl);	
+			}
+		});
 	var okusername=false;
     var okpass=false;
     var okname=false;
-	var okverifycode=false;
+	var okverifycode=false;	
 	 // 验证用户名/Tpl/PUblic/register_do.php
     $("#username").blur(function(){		
         var username=$.trim($(this).val());
@@ -14,7 +21,7 @@ $(function(){
             $.ajaxSetup({ 
                 async : false 
             });			
-			var posturl="/index.php/Boss/usernameTest";			
+			var posturl="/tj/Boss/usernameTest";			
 			$.post(posturl,{name:username},function(data){		
 				 if(data=='0'){			 
 						 tmp='1';
@@ -38,7 +45,7 @@ $(function(){
             $.ajaxSetup({ 
                 async : false 
             });			
-            $.post("/index.php/Boss/usernameTest",{name:username},function(data){ 			
+            $.post("/tj/Boss/usernameTest",{name:username},function(data){ 			
            	 if(data=='0'){            		            		 
             		 okusername=true;
             		 tmp='1';

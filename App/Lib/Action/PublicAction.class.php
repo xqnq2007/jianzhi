@@ -4,10 +4,16 @@ class PublicAction extends Action {
     public function index()
     { 
     	$this->display(''); // 输出模板 
-    }
-    public function agreement()
+    }	
+	public function test()
     { 
-    	$this->display(''); // 输出模板 
+    	echo $_GET['city'];
+    }	
+    public function agree()
+    { 
+    	 $curcity=$_SESSION['curcity'];
+		 $this->assign('appurl',$curcity);
+		$this->display(''); // 输出模板
     }
 	public function contactUs()
     { 
@@ -37,6 +43,13 @@ class PublicAction extends Action {
 			echo "0";	
 		}
     }
+	function curcity(){		
+		$data['status'] = 1;
+		$data['curcity'] =$city;	
+		$data['curcity'] =$_SESSION[curcity];				
+		$this->ajaxReturn($data,'JSON');
+		return $data;
+	}	
 	Public function yanzhengma(){
 		import('ORG.Util.Image');
 		Image::buildImageVerify();

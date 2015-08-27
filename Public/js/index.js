@@ -51,7 +51,7 @@ $(function(){
 			$("#comtul").empty();
 			$("#myModal").find('.allComtBtnLi').hide();
 			var tmpul=$("#comtul");
-			$.get("/index.php/Boss/getComt",{"postid":postid},function(data){							
+			$.get("/tj/Boss/getComt",{"postid":postid},function(data){							
 				var html = "";
 				if(data['status']=='1'){
 					var comtlist=data['comtlist'];					
@@ -98,7 +98,7 @@ $(function(){
 				var tmpul=$('#comtul');
 				var tmpmodal=$("#myModal");					
 				if($.trim(postcont)){				
-					$.get("/index.php/Wei/postComt",{"postid":postid,"postcont" :postcont },function(data){							
+					$.get("/tj/Wei/postComt",{"postid":postid,"postcont" :postcont },function(data){							
 							var html = "";					
 							if(data['status']=='1'){							
 								html=html+"<li class=\"list-group-item comtLi\"><ul><li><span class=\"comtName\">"+data['name']+

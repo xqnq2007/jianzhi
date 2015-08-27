@@ -11,127 +11,13 @@ class BossAction extends Action {
 	public function _before_index(){
     	//检查用户是否登录
     	//$tmp=new HeaderAction();
-    }
-    public function post(){    	
-		if($_SESSION[boss_shell]){    	
-			$boss=M("Boss");
-			$tmp=$_SESSION[boss_username];	   
-			$condition['username']=$_SESSION[boss_username];
-			$res=$boss->where($condition)->select();
-			$this->assign('thepost',$res);			      
-			$this->display('Boss:editpost');	
-			echo "<script src='__PUBLIC__/js/jquery.js'></script>";
-			echo "<script>
-			var subcss={	
-				margin:'0 0 0 225px'				
-			};
-			$('font[name=\"areaText\"]').text('选择地区');
-			$('input[name=\"area_id\"]').val('0');
-			$('font[name=\"payTypeText\"]').text('日结');
-			$('input[name=\"payType_id\"]').val('1');
-			$('font[name=\"salaryTypeText\"]').text('元\时');
-			$('input[name=\"salaryType_id\"]').val('1');
-			$('#canselBut').hide();
-			$('#submitBut1').css(subcss);
-			$('form[name=\"bossPostForm\"]').attr('action', '/index.php/Boss/add');
-			</script>";	
-		}else{
-				$this->error('您尚未登录');
-			}
-    }
-    public function add()//已注册用户发布信息
-    {
-      if($_SESSION[boss_shell]){		
-		  $post=M('Post');
-		  $boss=M('Boss');
-		  $condition['username']=$_SESSION[boss_username];
-		  $tmp=$boss->where($condition)->select();
-		  $post_num=$post->where('')->count();
-		  load("@.comfunc");
-		  $detail=detailSub($_POST['detail']);			  
-		  $salary=salarySub($_POST['salary']);
-		  $num=numSub($_POST['num']);			  
-		  $qq=qqSub($_POST['qq']);
-		  $title=trim($_POST['title']);
-		  $phone=phoneSub($_POST['phone']);
-		  $weixin=weixinTest($_POST['user_weixin']);		 
-		  $data=array(      
-			  'id'=>(string)(10000+$post_num),
-			  'username'=>$_SESSION[boss_username],
-			  'name'=>$tmp[0]["name"],
-			  'title'=>$title,
-			  'area'=>$_POST['area_id'],
-			  'payTypeId'=>$_POST['payType_id'],
-			  'salaryTypeId'=>$_POST['salaryType_id'], 
-			  'salary'=>$salary,
-			  'numwant'=>$num,
-			  'detail'=>$detail,
-			  'time'=> date('Y-m-d H:i:s',time()),
-			  'phone'=>$phone,
-			  'weixin'=>$weixin,
-			  'qq'=>$qq,     
-		  );
-		  if($post->add($data)){
-				echo "<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>";
-				echo "<script type='text/javascript'>window.parent.location.href='/index.php';</script>";
-							
-			}else{
-				echo "<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>";        	
-				$this->error('发布失败');
-			}
-      }else{
-        	$this->error('您尚未登录');
-       }
-       
-    }
-    public function register()//招聘用户注册
-    { 	
-        //$tmp=new HeaderAction();	
-    	//$this->display('Boss:register');
-		if(IS_POST){
-			$post=M('Post');
-			$post_num=$post->where('')->count();
-			load("@.comfunc");
-			$detail=detailSub($_POST['content']);
-			$phone=phoneSub($_POST['phone']);
-			$weixin=weixinTest($_POST['weixin']);
-			$qq=qqSub($_POST['qq']);
-			$data=array(      
-			'id'=>(string)(10000+$post_num),
-			'username'=>'',
-			'name'=>'',
-			'title'=>trim($_POST['title']),
-			'area'=>'0',
-			'payTypeId'=>'0',
-			'salary'=>'',
-			'salaryTypeId'=>'0',
-			'numwant'=>'',
-			'detail'=>$detail,      
-			'time'=> date('Y-m-d H:i:s',time()),      
-			'phone'=>$phone,
-			'weixin'=>$weixin,
-			'qq'=>$qq,      
-			);	  
-			if($post->add($data)){
-			echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
-			$this->success("发布成功");
-			$this->redirect('Wei:index');
-			}
-			else{
-			echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
-			$this->success("发布失败");
-			$this->redirect('Wei:post');
-			}
-		}else{
-			$this->display();
-		}		
-    }	
+    }       
     public function reg(){ 
 		if(IS_POST){
+			load("@.comfunc");
 			$boss=M('Boss');
 			$boss_num=$boss->where('')->count();
-			$username=trim($_POST['username']); 
-			load("@.comfunc");
+			$username=trim($_POST['username']); 			
 			$name=nameSub($_POST['name']); 
 			$pass=trim($_POST['pass']);
 			$phoneReg = "/^1\d{10}$/";	
@@ -146,8 +32,9 @@ class BossAction extends Action {
 				$email='';
 				$phone='';
 			}			 
-			$data=array( 	           
-				'id'=>(string)(10000+$boss_num),	      
+			$data=array( 
+				'id'=>'',
+				'bossId'=>(string)(10000+$boss_num),	      
 				'username'=>$username,
 				'pass'=>$pass,
 				'name'=>$name,
@@ -162,7 +49,8 @@ class BossAction extends Action {
 				$_SESSION[boss_username]=$username;
 				$_SESSION[boss_shell]=md5($username.$pass);						
 				$this->success('注册成功'); 
-				$this->redirect('Index/index');				
+				$tmpurl="/".$_SESSION['curcity']."/Index/index";
+				$this->redirect($tmpurl);				
 			}
 			else{      	
 				$this->error('注册失败');
@@ -384,33 +272,33 @@ class BossAction extends Action {
 		</script>";
     } 
     public function addReply(){
-	 load("@.comfunc");
-     $replymsg=M('Replymsg'); 
-     $detail=detailSub($_POST['detail']);    
-     $phone=phoneSub($_POST['phone']);
-	 $weixin=weixinTest($_POST['user_weixin']);
-     $qq=qqSub($_POST['qq']);             
-	      $data=array( 	           
-	     'id'=>'',
-	      'title'=>trim($_POST['title']),	      
-	      'content'=>$detail,
-	      'replytime'=> date('Y-m-d H:i:s',time()),
-	      'phone'=>$phone,
-	      'weixin'=>$weixin,
-	      'qq'=>$qq,  
-	      );	     
-   if($replymsg->add($data)){      	
-      	$this->success('反馈成功');      	
-      }
-      else{      	
-      	$this->error('反馈失败');
-      }
+		 load("@.comfunc");
+		 $replymsg=M('Replymsg'); 
+		 $detail=detailSub($_POST['detail']);    
+		 $phone=phoneSub($_POST['phone']);
+		 $weixin=weixinTest($_POST['user_weixin']);
+		 $qq=qqSub($_POST['qq']);             
+			  $data=array( 	           
+			 'id'=>'',
+			  'title'=>trim($_POST['title']),	      
+			  'content'=>$detail,
+			  'replytime'=> date('Y-m-d H:i:s',time()),
+			  'phone'=>$phone,
+			  'weixin'=>$weixin,
+			  'qq'=>$qq,  
+			  );	     
+	    if($replymsg->add($data)){      	
+			$this->success('反馈成功');      	
+		  }
+		  else{      	
+			$this->error('反馈失败');
+		  }
     }
 	public function contactUs(){    	
       $this->display();
     }
-    public function usernameTest(){
-    	$boss=M('Boss');
+    public function usernameTest(){		
+    	$boss=M('Boss');			
     	$username=$_POST['name'];
 		$map['username']=$username;
 		$tmp= $boss->where($map)->select();
@@ -420,12 +308,12 @@ class BossAction extends Action {
 			echo "0";	
 		}
     } 
-	public function bossLoginTest(){ 	
+	public function bossLoginTest(){ 			
 		$boss_username=$_POST['username'];
-		$boss_password=$_POST['pass'];
-		$boss=M('Boss');    
+		$boss_password=$_POST['pass'];		
+		$boss=M('Boss');
 		$condition['username']=$boss_username;
-		$tmp=$boss->where($condition)->select();
+		$tmp=$boss->where($condition)->select();		
 		$b=is_array($tmp);
 		$ps=$b ? $boss_password==$tmp[0]["pass"]:FALSE;    
 		if($ps){				
@@ -436,16 +324,16 @@ class BossAction extends Action {
 		}
 		else{
 			echo "0";
-		}  
+		}  		
     }
 	public function getComt(){
-		$comt=M('Comment');		
 		load("@.comfunc");
+		$comt=getComtData($_SESSION[curcity]);						
 		$postid=$this->_get('postid');
 		$comtlist = $comt->where('postId='.$postid)->order('postTime ASC')->select();
 		if($comtlist){
 			for($i=0;$i<count($comtlist);$i++){
-			$comtlist[$i]["postTime"]=tmspan($comtlist[$i]["postTime"]);			
+				$comtlist[$i]["postTime"]=tmspan($comtlist[$i]["postTime"]);			
 			}
 			$data['status'] = 1;
 			$data['comtlist'] =$comtlist;		
