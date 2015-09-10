@@ -61,7 +61,8 @@ html{
 	margin-left:0;
 	margin-right:0;	
 	margin-bottom:0;	
-	padding:0 14px;		
+	padding:0 14px;	
+	padding: 0 14px;	
 	border-bottom: 1px solid #ccc;
 	height: 50px;
 }
@@ -86,10 +87,4 @@ html{
 	cursor: pointer;
 	display: block;
 	text-align: center;		
-}
-.pass-reglink {
-	position: absolute;
-	top: 60px;
-	right: 0;
-	cursor: pointer;
 }

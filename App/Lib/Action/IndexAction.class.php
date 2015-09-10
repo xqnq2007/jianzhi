@@ -28,7 +28,7 @@ class IndexAction extends Action {
 		$Page->setConfig('theme',"<ul class='pagination'><li>%upPage%</li><li>%linkPage%</li><li>%downPage%</li></ul>");
 	    $show= $Page->show();// 分页显示输出
 	    // 进行分页数据查询
-	    $list = $Data->where($map)->order('time desc')->limit($Page->firstRow.','.$Page->listRows)->select();
+	    $list = $Data->where($map)->order('id desc')->limit($Page->firstRow.','.$Page->listRows)->select();
 		if($list){
 			for($i=0;$i<count($list);$i++){
 				$list[$i]["time"]=tmspan($list[$i]["time"]);	
@@ -39,7 +39,32 @@ class IndexAction extends Action {
 		$this->assign('appurl',$curcity);
 	    $this->assign('list',$list);// 赋值数据集
 	    $this->assign('page',$show);// 赋值分页输出	
-	    $this->display(); // 输出模板			 	  	
+	    $this->display(); // 输出模板
+		echo "<script src='__PUBLIC__/js/jquery.js'></script>";
+		echo "<script>
+			var str='$curcity';			
+				var tmpurl='/'+str+'/Boss/reg';
+				$('.pass-reglink').attr('href', tmpurl);	
+				switch(str){
+					case 'bj':				
+						$('#bjarea').show();
+						$('#tjarea').hide();
+						$('#tj').show();
+						$('#bj').hide();
+						break;
+					case 'tj':					
+						$('#tjarea').show();
+						$('#bjarea').hide();
+						$('#bj').show();
+						$('#tj').hide();
+						break;
+					default:
+						 $('#tjarea').show();
+						$('#bjarea').hide();
+						$('#bj').show();
+						$('#tj').hide();
+				}
+		</script>";	
     }
 	public function search(){
 		load("@.comfunc");		
@@ -59,9 +84,10 @@ class IndexAction extends Action {
 		$Page->setConfig('theme',"<ul class='pagination'><li>%upPage%</li><li>%linkPage%</li><li>%downPage%</li></ul>");
 	    $show= $Page->show();// 分页显示输出
 	    // 进行分页数据查询
-	    $list = $Data->where($where)->order('time desc')->limit($Page->firstRow.','.$Page->listRows)->select();
+	    $list = $Data->where($where)->order('id desc')->limit($Page->firstRow.','.$Page->listRows)->select();
 		$this->assign('curcity',$cityname);
 		$this->assign('appurl',$_SESSION[curcity]);
+		echo "<script src='__PUBLIC__/js/jquery.js'></script>";
 		if($list){
 			for($i=0;$i<count($list);$i++){
 				$list[$i]["time"]=tmspan($list[$i]["time"]);				
@@ -69,11 +95,44 @@ class IndexAction extends Action {
 			$this->assign('count',$count);
 			$this->assign('list',$list);// 赋值数据集
 			$this->assign('page',$show);// 赋值分页输出				
-			$this->display('Index:index'); // 输出模板	
+			$this->display('Index:index'); // 输出模板
+			echo "<script>
+			 var wellnum=$('.well').length;			
+			 if(wellnum<6){
+				$('#footer').find('.navbar').addClass('navbar-fixed-bottom');
+			 }			 
+			</script>";	
 		}else{
 			$this->assign('keywords',$keywords);
 			$this->display('Public:nodata');
-		}	
+			echo "<script>			
+				$('#footer').find('.navbar').addClass('navbar-fixed-bottom');			 			 
+			</script>";	
+		}		
+		echo "<script>				
+			var str='$curcity';			
+				var tmpurl='/'+str+'/Boss/reg';
+				$('.pass-reglink').attr('href', tmpurl);	
+				switch(str){
+					case 'bj':				
+						$('#bjarea').show();
+						$('#tjarea').hide();
+						$('#tj').show();
+						$('#bj').hide();
+						break;
+					case 'tj':					
+						$('#tjarea').show();
+						$('#bjarea').hide();
+						$('#bj').show();
+						$('#tj').hide();
+						break;
+					default:
+						 $('#tjarea').show();
+						$('#bjarea').hide();
+						$('#bj').show();
+						$('#tj').hide();
+				}
+		</script>";	
 	}	
     public function _before_index(){
     	//检查用户是否登录

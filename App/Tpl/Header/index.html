@@ -12,7 +12,7 @@
   <nav class="navbar navbar-default white h60" role="navigation">
   <div class="navbar-header ml105">
       <a class="navbar-brand" href="/{$appurl}/Index">
-		<img width="120" height="36" src="/Public/images/bigelogo1.jpg" class="logo">
+		<img width="120" height="36" src="/Public/images/bigelogo.jpg" class="logo">
 	  </a>  	 
    </div>   
    <div id="citynav">
@@ -23,8 +23,8 @@
                <b class="caret"></b>
             </a>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu" >
-               <li id="bj"><a href="/bj">北京</a></li>
-               <li id="tj"><a href="/tj">天津</a></li>			   
+               <li id="bj"><a href="/bj/">北京</a></li>
+               <li id="tj"><a href="/tj/">天津</a></li>			   
             </ul>			
          </li>
 	</ul>
@@ -43,7 +43,6 @@
 			<button type="button" class="navbar-left btn btn-primary navbar-btn"  data-toggle="modal"  id='loginBtn' data-target="#loginModal" >登陆</button>						
 		</li>
       </ul>	
-<!-- /.modal -->
 </nav>
 <nav class="navbar" id="menunav">      
   <div>
@@ -63,6 +62,15 @@
                <li><a href="/{$appurl}/Index/search?k=暑假工">暑假工</a></li>
                <li class="divider"></li>
                <li><a href="/{$appurl}/Index/search?k=家教">家教</a></li>               
+            </ul>			
+         </li>
+		  <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+               轻松
+               <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu" >
+               <li><a href="/{$appurl}/Index/search?k=替课">替课</a></li>                            
             </ul>			
          </li>
 		 <li class="dropdown" id="tjarea">
@@ -116,7 +124,6 @@
    </div>
 </nav>
 <hr>
-<!-- 登陆模态框（Modal） -->
 		<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" 	   aria-labelledby="myModalLabel" aria-hidden="true">
 		   <div class="modal-dialog">
 			  <div class="modal-content">
@@ -129,8 +136,7 @@
 					   账号登陆
 					</span>
 				 </div>
-				 <div class="modal-body">					
-					<!-- fabu begin -->
+				 <div class="modal-body">	
 					<div class="error_area" id="error"></div>
 					<form class="form-horizontal" action="" role="form" method="post" id="loginForm" name="loginForm">						
 							<div class="form-group">
@@ -147,10 +153,9 @@
 						</div>												
 				</form>		
 				 </div>				 
-			  </div><!-- /.modal-content -->
-		</div><!-- /.modal -->
-   </div>   
-   <!-- 发布模态框（Modal） -->
+			  </div>
+		</div>
+   </div>     
 		<div class="modal fade" id="postModal" tabindex="-1" role="dialog"    aria-labelledby="myModalLabel" aria-hidden="true">
 		   <div class="modal-dialog">
 			  <div class="modal-content">
@@ -163,8 +168,7 @@
 					   <span class="glyphicon glyphicon-pencil"></span>&nbsp;发布兼职
 					</span>
 				 </div>
-				 <div class="modal-body">					
-					<!-- fabu begin -->	
+				 <div class="modal-body">	
 					<form class="form-horizontal" role="form" method="post" id="postForm" name="postForm">
 					   <div class="form-group">
 						  <label for="firstname" class="col-sm-2 control-label">
@@ -216,10 +220,10 @@
 					   提交
 					</button>
 				 </div>
-			  </div><!-- /.modal-content -->
-		</div><!-- /.modal -->
+			  </div>
+		</div>
    </div>   
-	<!-- 提示信息模态框（Modal） -->
+	
 	<div class="modal fade" id="alertModal" tabindex="-1" role="dialog" 	 aria-labelledby="myModalLabel" aria-hidden="true">
 	   <div class="modal-dialog">
 		  <div class="modal-content">
@@ -228,7 +232,7 @@
 				   提交成功！
 				</h4>
 			 </div>         
-		  </div><!-- /.modal-content -->
+		  </div>
 	</div>
 	</div>
 </body>

@@ -13,8 +13,7 @@
 			$.ajaxSetup({ 
 				async : false 
 			});
-			$.post("/tj/Boss/usernameTest",{name:username},function(data){
-				alert(data);
+			$.post("/tj/Boss/usernameTest",{name:username},function(data){				
 				if(data=='0'){      					
 					 ok1=true;				 
 				}

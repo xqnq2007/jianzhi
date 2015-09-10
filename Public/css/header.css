@@ -156,7 +156,10 @@ hr{
 	margin-left:250px;
 }
 #citynav  .dropdown-menu{
-	min-width:52px;
+	min-width: 48px;
+	padding: 0;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
 }
 #citynav li a{
 	padding: 5px;
@@ -165,3 +168,9 @@ hr{
 #citynav  .dropdown-menu li a{
 	margin:0px;
 }
+.nav > li:hover .dropdown-menu {display: block;}
+ .dropdown-menu{
+	 border-top:none;
+	 border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+ }

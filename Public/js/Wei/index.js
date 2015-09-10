@@ -74,13 +74,13 @@ $(function(){
 		}  
 	})
 	$("#mainlist").on('click','.comtSendBtn',function(){		
-		var postid=$(this).parents(".well").eq(0) .find(".postid").val();		
+		var postid=$(this).parents(".well").eq(0) .find(".thepostid").val();		
 		var postcont=$(this).parent().parent().find(".comtInput").val();
 		var tmpul=$(this).closest("ul");	
 		var tmpli=$(this).parents(".comtBtnLi").eq(0);	
 		var tmpmodal=$(this).parents(".comtModal").eq(0);
 		if($.trim(postcont)){
-			$.get("/tj/Wei/postComt",{"postid":postid,"postcont" :postcont },function(data){					
+			$.post("/tj/Wei/postComt",{"postid":postid,"postcont" :postcont },function(data){				
 					var html = "";					
 					if(data['status']=='1'){							
 						html=html+"<li class=\"list-group-item comtLi\"><span class=\"comtName\">"+data['name']+
@@ -125,11 +125,11 @@ $(function(){
 			//加载更多数据		
 			$("#loading").css("display", "block");	
 			loading.data("on", true).fadeIn();
-			$.get("/tj/Wei/getDbMore",{"last_id" : $("#mainlist>div:last>input").val()},function(data){	
+			$.get("/Wei/getDbMore",{"last_id" : $("#mainlist>div:last>input").val()},function(data){					
 					var html = "";					
 					if($.isArray(data)){						
 						for(i in data){							
-							html+="<div class=\"well\"><input type=\"hidden\" class=\"postid\" value=\""+data[i]['postId']+"\"/><ul class=\"list-group\"><li class=\"list-group-item\"><div class=\"title\">"+data[i]['title']+"</div><div class=\"time\">"+data[i]['time']+"</div></li><li class=\"list-group-item detail\"><div class=\"wrap\"><div class=\"detailcontent\">"+data[i]['detail']+"</div><div class=\"gradient\"></div></div><div class=\"read-more\"></div></li><li class=\"list-group-item phone\"><span>电话："+data[i]['phone']+"&nbsp;&nbsp;&nbsp;&nbsp;</span>";
+							html+="<div class=\"well\"><input type=\"hidden\" class=\"postid\" value=\""+data[i]['id']+"\"/><input  type=\"hidden\" class=\"thepostid\" value=\""+data[i]['postId']+"\"/><ul class=\"list-group\"><li class=\"list-group-item\"><div class=\"title\">"+data[i]['title']+"</div><div class=\"time\">"+data[i]['time']+"</div></li><li class=\"list-group-item detail\"><div class=\"wrap\"><div class=\"detailcontent\">"+data[i]['detail']+"</div><div class=\"gradient\"></div></div><div class=\"read-more\"></div></li><li class=\"list-group-item phone\"><span>电话："+data[i]['phone']+"&nbsp;&nbsp;&nbsp;&nbsp;</span>";
 							if(data[i]['weixin']){
 								html+="<span class=\"clrrig\">微信：<span class=\"weixin\">"+data[i]['weixin']+"</span></span>";
 								if(data[i]['qq']){

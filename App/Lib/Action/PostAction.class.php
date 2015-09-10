@@ -74,37 +74,28 @@ class PostAction extends Action {
     { 			    
 		load("@.comfunc");		
 		if($_SESSION[curcity]){
-			$post=getPostData($_SESSION[curcity]);			
-		}				
-		$post_num=$post->where('')->count();		
+			$post=getPostData($_SESSION[curcity]);		
+			$posttable=getPostTable($_SESSION[curcity]);
+		}
+		$postid=(string)($post->max('id')+1);		
 		$username=$_SESSION[boss_username];
 		$name=$_SESSION[boss_name];
 		$detail=detailSub($_POST['detail']);
 		$qq=qqSub($_POST['qq']);
 		$title=trim($_POST['title']);
 		$phone=phoneSub($_POST['phone']);
-		$weixin=weixinTest($_POST['weixin']);		
-		$data=array(   
-			'id'=>'',
-			'postId'=>(string)(10000+$post_num),
-			'username'=>$username,
-			'name'=>$name,
-			'title'=>$title,
-			'area'=>'',
-			'payTypeId'=>'',
-			'salaryTypeId'=>'', 
-			'salary'=>'',
-			'numwant'=>'',      
-			'detail'=>$detail,
-			'time'=> date('Y-m-d H:i:s',time()),
-			'phone'=>$phone,
-			'weixin'=>$weixin,
-			'qq'=>$qq    
-		);		
-		if($post->add($data)){
-			echo "1";	
-		}else{			
-			echo "0";		
+		$weixin=weixinTest($_POST['weixin']);	
+		$time=date('Y-m-d H:i:s',time());
+		$sql = "INSERT INTO ".$posttable."(id,postId,username,name,title,area,payTypeId,salary,salaryTypeId,numwant,detail,time,phone,weixin,qq)VALUES('',$postid,'{$username}','{$name}','{$title}','0','0','','0','','{$detail}','{$time}','{$phone}','{$weixin}','{$qq}')";		
+		$titleexit=$post->where("detail="."'".$detail."'")->select();
+		if(!$titleexit){
+			if($post->execute($sql)){
+				echo "1";	
+			}else{			
+				echo "0";		
+			}	
+		}else{
+			echo "2";
 		}		
     }
 	public function test(){

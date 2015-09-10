@@ -4,7 +4,7 @@
 				$('#loginBtn').hide();
 			}
 		});
-	$.post("/index.php/Public/curcity",function(data){
+	/*$.post("/index.php/Public/curcity",function(data){
 			if(data['status']=='1'){			
 				var str=data['curcity'];					
 				var tmpurl="/"+str+"/Boss/reg";
@@ -29,7 +29,7 @@
 						$('#tj').hide();
 				}
 			}
-		});
+		});*/
 	$('#postBtn').click(function(){		
 		$.post("/index.php/Public/isLogin",function(data){			
 			if(data=='0'){
@@ -140,20 +140,20 @@ $(function(){
 					async : false 
 				});			
 				$.post("/tj/Post/bossPost",{title:title,phone:phone,detail:detail,weixin:weixin,qq:qq},function(data){	
-				if(data=='1'){
+					if(data=='1'){
 						 $('#postModal').modal('hide');
 						$('#alertModal').modal('show');
 						setTimeout("$('#alertModal').modal('hide');",2000);
 						$.post("/index.php/Public/curcity",function(data){
 							if(data['status']=='1'){			
 								var str=data['curcity'];					
-								var tmpurl="/"+str;
+								var tmpurl="/"+str+"/";
 								window.location.href=tmpurl;	  
 							}
-						});
-						
-					 }
-					 else{
+						});						
+					}else if(data=='2'){
+						alert('已经有同样的信息了！');
+					} else{
 						alert('提交失败');
 					 }
 				});			

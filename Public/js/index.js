@@ -33,7 +33,7 @@ $(function(){
 			$(this).text("全部评论");
 		}  
 	})
-		$(".parenttitle").click(function() {
+		$(".parenttitle").click(function() {			
 			var title = $(this).html();
 			var detail= $(this).parent().parent().parent().find(".parentdetail").html();
 			var time = $(this).parent().parent().parent().find(".parenttime").html();
@@ -51,16 +51,16 @@ $(function(){
 			$("#comtul").empty();
 			$("#myModal").find('.allComtBtnLi').hide();
 			var tmpul=$("#comtul");
-			$.get("/tj/Boss/getComt",{"postid":postid},function(data){							
-				var html = "";
-				if(data['status']=='1'){
+			$.post("/tj/Boss/getComt",{"postid":postid},function(data){	
+				var html = "";				
+				if(data['status']=='1'){					
 					var comtlist=data['comtlist'];					
 					for(i in comtlist){
 						html=html+"<li class=\"list-group-item comtLi\"><ul><li><span class=\"comtName\">"+comtlist[i]['posterName']+
 						"</span>:&nbsp;&nbsp;"+comtlist[i]['postContent']+"</li>"+
 						"<li><span class=\"comtTime\">"+comtlist[i]['postTime']+
 							"</span></li></ul></li>";		
-					}
+					}					
 					var dom=$('<div></div>').append(html);
 					var tmplis=dom.find(".comtLi");
 					if(tmplis.length>10){						
@@ -72,7 +72,7 @@ $(function(){
 							tmplis.eq(i).addClass("hid");
 						}
 						html=dom.html();								
-					}
+					}						
 					$("#comtul").append(html);	
 				}
 			},"json");
@@ -98,7 +98,7 @@ $(function(){
 				var tmpul=$('#comtul');
 				var tmpmodal=$("#myModal");					
 				if($.trim(postcont)){				
-					$.get("/tj/Wei/postComt",{"postid":postid,"postcont" :postcont },function(data){							
+					$.post("/tj/Wei/postComt",{"postid":postid,"postcont" :postcont },function(data){				
 							var html = "";					
 							if(data['status']=='1'){							
 								html=html+"<li class=\"list-group-item comtLi\"><ul><li><span class=\"comtName\">"+data['name']+

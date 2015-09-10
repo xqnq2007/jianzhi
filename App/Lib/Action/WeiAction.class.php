@@ -62,8 +62,8 @@ class WeiAction extends Action {
 		load("@.comfunc");
 		 $post=getPostData($_SESSION[curcity]);
 		$comt=getComtData($_SESSION[curcity]);	
-		$tmp=(int)$this->_get('last_id');
-        $map['postId'] = array('lt', $tmp);
+		$tmp=$this->_get('last_id');
+        $map['id'] = array('lt', $tmp);
 		if($_SESSION[keywords]){
 			$tmparr=getLikeArr($_SESSION[keywords]);
 			$map['title|detail'] = array('like',$tmparr,'OR');  //用like条件搜索title和content两个字段 
@@ -74,47 +74,42 @@ class WeiAction extends Action {
 			$list[$i]['voo']=$comt->where('postId='.$list[$i]['postId'])->order('postTime ASC')->select(); 
 		}
         $this->ajaxReturn($list);
-	}
+	}	
 	public function post(){	
 		if(IS_POST){
 			load("@.comfunc");
 			$post=getPostData($_SESSION[curcity]);
+			$posttable=getPostTable($_SESSION[curcity]);
 			$username=$_SESSION[boss_username];
-			$name=$_SESSION[boss_name];
-			$post_num=$post->where('')->count();			
+			$name=$_SESSION[boss_name];			
+			$postid=(string)($post->max('id')+1);
+			$title=trim($_POST['title']);
 			$detail=detailSub($_POST['content']);
+			$time=date('Y-m-d H:i:s',time());
 			$phone=phoneSub($_POST['phone']);
 			$weixin=weixinTest($_POST['weixin']);
 			$qq=qqSub($_POST['qq']);
-			$data=array(      
-			'id'=>'',
-			'postId'=>(string)(10000+$post_num),
-			'username'=>$username,
-			'name'=>$name,
-			'title'=>trim($_POST['title']),
-			'area'=>'0',
-			'payTypeId'=>'0',
-			'salary'=>'',
-			'salaryTypeId'=>'0',
-			'numwant'=>'',
-			'detail'=>$detail,      
-			'time'=> date('Y-m-d H:i:s',time()),      
-			'phone'=>$phone,
-			'weixin'=>$weixin,
-			'qq'=>$qq,      
-			);	  
-			if($post->add($data)){
-			echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
-			$this->success("发布成功");			
-			$tmpurl="/".$_SESSION['curcity']."/Wei";			
-			echo "<script>location.href='$tmpurl';</script>";			
-			}
-			else{
-			echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
-			$this->success("发布失败");			
-			$tmpurl="/".$_SESSION['curcity']."/Wei/index";
-			echo "<script>location.href='$tmpurl';</script>";	
-			}
+			$sql = "INSERT INTO ".$posttable."(id,postId,username,name,title,area,payTypeId,salary,salaryTypeId,numwant,detail,time,phone,weixin,qq)VALUES('',$postid,'{$username}','{$name}','{$title}','0','0','','0','','{$detail}','{$time}','{$phone}','{$weixin}','{$qq}')";		
+			$titleexit=$post->where("detail="."'".$detail."'")->select();
+			if(!$titleexit){
+				if($post->execute($sql)){
+					echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
+					$this->success("发布成功");			
+					$tmpurl="/".$_SESSION['curcity']."/Wei";			
+					echo "<script>location.href='$tmpurl';</script>";		
+				}else{			
+					echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
+					$this->error("发布失败");			
+					$tmpurl="/".$_SESSION['curcity']."/Wei/post";
+					echo "<script>location.href='$tmpurl';</script>";			
+				}	
+			}else{
+				echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
+				$this->error("已经有同样的信息了");			
+				$tmpurl="/".$_SESSION['curcity']."/Wei/post";
+				echo "<script>location.href='$tmpurl';</script>";	
+				
+			}			
 		}else{
 			$this->display();
 		}		
@@ -131,8 +126,9 @@ class WeiAction extends Action {
 			/*$weixin=weixinTest($_POST['user_weixin']);
 			$qq=qqSub($_POST['user_qq']);
 			$email=emailTest($_POST['user_email']); */         
-			$data=array( 	           
-				'id'=>(string)(10000+$boss_num),	      
+			$data=array( 	 
+				'id'=>'',
+				'bossId'=>(string)(10000+$boss_num), 
 				'username'=>$username,
 				'pass'=>$pass,
 				'name'=>$name,
@@ -148,13 +144,15 @@ class WeiAction extends Action {
 				$_SESSION[boss_shell]=md5($phone.$pass);
 				$this->success('注册成功');	
 				$this->assign('phone',$phone);
-				$tmpurl="/".$_SESSION['curcity']."/Wei/index";
-				$this->redirect($tmpurl);
+				$tmpurl="/".$_SESSION['curcity']."/Wei/index";				
+				echo "<script>location.href='$tmpurl';</script>";				
+				//$this->redirect($tmpurl);
 			}
 			else{      	
 				$this->error('注册失败');
 				$tmpurl="/".$_SESSION['curcity']."/Wei/reg";
-				$this->redirect($tmpurl);
+				echo "<script>location.href='$tmpurl';</script>";			
+				//$this->redirect($tmpurl);
 			}		 
 		}else{
 			$this->display();
@@ -163,14 +161,14 @@ class WeiAction extends Action {
 	public function postComt(){
 		load("@.comfunc");
 		$comt=getComtData($_SESSION[curcity]);				
-		$postid=$this->_get('postid');
+		$postid=$this->_post('postid');
 		$postername=$_SESSION[boss_name];
-		$postcont=$this->_get('postcont');		
+		$postcont=$this->_post('postcont');		
 		$comtdata=array(      
 			'id'=>'',
-			'postId'=>$postid,
+			'postId'=>(string)$postid,
 			'posterName'=>$postername,
-			'postContent'=>comtSub($postcont),			
+			'postContent'=>(string)comtSub($postcont),			
 			'postTime'=> date('Y-m-d H:i:s',time()) 
 		);	  
 		if($comt->add($comtdata)){
@@ -183,6 +181,33 @@ class WeiAction extends Action {
 			$data['status'] = 0;					
 			$this->ajaxReturn($data,'JSON');
 		}		
+    } 
+	public function postComt1(){
+		load("@.comfunc");
+		$comt=getComtData($_SESSION[curcity]);				
+		//$postid=$this->_get('postid');
+		$postid=$_GET['postid'];
+		$postername=$_SESSION[boss_name];
+		$postcont=$this->_get('postcont');		
+		$comtdata=array(      
+			'id'=>'',
+			'postId'=>(string)$postid,
+			'posterName'=>$postername,
+			'postContent'=>(string)comtSub($postcont),			
+			'postTime'=> date('Y-m-d H:i:s',time()) 
+		);	
+//var_dump($comtdata);
+		print_r($_GET);
+		/*if($comt->add($comtdata)){
+			$data['status'] = 1;
+			$data['name'] =$postername ;
+			$data['postcont'] = comtSub($postcont);			
+			$this->ajaxReturn($data,'JSON');
+		}
+		else{
+			$data['status'] = 0;					
+			$this->ajaxReturn($data,'JSON');
+		}	*/	
     } 
 }
 ?>

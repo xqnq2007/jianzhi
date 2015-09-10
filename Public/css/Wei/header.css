@@ -66,16 +66,18 @@ hr {
 	width: 50px;
 }
 #searchBtn{
-	margin-top: -2px;
+	margin-top: -1px;
 	-webkit-border-radius: 0;
 	background: #4c7ee0;
 	color: white;
 	border: none;
+	height:34px;
 }
 #postLi{
 	width: 50px;
 	font-size: 15px;
 	display:none;
+	margin-left:5px;
 }
 #citynav  .dropdown-menu{
 	min-width:52px;

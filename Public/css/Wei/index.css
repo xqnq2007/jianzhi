@@ -56,6 +56,7 @@
 .well .time{	
 	font-size: 12px;
 	color: #666;	
+	line-height:35px;
 }
 #mainlist .list-group-item{
 	color: #292929;
@@ -109,22 +110,21 @@
 	left:0;
 }
 #mainlist .comtBtn{
+	float:right;
 	padding:4px 6px;
 	font-size:12px;
 	background: #87907d;
-	color: #e1ead7;
+	color: #e1ead7;	
 }
 #mainlist .allComtBtn{	
 	font-size:12px;	
 	color: #336699;
 }
-#mainlist .comtBtnLi{
-	text-align:right;
-	padding: 5px 0;
-	text-align:right;	
+#mainlist .comtBtnLi{	
+	padding: 5px 0;	
 }
 #mainlist .allComtBtnLi{	
-	padding: 5px 0;	
+	padding: 5px 0;
 }
 #mainlist .comtLi{
 	padding:5px;

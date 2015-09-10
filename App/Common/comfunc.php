@@ -139,8 +139,7 @@
 		return $arr;
 	}
 	function getCurCity(){
-		$ip=get_client_ip();
-		//$clientIP="218.247.237.26";
+		$clientIP=get_client_ip();		
 		$taobaoIP = 'http://ip.taobao.com/service/getIpInfo.php?ip='.$clientIP;
 		$IPinfo = json_decode(file_get_contents($taobaoIP));
         $province = $IPinfo->data->region;
@@ -168,6 +167,19 @@
 				break;
 			default:				
 				 $Data = M('Post');
+		}
+		return $Data;
+	}	
+	function getPostTable($str){		
+		switch($str){
+			case 'bj':				
+				 $Data = 'jz_bjpost';
+				break;
+			case 'tj':				
+				 $Data = 'jz_post';
+				break;
+			default:				
+				 $Data = 'jz_post';
 		}
 		return $Data;
 	}	

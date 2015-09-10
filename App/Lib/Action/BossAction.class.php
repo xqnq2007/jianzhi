@@ -48,9 +48,10 @@ class BossAction extends Action {
 				$_SESSION[boss_name]=$name;
 				$_SESSION[boss_username]=$username;
 				$_SESSION[boss_shell]=md5($username.$pass);						
-				$this->success('注册成功'); 
-				$tmpurl="/".$_SESSION['curcity']."/Index/index";
-				$this->redirect($tmpurl);				
+				$this->success('注册成功');
+				$tmpurl="/".$_SESSION['curcity']."/";
+				echo "<script>location.href='$tmpurl';</script>";				
+				//$this->redirect($tmpurl);				
 			}
 			else{      	
 				$this->error('注册失败');
@@ -295,7 +296,7 @@ class BossAction extends Action {
 		  }
     }
 	public function contactUs(){    	
-      $this->display();
+      $this->display();	  
     }
     public function usernameTest(){		
     	$boss=M('Boss');			
@@ -329,7 +330,7 @@ class BossAction extends Action {
 	public function getComt(){
 		load("@.comfunc");
 		$comt=getComtData($_SESSION[curcity]);						
-		$postid=$this->_get('postid');
+		$postid=$this->_post('postid');
 		$comtlist = $comt->where('postId='.$postid)->order('postTime ASC')->select();
 		if($comtlist){
 			for($i=0;$i<count($comtlist);$i++){

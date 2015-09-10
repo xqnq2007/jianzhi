@@ -1,4 +1,5 @@
 <?php
+include "/Public/lib/simple_html_dom.php" ;
 // 本类由系统自动生成，仅供测试用途
 class SpiderAction extends Action {
     public function index(){ 
@@ -23,12 +24,12 @@ class SpiderAction extends Action {
 		return $encode;
 	}	
     public function spider(){		
-		 import('Org.Util.simple_html_dom');
+		 //import('Org.Util.simple_html_dom');
 		ini_set('max_execution_time', '1000');		
 		$target_url = "http://tj.133jz.com";
 		$html = new simple_html_dom();
 		$detailhtml = new simple_html_dom();
-		$html->load_file($target_url);
+		$html->load_file($target_url);		
 		// 查找channel
 		$res = array();
 		foreach($html->find('ul.title-list li') as $k=>$li){       
@@ -76,7 +77,7 @@ class SpiderAction extends Action {
 					}				
 				}
 			}	
-		}
+		}		
 		foreach($res as $i=>$post){		
 			if(!array_key_exists("phone",$post)){				
 				unset($res[$i]);
@@ -104,8 +105,9 @@ class SpiderAction extends Action {
 			$newtime=date('Y').'-'.$m.'-'.$timex[1].' '.date('H').':'.date('i').':'.date('s');
 			$res[$i]['bbstime']=$newtime;
 		}	
-		return $res;	
-		//var_dump($res);
+		//return $res;	
+		var_dump($res);
+		echo  'haha';
 	}
 	public function test(){
 		$post=M('Post');
@@ -145,8 +147,9 @@ class SpiderAction extends Action {
 				$post_num=$post->where('')->count();
 				$strtime=$thepost['bbstime'];
 				$newtime=date('Y-m-d H:i:s',strtotime($strtime));
-				$data=array(      
-					'id'=>(string)(10000+$post_num),
+				$data=array(
+					'id'=>'',
+					'postId'=>(string)(10000+$post_num),
 					'username'=>$admininfo[0]["username"],
 					'name'=>$admininfo[0]["name"],
 					'title'=>$title,

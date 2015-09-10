@@ -1,2 +1,25 @@
+---
+name: jianzhinan4
+version: 1
 handle:
-  - rewrite: if(!is_dir() && !is_file() && path~"^(.*)$") goto "index.php/$1"
+
+- rewrite: if(!is_dir() && !is_file() && path~"^tj/Index/search(.*)$")goto "index.php/Index/search$1"
+- rewrite: if(!is_dir() && !is_file() && path~"^tj/Wei/search(.*)$")goto "index.php/Wei/search$1"
+- rewrite: if(!is_dir() && !is_file() && path~"^bj/Index/search(.*)$")goto "index.php/Index/search$1"
+- rewrite: if(!is_dir() && !is_file() && path~"^bj/Wei/search(.*)$")goto "index.php/Wei/search$1"
+- rewrite: if(!is_dir() && !is_file() && path~"^tj/(.*)$")goto "index.php/$1?city=tj"
+- rewrite: if(!is_dir() && !is_file() && path~"^bj/(.*)$")goto "index.php/$1?city=bj"
+- rewrite: if(!is_dir() && !is_file() && path~"^tj$")goto "index.php?city=tj"
+- rewrite: if(!is_dir() && !is_file() && path~"^bj$")goto "index.php?city=bj"
+- rewrite: if(!is_dir() && !is_file() && path~"^(.*)$") goto "index.php/$1"
+
+name: crontest
+version: 1
+cron:
+- description: cron tjspider
+			url: mycron/spider.php
+			schedule: "*/240 * * * *"
+  
+  - description: cron bjspider
+			url: mycron/bjspider.php
+			schedule: "*/240 * * * *"
