@@ -18,9 +18,13 @@ return array(
 	'URL_ROUTE_RULES' => array( //定义路由规则
 		'Test/:id'=>'Test/urlroute',
 		'Wei'=>'Wei/index',
+		'Weijj'=>'Weijj/index',
 		':city^Home|Wei|Admin|Index|Public|User|detail$' => 'Home',
 		':city^Home|Wei|Admin|Index|Public|User|detail/:m$' => 'Home',
-		':city^Home|Wei|Admin|Index|Public|User|detail/:m/:a' => 'Home',		
+		':city^Home|Wei|Admin|Index|Public|User|detail/:m/:a' => 'Home',			
+		':city^Home|Weijj|Admin|Index|Public|User|detail$' => 'Home',
+		':city^Home|Weijj|Admin|Index|Public|User|detail/:m$' => 'Home',
+		':city^Home|Weijj|Admin|Index|Public|User|detail/:m/:a' => 'Home'		
 	),
 	 //'SESSION_EXPIRE'=>'60'
 );

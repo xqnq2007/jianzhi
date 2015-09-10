@@ -50,6 +50,13 @@ class PublicAction extends Action {
 		$this->ajaxReturn($data,'JSON');
 		return $data;
 	}	
+	function jjcurcity(){		
+		$data['status'] = 1;
+		$data['curcity'] =$city;	
+		$data['curcity'] =$_SESSION[jjcurcity];				
+		$this->ajaxReturn($data,'JSON');
+		return $data;
+	}	
 	Public function yanzhengma(){
 		import('ORG.Util.Image');
 		Image::buildImageVerify();

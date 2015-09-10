@@ -16,7 +16,8 @@ class BossAction extends Action {
 		if(IS_POST){
 			load("@.comfunc");
 			$boss=M('Boss');
-			$boss_num=$boss->where('')->count();
+			$bosstable=getBossTable();
+			$bossid=(string)($boss->max('id')+1);					
 			$username=trim($_POST['username']); 			
 			$name=nameSub($_POST['name']); 
 			$pass=trim($_POST['pass']);
@@ -31,27 +32,16 @@ class BossAction extends Action {
 			}else{
 				$email='';
 				$phone='';
-			}			 
-			$data=array( 
-				'id'=>'',
-				'bossId'=>(string)(10000+$boss_num),	      
-				'username'=>$username,
-				'pass'=>$pass,
-				'name'=>$name,
-				'phone'=>$phone,
-				'weixin'=>$weixin,
-				'qq'=>$qq,
-				'bossmail'=>$email,        
-				'regtime'=> date('Y-m-d H:i:s',time())			
-			);      
-			if($boss->add($data)){
+			}
+			$time=date('Y-m-d H:i:s',time());
+			$sql = "INSERT INTO ".$bosstable."(id,bossId,username,pass,name,phone,weixin,qq,bossmail,regtime)VALUES('',$bossid,'{$username}','{$pass}','{$name}','{$phone}','{$weixin}','{$qq}','{$email}','{$time}')";					
+			if($boss->execute($sql)){
 				$_SESSION[boss_name]=$name;
 				$_SESSION[boss_username]=$username;
 				$_SESSION[boss_shell]=md5($username.$pass);						
 				$this->success('注册成功');
 				$tmpurl="/".$_SESSION['curcity']."/";
-				echo "<script>location.href='$tmpurl';</script>";				
-				//$this->redirect($tmpurl);				
+				echo "<script>location.href='$tmpurl';</script>";
 			}
 			else{      	
 				$this->error('注册失败');

@@ -138,6 +138,74 @@
 		}
 		return $arr;
 	}
+	function getJJLikeArr($keywords){
+		$arr=array();
+		switch($keywords){
+			case '数学':
+				$arr=array("%数学%","%数学","数学%");
+				break;
+			case '物理':
+				$arr=array("%物理%","%物理","物理%");
+				break;
+			case '化学':
+				$arr=array("%化学%","%化学","化学%");
+				break;
+			case '英语':
+				$arr=array("%英语%","%英语","英语%");
+				break;
+			case '语文':
+				$arr=array("%语文%","%语文","语文%");
+				break;
+			case '生物':
+				$arr=array("%生物%","%生物","生物%");
+				break;				
+			case '历史':
+				$arr=array("%历史%","%历史","历史%");
+				break;
+			case '地理':
+				$arr=array("%地理%","%地理","地理%");
+				break;
+			case '政治':
+				$arr=array("%政治%","%政治","政治%");
+				break;
+			case '初一':
+				$arr=array("%初一%","%初一","初一%","%初中一年级%","%初中一年级","初中一年级%");
+				break;
+			case '初二':
+				$arr=array("%初二%","%初二","初二%","%初中二年级%","%初中二年级","初中二年级%");
+				break;
+			case '初三':
+				$arr=array("%初三%","%初三","初三%","%初中三年级%","%初中三年级","初中三年级%");
+				break;
+			case '高一':
+				$arr=array("%高一%","%高一","高一%","%高中一年级%","%高中一年级","高中一年级%");
+				break;
+			case '高二':
+				$arr=array("%高二%","%高二","高二%","%高中二年级%","%高中二年级","高中二年级%");
+				break;
+			case '高三':
+				$arr=array("%高三%","%高三","高三%","%高中三年级%","%高中三年级","高中三年级%");
+				break;				
+			case '小三':
+				$arr=array("%小三%","%小三","小三%","%小学三年级%","%小学三年级","小学三年级%");
+				break;
+			case '小四':
+				$arr=array("%小四%","%小四","小四%","%小学四年级%","%小学四年级","小学四年级%");
+				break;
+			case '小五':
+				$arr=array("%小五%","%小五","小五%","%小学五年级%","%小学五年级","小学五年级%");
+				break;	
+			case '小一':
+				$arr=array("%小一%","%小一","小一%","%小学一年级%","%小学一年级","小学一年级%");
+				break;
+			case '小二':
+				$arr=array("%小二%","%小二","小二%","%小学二年级%","%小学二年级","小学二年级%");
+				break;	
+			default:
+				$arr=array('%'.$keywords.'%','%'.$keywords,$keywords.'%');
+		}
+		return $arr;
+	}
 	function getCurCity(){
 		$clientIP=get_client_ip();		
 		$taobaoIP = 'http://ip.taobao.com/service/getIpInfo.php?ip='.$clientIP;
@@ -169,6 +237,23 @@
 				 $Data = M('Post');
 		}
 		return $Data;
+	}
+	function getJJPostData($str){		
+		switch($str){
+			case 'bj':				
+				 $Data = M('Bjjjpost');
+				break;
+			case 'tj':				
+				 $Data = M('Jjpost');
+				break;
+			default:				
+				 $Data = M('Jjpost');
+		}
+		return $Data;
+	}	
+	function getBossTable(){			
+		$Data = 'jz_boss';
+		return $Data;
 	}	
 	function getPostTable($str){		
 		switch($str){
@@ -183,6 +268,19 @@
 		}
 		return $Data;
 	}	
+	function getJJPostTable($str){		
+		switch($str){
+			case 'bj':				
+				 $Data = 'jz_bjjjpost';
+				break;
+			case 'tj':				
+				 $Data = 'jz_jjpost';
+				break;
+			default:				
+				 $Data = 'jz_jjpost';
+		}
+		return $Data;
+	}	
 	function getComtData($str){		
 		switch($str){
 			case 'bj':				
@@ -193,6 +291,19 @@
 				break;
 			default:				
 				 $Data = M('Comment');
+		}
+		return $Data;
+	}
+	function getJJComtData($str){		
+		switch($str){
+			case 'bj':				
+				 $Data = M('Bjjjcomment');
+				break;
+			case 'tj':				
+				 $Data = M('Jjcomment');
+				break;
+			default:				
+				 $Data = M('Jjcomment');
 		}
 		return $Data;
 	}
