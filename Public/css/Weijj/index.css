@@ -1,0 +1,148 @@
+.detailcontent{
+	color: #262626;
+	font-size: 14px;
+	line-height: 19px;
+	margin: 7px 0 0 0;
+}
+.subbtn{
+	background-color: #3BA3FF;
+	border-color: #3BA3FF;
+	padding:8px 25px;
+	font-size:20px;	
+}
+.fabu{
+	color: #3BA3FF;
+}
+.title{
+	color: #0000cc;
+	font-size: 17px;
+	line-height: 21px;
+	padding-top: 6px;
+	margin-top:3px;	
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width:290px;
+}
+.pt6{
+	padding-top:6px;
+}
+.f18{
+	font-size:18px;
+}
+* a{text-decoration: none !important;}
+.navbar-brand{color:#fff}
+#mainlist{	
+	padding:6px;
+	text-align:left;
+}
+#mainlist .well{	
+	padding: 5px 10px 0px;
+	position: relative;
+	margin: 6px 0;
+	border-radius:0px;		
+	webkit-box-shadow:none;
+	box-shadow:none;
+	background: #fff;
+	border: 1px solid #e0e0e0;
+}
+#mainlist .list-group{
+	margin-bottom: 6px;
+	padding-bottom: 3px;
+	border: 0px;
+	border-radius:0px;
+	overflow:hidden;	
+}
+.well .time{	
+	font-size: 12px;
+	color: #666;	
+	line-height:28px;
+}
+#mainlist .list-group-item{
+	color: #292929;
+	font-size: 14px;
+	font-weight: 500;	
+	border-radius:0px !important;
+	padding:0;
+	border:0;
+}
+.posttitle{
+	height:50px;
+}
+.loading-wrap{
+	bottom: 50px;
+	width: 100%;
+	height: 52px;
+	text-align: center;
+}
+#loading{
+	margin-top:20px;
+	display:none;
+}
+.loading {
+	padding: 10px 10px;
+	height: 32px;
+	line-height: 28px;
+	color: #FFF;
+	font-size: 20px;
+	border-radius: 5px;
+	background: 10px center rgba(0,0,0,.7);
+}
+.footer{
+	border: 2px solid #D4D4D4;
+	display:none;
+}
+#mainlist .phone{
+	color:#1f992f;
+	font-size:13px;
+	margin-top:7px;
+}
+.qqspan{
+	width:26px;
+}
+#searchForm{
+	height:50px;	
+}
+.comtModal .modal-body{
+	padding:0;
+	position:absolute;
+	top:250px;
+	left:0;
+}
+#mainlist .comtBtn{
+	float:right;
+	padding:4px 6px;
+	font-size:12px;
+	background: #87907d;
+	color: #e1ead7;
+}
+#mainlist .allComtBtn{	
+	font-size:12px;	
+	color: #336699;
+}
+#mainlist .comtBtnLi{	
+	margin-bottom:5px;
+}
+#mainlist .allComtBtnLi{	
+	padding: 5px 0;	
+}
+#mainlist .comtLi{
+	padding:5px;
+	font-size:12px;
+	background: #f1f1f1;	
+	overflow: hidden;
+	text-overflow:ellipsis;
+	display:block;
+}
+.comtName{
+	color:#336699;
+}
+.qqdivinline{
+	display:inline;
+}
+#mainlist .hid{
+	display:none;
+}
+#mainlist .show{
+	display:block;
+}

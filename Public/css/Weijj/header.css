@@ -1,0 +1,103 @@
+.nav>li {
+	position: relative;
+	display: block;
+	float: left;
+}
+.logo {
+	float:left;
+	width:100px;
+	height:30px;
+	position: absolute;	
+	left: 10px;
+	top:10px;
+}
+.pr10{
+	padding-right:15px;
+}
+.navbar{	
+	color:#08a5e0 !important;
+	font-size:16px;
+	font-weight:700;
+	line-height: 50px;
+	height:50px;
+}
+#postBtn{	
+	padding: 15px 0 0 5px;
+}
+#menunav{
+	height:34px;
+	min-height:0;		
+	margin-bottom:0px;
+	z-index:1;
+}
+#menunav ul{
+	margin:0;
+	font-size:15px;
+	font-weight:normal;
+}
+#menunav .dropdown-menu{
+	min-width:0;
+	border: 1px solid #f1f1f1;
+	border-top: 0px;
+}
+#menunav .dropdown-menu a{
+	padding-left:10px;
+}
+#menunav li a{
+	padding:7px 10px;
+}
+#menunav .indexli{
+	margin-left:5px;
+}
+#menunav .divider{
+	margin:2px 0px;
+}
+#menunav .dropdown-menu{
+	background:#fefefe;
+}
+hr {
+	border: 0;
+	border-top: 1px solid #e5e5e5;
+	margin: 0;	
+}
+#keywords{
+	border-right: 0px;
+	-webkit-border-radius: 0;
+	width: 50px;
+}
+#searchBtn{
+	margin-top: -1px;
+	-webkit-border-radius: 0;
+	background: #4c7ee0;
+	color: white;
+	border: none;
+	height:34px;
+}
+#postLi{
+	width: 50px;
+	font-size: 15px;
+	display:none;
+	margin-left:5px;
+}
+#citynav  .dropdown-menu{
+	min-width:52px;
+}
+#citynav li a{
+	padding: 5px;
+	margin: 10px 0 0;
+}
+#citynav  .dropdown-menu li a{
+	margin:0px;
+}
+#cityselec .dropdown-toggle{
+	padding: 10px;
+	font-size: 15px;
+}
+#cityselec .dropdown-menu{
+	min-width: 0;
+	margin: 0;
+	padding: 0;
+}
+#cityselec .dropdown-menu a{
+	padding: 5px 12px;
+}

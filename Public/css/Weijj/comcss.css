@@ -1,0 +1,113 @@
+.bgf5{
+	background:#f5f5f5;
+}
+.w70{
+	width:70px;	
+}
+.w40{
+	width:40px;	
+}
+.minwid0{
+	min-width:0px;
+}
+.pad6{
+	padding:6px;
+}
+.pl15{
+	padding-left:15px;
+}
+.disinline{
+	display:inline;
+}
+.disnone{
+	display:none;
+}
+.colorphone{
+	color:#1f992f;
+}
+.mlf5{
+	margin-left:-5px;
+}
+.mlf10{
+	margin-left:10px;
+}
+.ml6{
+	margin-left:6px;
+}
+.mr2{
+	margin-right:2px;
+}
+.mrf5{
+	margin-right:-5px;
+}
+.mt7{
+	margin-top:7px;
+}
+.mt5{
+	margin-top:5px;
+}
+.mtf2{
+	margin-top:-2px;
+}
+.mtf8{
+	margin-top:-8px;
+}
+.h40{
+	height:40px;
+}
+.h100{
+	height:100px;
+}
+.f16{
+	font-size:16px;
+}
+.f13{
+	font-size:13px;
+}
+.tacenter{
+	text-align:center;
+}
+.taleft{
+	text-align:left;
+}
+body{
+	padding-top: 50px;	
+}
+.bor0{
+	border:none;
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.clrrig{
+	clear:right;
+}
+.colorf1{
+	color:#f1f1f1;
+}
+.bgf1{
+	background:#f1f1f1;
+}
+.pass-header-title {
+	line-height: 50px;
+	font-size: 20px;
+	text-align: center;
+	width: 100%;
+	display: block;
+	color:black;
+	background:white;
+}
+.pass-header-back {
+	background: url('/Public/images/arrow30.png') no-repeat;	
+	width: 35px;
+	height: 30px;
+	position: absolute;
+	left: 20px;
+	top: 10px;
+}
+.h28{
+	height:28px;
+}

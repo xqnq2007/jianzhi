@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>兼职时代</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maxinum-scale=1.0,user-scalable=no">
+	<link href="__PUBLIC__/boot/css/bootstrap.min.css" rel="stylesheet">
+	<link href="__PUBLIC__/css/Weijj/comcss.css" rel="stylesheet"	type="text/css" />
+	<link href="__PUBLIC__/css/Weijj/header.css" rel="stylesheet"	type="text/css" />	
+	<script src="__PUBLIC__/js/Weijj/header.js"></script>	
+</head>
+<body>
+<!-- header begin -->
+<nav class="navbar navbar-fixed-top bgf1">
+      <a class="fl" href="__APP__/Weijj" id="logohref">
+		<img class="logo" src="/Public/images/jjzhushou.jpg">
+	  </a>    
+  <ul class="nav navbar-nav fr pr10">		 
+		 <li class="dropdown" id="cityselec">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
+               {$curcity}	  
+               <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu" >
+               <li><a href="/bj/Weijj" id="bj">北京</a></li>
+               <li><a href="/tj/Weijj" id="tj">天津</a></li>			   
+            </ul>			
+         </li>
+		<li class="mtf8 mrf5"> 
+			<input type="text" class="form-control w70 disinline" placeholder="" id="keywords">
+			<button type="submit" class="btn btn-default w40 pad6 mlf5" id="searchBtn">搜索</button>        
+        </li>		
+         <li class="mtf8" id="postLi"><a id="postBtn">发布</a></li>
+         <li class="mtf2" id="loginLi"><a href="#" id="loginBtn">登陆</a></li>         
+      </ul>
+</nav>
+<nav class="navbar" id="menunav">      
+  <div>
+      <ul class="nav navbar-nav">
+         <li class="active indexli"><a href="#" id="indexlink">首页</a></li>
+         <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+               学科
+               <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu" >
+               <li><a href="/{$appurl}/Weijj/search?k=数学">数学</a></li>
+               <li><a href="/{$appurl}/Weijj/search?k=物理">物理</a></li>
+			   <li><a href="/{$appurl}/Weijj/search?k=化学">化学</a></li>               
+			   <li><a href="/{$appurl}/Weijj/search?k=英语">英语</a></li>
+			   <li><a href="/{$appurl}/Weijj/search?k=语文">语文</a></li>
+               <li><a href="/{$appurl}/Weijj/search?k=生物">生物</a></li>
+			   <li><a href="/{$appurl}/Weijj/search?k=历史">历史</a></li>
+			   <li><a href="/{$appurl}/Weijj/search?k=地理">地理</a></li>
+               <li><a href="/{$appurl}/Weijj/search?k=政治">政治</a></li>               
+            </ul>			
+         </li>
+		 <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+               年级
+               <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu" >
+               <li><a href="/{$appurl}/Weijj/search?k=初一">初一</a></li>
+               <li><a href="/{$appurl}/Weijj/search?k=初二">初二</a></li>
+			   <li><a href="/{$appurl}/Weijj/search?k=初三">初三</a></li>               
+			   <li><a href="/{$appurl}/Weijj/search?k=高一">高一</a></li>
+			   <li><a href="/{$appurl}/Weijj/search?k=高二">高二</a></li>
+               <li><a href="/{$appurl}/Weijj/search?k=高三">高三</a></li>
+			   <li><a href="/{$appurl}/Weijj/search?k=小三">小三</a></li>
+			   <li><a href="/{$appurl}/Weijj/search?k=小四">小四</a></li>
+               <li><a href="/{$appurl}/Weijj/search?k=小五">小五</a></li> 
+			   <li><a href="/{$appurl}/Weijj/search?k=小一">小一</a></li>
+			   <li><a href="/{$appurl}/Weijj/search?k=小二">小二</a></li>
+            </ul>			
+         </li>
+		 <li class="dropdown" id="tjarea">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+               地区
+               <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu" >
+               <li><a href="/{$appurl}/Weijj/search?k=西青">西青</a></li>
+               <li><a href="/{$appurl}/Weijj/search?k=和平">和平</a></li>
+			   <li><a href="/{$appurl}/Weijj/search?k=南开">南开</a></li>               
+			   <li><a href="/{$appurl}/Weijj/search?k=河东">河东</a></li>
+			   <li><a href="/{$appurl}/Weijj/search?k=河西">河西</a></li>
+               <li><a href="/{$appurl}/Weijj/search?k=河北">河北</a></li>
+			   <li><a href="/{$appurl}/Weijj/search?k=红桥">红桥</a></li>
+               <li><a href="/{$appurl}/Weijj/search?k=塘沽">塘沽</a></li>
+			   <li><a href="/{$appurl}/Weijj/search?k=汉沽">汉沽</a></li>               
+			   <li><a href="/{$appurl}/Weijj/search?k=大港">大港</a></li>
+			   <li><a href="/{$appurl}/Weijj/search?k=东丽">东丽</a></li>
+               <li><a href="/{$appurl}/Weijj/search?k=津南">津南</a></li>
+			   <li><a href="/{$appurl}/Weijj/search?k=北辰">北辰</a></li>
+               <li><a href="/{$appurl}/Weijj/search?k=武清">武清</a></li>
+			   <li><a href="/{$appurl}/Weijj/search?k=宝坻">宝坻</a></li> 
+            </ul>			
+         </li>
+		 <li class="dropdown" id="bjarea">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+               地区
+               <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu" >
+               <li><a href="/{$appurl}/Weijj/search?k=东城">东城</a></li>
+               <li><a href="/{$appurl}/Weijj/search?k=西城">西城</a></li>
+			   <li><a href="/{$appurl}/Weijj/search?k=海淀">海淀</a></li>               
+			   <li><a href="/{$appurl}/Weijj/search?k=朝阳">朝阳</a></li>
+			   <li><a href="/{$appurl}/Weijj/search?k=丰台">丰台</a></li>
+               <li><a href="/{$appurl}/Weijj/search?k=石景山">石景山</a></li>
+			   <li><a href="/{$appurl}/Weijj/search?k=通州">通州</a></li>
+               <li><a href="/{$appurl}/Weijj/search?k=顺义">顺义</a></li>
+			   <li><a href="/{$appurl}/Weijj/search?k=房山">房山</a></li>               
+			   <li><a href="/{$appurl}/Weijj/search?k=大兴">大兴</a></li>
+			   <li><a href="/{$appurl}/Weijj/search?k=昌平">昌平</a></li>
+               <li><a href="/{$appurl}/Weijj/search?k=怀柔">怀柔</a></li>
+			   <li><a href="/{$appurl}/Weijj/search?k=平谷">平谷</a></li>
+               <li><a href="/{$appurl}/Weijj/search?k=门头沟">门头沟</a></li>
+			   <li><a href="/{$appurl}/Weijj/search?k=密云">密云</a></li> 
+			   <li><a href="/{$appurl}/Weijj/search?k=延庆">延庆</a></li> 
+            </ul>			
+         </li>
+      </ul>
+   </div>
+</nav>
+<hr>
+</body>
+</html>

@@ -1,0 +1,18 @@
+.p-t10lr14 {
+	padding: 10px 14px 0;
+}
+.gray {
+	color: #969696;
+}
+#weiRegForm .form-group{
+	margin-left:0;
+	margin-right:0;	
+	margin-bottom:0;	
+	padding:0 14px;	
+	padding: 0 14px;	
+	border-bottom: 1px solid #ccc;
+	height: 50px;
+}
+#weiRegForm .form-control{		
+	-webkit-box-shadow: none;	
+}

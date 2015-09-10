@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>兼职信息</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maxinum-scale=1.0,user-scalable=no">
+	<link href="__PUBLIC__/boot/css/bootstrap.min.css" rel="stylesheet">	
+	<link href="__PUBLIC__/css/Weijj/slide.css" rel="stylesheet" type="text/css" media="screen" />	
+	<link href="__PUBLIC__/css/Weijj/comcss.css" rel="stylesheet"	type="text/css" />
+	<link href="__PUBLIC__/css/Weijj/index.css" rel="stylesheet"	type="text/css" />	
+	<script src="__PUBLIC__/js/jquery.min.js"></script>	
+	<script src="__PUBLIC__/js/jquery.livequery.js" type="text/javascript"></script>  
+	<script src="__PUBLIC__/boot/js/bootstrap.min.js"></script>	
+	<script src="__PUBLIC__/js/Weijj/index.js"></script>
+</head>
+<include file="Weijj:header122" />
+<body>
+<include file="Weijj:header" />
+<div id="mainlist">
+<volist name="post" id="vo">
+<div class="well">
+<input  type="hidden" class="postid" value={$vo.id} />
+<input  type="hidden" class="thepostid" value={$vo.postId} />
+<ul class="list-group postul" name="letter">
+<li class="list-group-item">	
+	<div class="title">{$vo.title}</div>	
+</li>
+<li class="list-group-item detail">
+	<div class="wrap">
+			<div class="detailcontent">
+				{$vo.detail}
+			</div>
+			<div class="gradient"></div>
+	</div>
+	<div class="read-more"></div>
+</li>
+<li class="list-group-item phone"><span>电话：{$vo.phone}&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="clrrig">微信：<span class="weixin">{$vo.weixin}</span></span>
+<div class="qqdiv"><span class="qqspan"><font>Q</font><font class="ml6">Q</font></span><font>：</font><span class="qq">{$vo.qq}</span></div>  
+</li>
+<li class="list-group-item comtBtnLi h28">
+	<span class="time">{$vo.time}</span>
+	<span>
+	<button  class="btn comtBtn">评论</button>
+	<div class="modal fade comtModal" tabindex="-1" role="dialog" 
+		aria-labelledby="myModalLabel" aria-hidden="true" >
+	   <div class="modal-dialog">
+		  <div class="modal-content">			 
+			 <div class="modal-body">
+				  <div class="input-group">					
+				  <input type="text" class="form-control comtInput" placeholder="评价一下吧" maxlength="50" />
+				  <span class="input-group-btn">
+					<button class="btn btn-default comtSendBtn" type="button">发送</button>
+				  </span>
+					</div>
+			 </div>			 
+		  </div>
+	</div>
+	</div>
+	</span>
+</li>
+<li class="list-group-item allComtBtnLi" style="display:none;">
+<font  class="allComtBtn">全部评论</font></li>
+<volist name="vo['voo']" id="sub"> 
+	<li class="list-group-item comtLi"><span class="comtName">{$sub.posterName}</span>:&nbsp;&nbsp;{$sub.postContent}</li>     
+ </volist> 
+</ul>
+</div>
+</volist>
+</div>
+<div id="loading" class="loading-wrap" >
+	<span class="loading">加载中...</span>
+</div>
+<div class="footer"><center>没有更多数据</center></div>
+</body>
+</html>
